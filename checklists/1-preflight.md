@@ -45,3 +45,4 @@ Complete before design and build. Output: a signed [`project-brief.md`](../templ
 - [ ] PRV-05 Processors and contracts
 - [ ] PRV-04 · PRV-10 · PRV-12 Legal texts commissioned
 - [ ] A11Y-02 Accessibility-law scope assessed
+- [ ] I18N-01 URL structure per market *(multilingual)*

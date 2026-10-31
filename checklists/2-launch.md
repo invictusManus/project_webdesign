@@ -142,6 +142,26 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] MSR-21 Uptime monitoring with alerts
 - [ ] MSR-22 Expiry alerts
 
+### Internationalization *(multilingual)*
+- [ ] I18N-01 One URL per language or market
+- [ ] I18N-02 No forced geo or language redirects
+- [ ] I18N-03 Complete, reciprocal hreflang
+- [ ] I18N-04 Self-canonical per language
+- [ ] I18N-05 Correct `lang` and `og:locale`
+- [ ] I18N-06 Fully localized templates
+- [ ] I18N-10 RTL support *(RTL languages)*
+
+### Quality assurance
+- [ ] QA-01 Browser matrix tested
+- [ ] QA-02 Viewports tested
+- [ ] QA-03 Static checks in CI
+- [ ] QA-04 Lighthouse CI assertions pass
+- [ ] QA-05 E2E tests for critical flows
+- [ ] QA-07 Real-device test
+- [ ] QA-08 Full pre-launch crawl
+- [ ] QA-09 No placeholders or test pages
+- [ ] QA-10 No open P0/P1 defects
+
 ## B · Launch day
 
 - [ ] Lower DNS TTL 48 h before (TEC-14), switch DNS, then confirm HTTPS and host redirects (SEO-05)
