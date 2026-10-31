@@ -1,0 +1,7 @@
+# Serve at /.well-known/security.txt as text/plain; charset=utf-8 (SEC-18, RFC 9116).
+# Expires must be less than one year ahead; renew via the expiry alert (MSR-22).
+Contact: mailto:security@example.com
+Expires: 2027-10-31T00:00:00.000Z
+Preferred-Languages: en, de
+Canonical: https://www.example.com/.well-known/security.txt
+Policy: https://www.example.com/security-policy/

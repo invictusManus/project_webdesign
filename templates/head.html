@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- Document head template. Rules: TEC-01, SEO-06, SEO-15, SEO-16, SEO-19, PRF-11, PRF-12. Replace every … and example.com. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Primary topic – Brand</title>
+  <meta name="description" content="One-sentence summary of this page, about 120–160 characters.">
+  <link rel="canonical" href="https://www.example.com/page/">
+
+  <!-- Multilingual sites only (standards/12-i18n.md): one line per language version + x-default. -->
+  <link rel="alternate" hreflang="en" href="https://www.example.com/en/page/">
+  <link rel="alternate" hreflang="de" href="https://www.example.com/de/seite/">
+  <link rel="alternate" hreflang="x-default" href="https://www.example.com/en/page/">
+
+  <!-- Social previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Primary topic">
+  <meta property="og:description" content="…">
+  <meta property="og:url" content="https://www.example.com/page/">
+  <meta property="og:image" content="https://www.example.com/og/page.png">
+  <meta property="og:image:alt" content="…">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Critical resources: preload only the above-the-fold font, then styles. -->
+  <link rel="preload" href="/fonts/brand-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.abc123.css">
+
+  <!-- Icons and manifest -->
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Structured data: paste the matching graph from templates/schema/. -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[]}</script>
+
+  <!-- If Google tags are used: templates/consent-default.html goes here. -->
+
+  <script src="/assets/site.abc123.js" type="module"></script>
+</head>

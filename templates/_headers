@@ -1,0 +1,22 @@
+# Response headers in Cloudflare Pages / Netlify `_headers` format.
+# Other hosts: set the same name/value pairs in server or platform config.
+# Rules: SEC-02, SEC-03, SEC-04 (CSP), PRF-17 (caching).
+# CSP starts as Report-Only. When the console shows no violations, rename it to Content-Security-Policy.
+# Inline scripts (e.g. the consent default) need their hash: script-src 'self' 'sha256-…'.
+# The GTM/GA4 origins below are only needed if Google tags are used; remove them otherwise.
+
+/*
+  Strict-Transport-Security: max-age=63072000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  X-Frame-Options: DENY
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' https://www.googletagmanager.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+
+# Fingerprinted build output: cache for a year.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/.well-known/security.txt
+  Content-Type: text/plain; charset=utf-8
