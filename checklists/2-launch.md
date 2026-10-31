@@ -6,6 +6,31 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 
 ## A · Release gate
 
+### Design, UX & content
+- [ ] DES-03 Token color pairs pass contrast
+- [ ] DES-04 Typography rules
+- [ ] DES-06 Component states documented
+- [ ] DES-10 Logo, favicons, OG images
+- [ ] UX-02 Consistent navigation and footer
+- [ ] UX-05 No overflow from 360 to 1440 px, no hover-only functions
+- [ ] UX-06 One primary call to action per page
+- [ ] UX-07 Clear first screen
+- [ ] UX-09 Lean forms with confirmation
+- [ ] UX-10 Empty, loading and error states
+- [ ] UX-11 No dark patterns
+- [ ] CON-04 Every page adds original value
+- [ ] CON-05 About, bylines, sources
+- [ ] CON-06 Honest dates
+- [ ] CON-09 AI-assisted content reviewed
+- [ ] CON-12 Owner and review date per page
+
+### AI search
+- [ ] GEO-01 SEO gate passed first
+- [ ] GEO-02 No snippet restrictions on key pages
+- [ ] GEO-03 AI crawler policy live; CDN doesn't block allowed bots
+- [ ] GEO-05 Consistent entity name and description
+- [ ] GEO-06 Organization graph with `sameAs`
+
 ### Technical & SEO
 - [ ] TEC-01 Document head basics
 - [ ] TEC-02 Valid HTML, unique IDs

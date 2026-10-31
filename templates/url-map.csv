@@ -1,0 +1,6 @@
+url,status,page_type,parent,primary_query,intent,cluster,monthly_volume,priority,indexable,canonical,redirect_from,hreflang_group,owner,review_date,notes
+/,keep,home,,brand name,navigational,brand,,1,yes,/,,home,Jane,2027-04-30,
+/services/,new,hub,/,service category,commercial,services,1900,1,yes,/services/,/leistungen/,services,Jane,2027-04-30,pillar for services cluster
+/services/consulting/,new,service,/services/,consulting service city,commercial,services,480,1,yes,/services/consulting/,/beratung.html,services-consulting,Jane,2027-04-30,
+/blog/how-to-choose-x/,new,article,/blog/,how to choose x,informational,services,720,2,yes,/blog/how-to-choose-x/,,,Max,2027-04-30,links to /services/consulting/
+/old-promo/,remove,,,,,,,,no,,,,,,410: no equivalent (SEO-35)
