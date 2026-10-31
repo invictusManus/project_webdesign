@@ -44,7 +44,7 @@ Last verified: 2026-10
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| TEC-17 | MUST | Forms validate on the server and show clear success and error states. Each form collects only the fields it needs, and its delivery is confirmed by a test submission. | Test submission per form |
+| TEC-17 | MUST | Forms validate on the server and show clear success and error states. Delivery is confirmed by a test submission. | Test submission per form |
 | TEC-18 | MUST | Spam protection without tracking: honeypot, time trap and rate limit first; a privacy-friendly challenge only if spam persists. Never a puzzle-only CAPTCHA (see A11Y-20). | Bot test; a11y review |
 | TEC-19 | MUST | The CMS content model has structured fields for title, meta description, slug, social image, alt text (required), author and dates, plus drafts, preview, versions and roles. | CMS schema review |
 | TEC-20 | MUST | Every external script, embed, font or pixel is listed in the third-party inventory in [`project-brief.md`](../templates/project-brief.md): purpose, owner, consent category, data shared, performance cost, CSP origins. The default answer is no. | Inventory vs. network requests |
@@ -56,7 +56,7 @@ Last verified: 2026-10
 | ID | Level | Rule | Verify |
 |---|---|---|---|
 | TEC-23 | SHOULD | Code is in version control with a protected main branch, reviewed pull requests and CI on every pull request ([`ci/quality.yml`](../templates/ci/quality.yml)). | Repository settings |
-| TEC-24 | SHOULD | Use a formatter and a linter with default settings, one package manager, a committed lockfile and `.editorconfig`. | CI lint step |
+| TEC-24 | SHOULD | Use a formatter and a linter with default settings, one package manager, a lockfile (SEC-14) and `.editorconfig`. | CI lint step |
 | TEC-25 | MUST | No end-of-life runtime, framework, CMS or plugin in production. Dependency updates are automated and merged at least monthly. | Update bot dashboard; endoflife.date |
 | TEC-26 | SHOULD | The site repository has a README (run, build, deploy, rollback, owners) and an `AGENTS.md` ([template](../templates/AGENTS.md)). | Repository |
 | TEC-27 | SHOULD | Handover package: who has access to what, credentials in the vault, runbook, and licenses for fonts, images and code. | Handover sign-off |

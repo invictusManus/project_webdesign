@@ -8,7 +8,7 @@ This website follows the Website Foundation blueprint: https://github.com/invict
 - Stack & rendering: [framework, CMS, hosting; rendering per page type]
 - Commands: dev `[…]` · build `[…]` · verify `[…]`
 - Brand: `DESIGN.md` · tokens: `tokens.json` · URL and keyword map: `url-map.csv` · brief: `[path]`
-- Production URL: [https://…] · staging: [https://…] (auth required)
+- Production URL: [URL] · staging: [URL] (auth required)
 
 ## Before you change anything
 

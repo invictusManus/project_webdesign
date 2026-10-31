@@ -19,7 +19,7 @@ Last verified: 2026-10
 | ID | Level | Rule | Verify |
 |---|---|---|---|
 | MSR-06 | MUST | A measurement plan exists before implementation: business goals → KPIs → key events → parameters ([`project-brief.md`](../templates/project-brief.md)). | Brief |
-| MSR-07 | MUST | GA4 setup: data retention 14 months, internal and developer traffic filtered, unwanted referrals excluded, cross-domain measurement where needed, correct time zone and currency. | GA4 Admin |
+| MSR-07 | MUST | If GA4 is used: setup with data retention 14 months, internal and developer traffic filtered, unwanted referrals excluded, cross-domain measurement where needed, correct time zone and currency. | GA4 Admin |
 | MSR-08 | MUST | Every primary conversion (successful form submit, purchase, sign-up, call click) is a key event and has been tested in DebugView. | GA4 DebugView; Realtime |
 | MSR-09 | SHOULD | Enhanced measurement is reviewed: keep page views, scrolls, outbound clicks, downloads and site search. Turn off form interactions if they misfire, and replace them with custom events. | DebugView |
 | MSR-10 | SHOULD | Events and parameters follow a documented naming convention (`snake_case`, `verb_object`). | Event list vs. plan |
@@ -31,13 +31,13 @@ Last verified: 2026-10
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| MSR-14 | MUST | All tags run through one tag manager container owned by the site owner. No duplicate hard-coded tags. | Tag Assistant; source |
-| MSR-15 | MUST | Every tag has consent settings. Basic vs. advanced Consent Mode is a documented decision. A test shows no Google request that sets or reads cookies before consent (PRV-03). | Tag Assistant; network before consent |
+| MSR-14 | MUST | If marketing or Google tags are used: all tags run through one tag manager container owned by the site owner. No duplicate hard-coded tags. | Tag Assistant; source |
+| MSR-15 | MUST | Every tag has consent settings. Basic Consent Mode (tags load after consent) is the default; advanced mode needs a documented legal assessment. A test shows no Google request that sets or reads cookies before consent (PRV-03). | Tag Assistant; network before consent |
 | MSR-16 | SHOULD | Use one workspace per change and named versions with notes. Test in preview before publishing. At most 3 people can publish. | GTM versions |
 | MSR-17 | SHOULD | A UTM convention (lowercase, fixed vocabulary for `utm_source`, `utm_medium`, `utm_campaign`) is used for all campaigns, never on internal links. | Acquisition report: no "(other)" spikes |
 | MSR-18 | COULD | Server-side tagging on a first-party subdomain controls what data reaches vendors. | Server container |
 | MSR-19 | SHOULD | Ads conversions are imported from GA4 key events, or use the Ads tag with enhanced conversions. Both are consent-gated. | Google Ads → Conversions |
-| MSR-20 | MUST | E-commerce: Merchant Center gets its product feed via the Merchant API (the Content API for Shopping is sunset). The feed matches the on-page Product data. | Merchant Center diagnostics |
+| MSR-20 | MUST | E-commerce: Merchant Center gets its product feed by file, a platform integration or the Merchant API, never the sunset Content API for Shopping. The feed matches the on-page Product data. | Merchant Center diagnostics |
 
 ## Monitoring
 

@@ -10,7 +10,7 @@ Last verified: 2026-10
 |---|---|---|---|
 | SEO-01 | MUST | Every indexable URL returns `200`, is not blocked by robots.txt and has its content in the initial HTML response. | Crawler; GSC URL Inspection |
 | SEO-02 | MUST | Exclude pages from the index with `noindex` (meta tag or `X-Robots-Tag`) on a crawlable URL. Never use robots.txt for this. | Crawler: indexability report |
-| SEO-03 | MUST | `/robots.txt` uses only `user-agent`, `allow`, `disallow`, `sitemap`. It lists the sitemap, stays under 500 KiB and never blocks CSS/JS needed for rendering. Template: [`robots.txt`](../templates/robots.txt). | GSC robots.txt report |
+| SEO-03 | MUST | `/robots.txt` controls crawling only with `user-agent`, `allow`, `disallow`, `sitemap` (Google ignores other lines; ⚗ GEO-16 lines are optional extras). It lists the sitemap, stays under 500 KiB and never blocks CSS/JS needed for rendering. Template: [`robots.txt`](../templates/robots.txt). | GSC robots.txt report |
 | SEO-04 | MUST | Production carries no leftover `noindex`, `Disallow: /` or password protection from staging. | `curl -I` + view source on live URLs |
 | SEO-05 | MUST | One canonical host: HTTPS plus either `www` or apex. Every other variant answers with a single 301 to it. | `curl -I` on http/https × www/apex |
 | SEO-06 | MUST | Every indexable page has an absolute, self-referencing `rel=canonical`, in HTML or HTTP header but not both. Duplicates point to the preferred URL. | Crawler: canonical report |

@@ -2,9 +2,10 @@
   Consent Mode v2 default + Google Tag Manager (PRV-03, MSR-15).
   Place in <head>, before any other Google tag. The CMP must call
   gtag('consent', 'update', {...}) with the user's choice.
-  Advanced mode (this file): GTM loads, Google tags send cookieless pings until consent.
-  Basic mode: let the CMP inject the GTM snippet only after consent. Basic is the
-  conservative choice under GDPR/TDDDG; assess advanced mode legally before use.
+  Basic mode (default): GTM loads only after consent. The CMP calls window.loadGtm()
+  once the user grants any Google-related purpose (PRF-13, PRV-01).
+  Advanced mode (calling loadGtm() on page load) sends cookieless pings before consent;
+  it is a documented exception that needs a legal assessment (MSR-15).
   No <noscript> GTM iframe: it would bypass consent.
 -->
 <script>
@@ -22,8 +23,14 @@
   });
   gtag('set', 'ads_data_redaction', true);
 </script>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<script>
+  window.loadGtm = function () {
+    if (window.gtmLoaded) return;
+    window.gtmLoaded = true;
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+  };
+</script>

@@ -43,7 +43,7 @@ Last verified: 2026-10
 | PRV-04 | MUST | [EU] A privacy policy is linked from every page. It names the controller, the DPO if required, purposes and legal bases, every recipient, third-country transfers and their safeguards, retention periods, data subject rights and the right to complain. | Policy vs. third-party inventory (TEC-20) |
 | PRV-05 | MUST | [EU] Every processor (hosting, analytics, forms, email, CMP) has a data processing agreement (Art. 28 GDPR). US recipients must be certified under the EU-US Data Privacy Framework or covered by standard contractual clauses plus a transfer impact assessment. | Contract register |
 | PRV-06 | MUST | Collect only the data each purpose needs. Retention periods are defined and enforced automatically. Logs are anonymized or short-lived. | Retention config |
-| PRV-07 | SHOULD | Privacy-friendly defaults: self-hosted fonts (no font CDN), click-to-load embeds (TEC-21), and cookieless analytics where it suffices. Whether consent is still needed is assessed legally. | Network panel |
+| PRV-07 | SHOULD | Privacy-friendly defaults: fonts per PRF-10, click-to-load embeds (TEC-21), and cookieless analytics where it suffices. Whether consent is still needed is assessed legally. | Network panel |
 | PRV-08 | SHOULD | [EU] Keep a record of processing activities (Art. 30). Run a DPIA where required. Have a breach process that can notify within 72 hours. | Documentation |
 | PRV-09 | COULD | Outside the EU: honor Global Privacy Control. Add a CCPA/CPRA "Do Not Sell or Share" link if in scope. UK GDPR/PECR mirror the EU rules. Check local law for each target market. | Legal review per market |
 

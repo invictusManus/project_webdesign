@@ -4,7 +4,6 @@
 
 User-agent: *
 Disallow: /api/
-Disallow: /search
 # Keep CSS, JS and images crawlable.
 
 # AI search and user-initiated fetches (citations in ChatGPT, Claude, Perplexity) fall under "*" above.
