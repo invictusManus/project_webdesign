@@ -15,12 +15,12 @@
       },
       "description": "One sentence that says what the organization does and for whom. Use the same wording everywhere.",
       "email": "hello@example.com",
-      "telephone": "+49-40-000000",
+      "telephone": "+49-30-000000",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Musterstraße 1",
-        "postalCode": "20095",
-        "addressLocality": "Hamburg",
+        "postalCode": "10115",
+        "addressLocality": "Berlin",
         "addressCountry": "DE"
       },
       "vatID": "DE000000000",

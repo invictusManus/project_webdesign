@@ -35,7 +35,7 @@ Status: pass · fail · n/a · not verified. Severity per QA-10.
 
 | Rule | Status | Evidence | Severity | Fix | Owner | Due |
 |---|---|---|---|---|---|---|
-| SEO-08 | fail | `/preise/` returns 200 with home content | P1 | 301 to `/pricing/` | | |
+| SEO-08 | fail | `/old-page/` returns 200 with home-page content | P1 | 301 to `/new-page/` | | |
 | | | | | | | |
 
 ## 5. Action plan
