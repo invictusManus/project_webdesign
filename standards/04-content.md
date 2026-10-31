@@ -1,5 +1,7 @@
 # 04 · Content
 
+**Why it matters:** Content is why people visit and why search engines and AI cite you. Pages that add original value from identifiable experts outperform generic text. Guide: Phase 3.
+
 Scope: content strategy, topic clusters, E-E-A-T, copywriting, media, AI-assisted content, governance. Per-page planning: [`content-brief.md`](../templates/content-brief.md).
 
 Last verified: 2026-10

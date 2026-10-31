@@ -1,5 +1,7 @@
 # 11 · Measurement & monitoring
 
+**Why it matters:** Without measurement you can't know what works. Search Console shows how Google sees the site, analytics shows what visitors do, and monitoring tells you when something breaks. Guide: steps 8, 28 and 37.
+
 Scope: Search Console, Bing Webmaster Tools, GA4, Google Tag Manager, conversion tracking, Merchant Center, uptime/error monitoring, dashboards. The legal side of consent is in [`10-security-privacy.md`](10-security-privacy.md); AI-visibility measurement is in [`06-geo-aeo.md`](06-geo-aeo.md); the recurring routine is in [`checklists/3-monitoring.md`](../checklists/3-monitoring.md).
 
 Last verified: 2026-10

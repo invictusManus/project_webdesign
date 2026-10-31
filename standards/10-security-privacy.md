@@ -1,5 +1,7 @@
 # 10 · Security, privacy & legal
 
+**Why it matters:** Security protects visitors and the site from abuse; privacy law decides what you may collect and how. In the EU, mistakes here lead to fines and warning letters. Guide: steps 10, 27 and 28.
+
 Scope: transport security, headers, application security (OWASP Top 10:2025), supply chain, privacy (GDPR, TDDDG), consent, legal pages, AI transparency. Rules tagged [EU] are requirements, not legal advice.
 
 Last verified: 2026-10

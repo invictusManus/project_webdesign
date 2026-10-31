@@ -1,5 +1,7 @@
 # 08 · Performance
 
+**Why it matters:** Faster pages keep more visitors and convert better. Core Web Vitals measure what real users experience, and Google's ranking systems use them. Guide: step 26.
+
 Scope: Core Web Vitals, budgets, images, fonts, JavaScript, network and caching.
 
 Last verified: 2026-10

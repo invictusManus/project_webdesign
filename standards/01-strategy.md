@@ -1,5 +1,7 @@
 # 01 · Strategy & competition
 
+**Why it matters:** A website without a defined audience, offer and goal can't be designed, written or measured well. This research decides which pages exist and what each must achieve. Guide: Phase 1.
+
 Scope: goals, audiences, positioning, competitors, search demand and intent, page priorities. Output: [`project-brief.md`](../templates/project-brief.md) and [`url-map.csv`](../templates/url-map.csv).
 
 Last verified: 2026-10

@@ -1,5 +1,7 @@
 # 07 · Technical foundation
 
+**Why it matters:** The technical foundation decides speed, security, editability and how easily the site can change later. Most rules here are cheap at the start and expensive to retrofit. Guide: steps 9, 21 and 29.
+
 Scope: HTML/CSS/JS baseline, rendering, hosting, environments, domain, DNS, email, integrations (CMS, forms, APIs, third parties), maintenance and handover. Security headers and TLS: [`10-security-privacy.md`](10-security-privacy.md).
 
 Last verified: 2026-10

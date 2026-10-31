@@ -1,5 +1,7 @@
 # 06 · GEO & AEO (AI search)
 
+**Why it matters:** A growing share of searches end in an AI-generated answer. Being cited there depends on the same indexable pages as SEO, plus a consistent brand identity and citable facts. Guide: step 40.
+
 Scope: visibility and citations in AI answers (Google AI Overviews and AI Mode, ChatGPT, Perplexity, Copilot, Gemini, Claude): eligibility, crawler policy, entities, citable content, off-site signals, measurement. Google's position: optimizing for generative AI search is SEO, and no special files or markup are needed. Clean SEO ([`05-seo.md`](05-seo.md)) comes first.
 
 Last verified: 2026-10

@@ -1,5 +1,7 @@
 # 05 · SEO
 
+**Why it matters:** SEO makes sure search engines can crawl, understand and rank your pages. Most of it is technical hygiene done once, plus one clear purpose per page. Guide: steps 23–25.
+
 Scope: crawling, indexing, on-page, internal links, off-page, local, spam policies, migrations. AI search: [`06-geo-aeo.md`](06-geo-aeo.md). Multilingual: [`12-i18n.md`](12-i18n.md).
 
 Last verified: 2026-10

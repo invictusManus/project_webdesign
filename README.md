@@ -1,13 +1,16 @@
 # Website Foundation
 
-A compact, stack-agnostic blueprint for building and optimizing professional websites: strategy, design, UX, content, SEO, GEO/AEO, tech, performance, accessibility, security, privacy, measurement, internationalization and QA.
+A complete web design 101: a stack-agnostic guide and blueprint for building and optimizing professional websites. It covers strategy, design, UX, content, SEO, GEO/AEO, tech, performance, accessibility, security, privacy, measurement, internationalization and QA.
 
-It is not a tutorial and not a website. Every file is a rule set, a checklist or a template you can apply directly, by hand or through an AI coding agent.
+There are two layers:
+- **Learn:** [`GUIDE.md`](GUIDE.md) walks you from zero to launch to growth in 41 steps, explaining why each step matters. [`GLOSSARY.md`](GLOSSARY.md) explains the terms.
+- **Apply:** the standards, checklists and templates hold the testable rules, which you can apply by hand or through an AI coding agent.
 
 ## How to use
 
 | Goal | Start with |
 |---|---|
+| Learn web design from scratch | [`GUIDE.md`](GUIDE.md) + [`GLOSSARY.md`](GLOSSARY.md) |
 | Build a new website | [`checklists/1-preflight.md`](checklists/1-preflight.md) → standards → [`checklists/2-launch.md`](checklists/2-launch.md) |
 | Audit or optimize an existing site | [`checklists/2-launch.md`](checklists/2-launch.md) as audit sheet + [`templates/audit-report.md`](templates/audit-report.md) |
 | Relaunch or migrate a site | [`checklists/2-launch.md`](checklists/2-launch.md) § D + [`templates/url-map.csv`](templates/url-map.csv) |
@@ -44,7 +47,7 @@ Every rule exists exactly once, in `standards/`, with a stable ID:
 ## Contents
 
 ```
-README.md · AGENTS.md · TOOLS.md
+README.md · GUIDE.md · GLOSSARY.md · AGENTS.md · TOOLS.md
 standards/   01-strategy · 02-brand-design · 03-ux · 04-content · 05-seo · 06-geo-aeo · 07-tech
              08-performance · 09-accessibility · 10-security-privacy · 11-measurement · 12-i18n · 13-qa
              site-types

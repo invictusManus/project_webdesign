@@ -1,5 +1,7 @@
 # 02 · Brand & design
 
+**Why it matters:** Visitors judge credibility in seconds, mostly from visual quality and consistency. A documented brand plus design tokens keep every page consistent and make changes cheap. Guide: steps 11–13.
+
 Scope: corporate identity, design tokens, color, typography, layout, components, motion, imagery, brand assets. The brand spec lives in [`DESIGN.md`](../templates/DESIGN.md) and the values in [`tokens.json`](../templates/tokens.json).
 
 Last verified: 2026-10

@@ -1,5 +1,7 @@
 # 09 · Accessibility
 
+**Why it matters:** Accessible sites work for everyone: the roughly one in six people with a significant disability, keyboard users, older users, people on small screens. In the EU it is a legal requirement for many sites. Guide: steps 16, 22 and 32.
+
 Scope: WCAG 2.2 AA, EU accessibility law, semantics, perception, operation, understanding, testing.
 
 Last verified: 2026-10
