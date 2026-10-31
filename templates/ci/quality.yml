@@ -29,7 +29,7 @@ jobs:
 
       - name: No placeholders in output (QA-09)
         run: |
-          if grep -rIinE --include='*.html' 'lorem|\bTODO\b|FIXME|example\.com' dist || grep -rIn --include='*.html' 'XXX' dist; then
+          if grep -rIinE --include='*.html' 'lorem|\bTODO\b|FIXME|example\.com' dist || grep -rInE --include='*.html' 'XXX|REPLACE-' dist; then
             echo "Placeholder text found"; exit 1
           fi
 

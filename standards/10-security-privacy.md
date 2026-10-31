@@ -2,6 +2,8 @@
 
 **Why it matters:** Security protects visitors and the site from abuse; privacy law decides what you may collect and how. In the EU, mistakes here lead to fines and warning letters. Guide: steps 10, 27 and 28.
 
+Detail: `reference/google-search/` notes.
+
 Scope: transport security, headers, application security (OWASP Top 10:2025), supply chain, privacy (GDPR, TDDDG), consent, legal pages, AI transparency. Rules tagged [EU] are requirements, not legal advice.
 
 Last verified: 2026-10
@@ -29,11 +31,14 @@ Last verified: 2026-10
 | SEC-12 | MUST | State-changing requests are protected against CSRF (SameSite cookies plus a token for authenticated actions) and are rate-limited. | DAST; manual |
 | SEC-13 | MUST | If the site has user accounts, follow NIST SP 800-63B-4: passwords ≥ 15 characters without MFA or ≥ 8 with MFA, maximum ≥ 64, no composition rules, no forced rotation. Check against breached-password lists, hash with Argon2id, give generic login errors and offer MFA. | Auth review |
 | SEC-14 | MUST | Supply chain (OWASP A03): committed lockfile, frozen installs in CI, dependency vulnerability scan and secret scan in CI, 2FA on Git, registry, hosting and DNS accounts. | CI logs; account settings |
-| SEC-15 | MUST | Critical security patches for CMS, plugins and runtime ship within 48 hours, all others within 7 days. | Patch log |
+| SEC-15 | MUST | Critical security patches for CMS, plugins and runtime ship within 48 hours, all others within 7 days. Every CMS, plugin, forum and blog (even forgotten ones) is inventoried with its version. Servers are reached by SSH/SFTP, never FTP or telnet. | Patch log; software inventory |
 | SEC-16 | SHOULD | Third-party scripts are self-hosted or pinned with Subresource Integrity. | Source review |
 | SEC-17 | SHOULD | Errors fail closed and never expose stack traces. Security events (logins, admin changes) are logged without unnecessary personal data and alert on anomalies. | Error page test; log review |
 | SEC-18 | SHOULD | Publish `/.well-known/security.txt` (RFC 9116) with `Contact` and an `Expires` date less than a year ahead. Template: [`security.txt`](../templates/security.txt). | Fetch the file |
 | SEC-19 | SHOULD | Before launch, a DAST baseline scan (e.g. ZAP) shows no high-risk findings. | Scan report |
+| SEC-20 | SHOULD | Hack detection: Search Console messages are forwarded to a monitored mailbox, the Security issues and Manual actions reports stay clean, and `site:example.com` plus spam terms (e.g. `casino`) is checked monthly for injected pages. Logs are watched for open-redirect abuse (`=http:` or `=//` parameters, spikes on redirect URLs). | GSC Security issues; `site:` query; log review |
+| SEC-21 | SHOULD | Incident runbook for a flagged site: review the Search Console owner list for unknown owners, open the flagged sample URLs from a machine outside the site's network and refresh several times, fix every cause, then request one review. Never toggle between clean and compromised states (Safe Browsing Repeat Offenders get no review requests for 30 days). | Tabletop exercise; GSC Security issues |
+| SEC-22 | SHOULD | Embedded ads and third-party components are vetted: deceptive ads or pop-up redirects count against the host page. Hosted payment, booking or login pages run by a third party show that party's brand on every page and state the relationship (social-engineering flag). | Security issues report; page review |
 
 ## Privacy & consent
 
@@ -63,6 +68,7 @@ Last verified: 2026-10
 - [OWASP Top 10:2025](https://owasp.org/Top10/) · [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/) · [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 - [MDN: HTTP security headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) · [MDN HTTP Observatory](https://developer.mozilla.org/en-US/observatory)
 - [BSI TR-02102-2 (TLS)](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/TechnischeRichtlinien/TR02102/BSI-TR-02102-2.html) · [RFC 9116 security.txt](https://www.rfc-editor.org/rfc/rfc9116)
+- [Google: Prevent malware](https://developers.google.com/search/docs/monitor-debug/security/prevent-malware) · [Social engineering](https://developers.google.com/search/docs/monitor-debug/security/social-engineering) · [Repeat Offenders](https://developers.google.com/search/docs/monitor-debug/security/safe-browsing-repeat-offenders) · [`site:` operator](https://developers.google.com/search/docs/monitor-debug/search-operators/all-search-site)
 - [NIST SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html)
 - [TDDDG §25](https://www.gesetze-im-internet.de/ttdsg/__25.html) · [DSK Orientierungshilfe Digitale Dienste](https://www.datenschutzkonferenz-online.de/media/oh/OH_Digitale_Dienste.pdf)
 - [Google: Consent mode](https://developers.google.com/tag-platform/security/guides/consent) · [Google CMP partner program](https://cmppartnerprogram.withgoogle.com/)

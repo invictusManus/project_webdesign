@@ -1,11 +1,15 @@
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   "@id": "https://www.example.com/locations/berlin/#localbusiness",
   "name": "Example Berlin",
   "url": "https://www.example.com/locations/berlin/",
-  "image": "https://www.example.com/images/berlin-office.jpg",
-  "telephone": "+49-30-000000",
+  "image": [
+    "https://www.example.com/images/berlin-office-1x1.jpg",
+    "https://www.example.com/images/berlin-office-4x3.jpg",
+    "https://www.example.com/images/berlin-office-16x9.jpg"
+  ],
+  "telephone": "+49-30-REPLACE",
   "priceRange": "€€",
   "address": {
     "@type": "PostalAddress",
@@ -14,7 +18,7 @@
     "addressLocality": "Berlin",
     "addressCountry": "DE"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": 52.5200, "longitude": 13.4050 },
+  "geo": { "@type": "GeoCoordinates", "latitude": 52.52001, "longitude": 13.40501 },
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -24,5 +28,5 @@
     }
   ],
   "parentOrganization": { "@id": "https://www.example.com/#organization" },
-  "sameAs": ["https://maps.google.com/?cid=0000000000000000000"]
+  "sameAs": ["https://maps.google.com/?cid=REPLACE"]
 }

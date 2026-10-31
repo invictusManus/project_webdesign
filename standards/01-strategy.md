@@ -2,6 +2,8 @@
 
 **Why it matters:** A website without a defined audience, offer and goal can't be designed, written or measured well. This research decides which pages exist and what each must achieve. Guide: Phase 1.
 
+Detail: `reference/google-search/` notes.
+
 Scope: goals, audiences, positioning, competitors, search demand and intent, page priorities. Output: [`project-brief.md`](../templates/project-brief.md) and [`url-map.csv`](../templates/url-map.csv).
 
 Last verified: 2026-10
@@ -20,9 +22,11 @@ Last verified: 2026-10
 | STR-10 | SHOULD | On existing sites, capture a baseline before work starts: traffic, conversions, rankings, Core Web Vitals, indexed pages and backlinks. | Baseline export |
 | STR-11 | SHOULD | Record each target market's constraints: language, currency, legal requirements, payment and shipping norms. | Brief "Markets" |
 | STR-12 | COULD | Entity audit: how search engines and AI assistants describe the brand today (knowledge panel, AI answers), and the gap to the positioning statement. | Prompt sample; SERP |
+| STR-13 | SHOULD | SEO vendors get read-only Search Console access during audits, explain every change (especially with CMS or FTP access), and never guarantee rankings or sell "priority submit"; the site owner answers for their actions. Tool scores are heuristics: advice is checked against Google's documentation first. | GSC users list; vendor contract |
 
 ## Sources
 
 - [Google: SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)
 - [Google: Creating helpful, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- [Google: Do you need an SEO?](https://developers.google.com/search/docs/fundamentals/do-i-need-seo) · [Third-party SEO tools and advice](https://developers.google.com/search/docs/fundamentals/third-party-seo)
 - [Google: Keyword Planner](https://support.google.com/google-ads/answer/7337243)

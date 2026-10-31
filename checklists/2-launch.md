@@ -48,25 +48,36 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] TEC-19 CMS fields incl. required alt text
 - [ ] TEC-20 Third-party inventory complete
 - [ ] TEC-25 No end-of-life software
+- [ ] TEC-29 CDN, WAF and firewall let Googlebot through
 - [ ] SEO-01 Indexable URLs return 200 with content in HTML
 - [ ] SEO-02 Noindex, not robots.txt, for exclusions
 - [ ] SEO-03 robots.txt valid, lists sitemap
+- [ ] SEO-38 robots.txt served with 200 on every host
 - [ ] SEO-04 No staging leftovers on production
 - [ ] SEO-05 One canonical host, single 301s
 - [ ] SEO-06 Self-referencing canonicals
+- [ ] SEO-41 Canonical signals agree on one HTTPS URL
 - [ ] SEO-07 Clean XML sitemap
 - [ ] SEO-08 No soft 404s
 - [ ] SEO-09 Redirects one hop
 - [ ] SEO-10 Content and directives server-rendered
 - [ ] SEO-11 Crawlable links
+- [ ] SEO-39 Mobile content parity
+- [ ] SEO-40 Lazy content loads without interaction
 - [ ] SEO-15 Unique titles
 - [ ] SEO-16 Unique meta descriptions
 - [ ] SEO-17 One H1
 - [ ] SEO-21 Structured data valid and visible
+- [ ] SEO-46 Markup on crawlable pages, required properties, crawlable images
+- [ ] SEO-47 Honest review and rating markup
+- [ ] SEO-48 *(shop)* Product and Offer markup complete and matching the page
+- [ ] SEO-51 *(job pages)* JobPosting on leaf pages, expired jobs handled
+- [ ] SEO-52 *(paywalls)* Googlebot sees full content, paywall markup
 - [ ] SEO-22 No orphan pages
 - [ ] SEO-25 Zero broken internal links
 - [ ] SEO-27 No link schemes
 - [ ] SEO-33 Spam policies respected
+- [ ] SEO-57 Third-party and affiliate content integrated with original value
 - [ ] SEO-29 *(local)* Business Profile verified and clean
 - [ ] SEO-30 *(local)* NAP identical everywhere
 
@@ -80,6 +91,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] PRF-12 No render-blocking scripts
 - [ ] PRF-13 Third parties after consent or interaction
 - [ ] PRF-17 Immutable asset caching
+- [ ] PRF-22 No HTML, CSS or JS file over 2 MB
 
 ### Accessibility
 - [ ] A11Y-01 WCAG 2.2 AA target met
@@ -164,7 +176,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 
 ## B · Launch day
 
-- [ ] Lower DNS TTL 48 h before (TEC-14), switch DNS, then confirm HTTPS and host redirects (SEO-05)
+- [ ] Lower DNS TTL at least 7 days before (TEC-14), switch DNS, then confirm HTTPS and host redirects (SEO-05)
 - [ ] Production has no `noindex`, no `Disallow: /` and no password (SEO-04)
 - [ ] Submit the sitemap (MSR-02); inspect key pages and request indexing (MSR-03)
 - [ ] Set up Bing Webmaster Tools and IndexNow (MSR-04)

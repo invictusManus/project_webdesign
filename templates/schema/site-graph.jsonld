@@ -5,6 +5,7 @@
       "@type": "Organization",
       "@id": "https://www.example.com/#organization",
       "name": "Example",
+      "alternateName": ["EX", "example.com"],
       "legalName": "Example GmbH",
       "url": "https://www.example.com/",
       "logo": {
@@ -15,7 +16,7 @@
       },
       "description": "One sentence that says what the organization does and for whom. Use the same wording everywhere.",
       "email": "hello@example.com",
-      "telephone": "+49-30-000000",
+      "telephone": "+49-30-REPLACE",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Musterstraße 1",
@@ -23,9 +24,9 @@
         "addressLocality": "Berlin",
         "addressCountry": "DE"
       },
-      "vatID": "DE000000000",
+      "vatID": "REPLACE-VAT-ID",
       "sameAs": [
-        "https://www.wikidata.org/wiki/Q000000",
+        "https://www.wikidata.org/wiki/REPLACE-Q-ID",
         "https://www.linkedin.com/company/example"
       ]
     },
@@ -34,6 +35,7 @@
       "@id": "https://www.example.com/#website",
       "url": "https://www.example.com/",
       "name": "Example",
+      "alternateName": ["EX", "example.com"],
       "inLanguage": "en",
       "publisher": { "@id": "https://www.example.com/#organization" }
     },

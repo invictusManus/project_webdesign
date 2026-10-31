@@ -2,9 +2,10 @@
 
 A complete web design 101: a stack-agnostic guide and blueprint for building and optimizing professional websites. It covers strategy, design, UX, content, SEO, GEO/AEO, tech, performance, accessibility, security, privacy, measurement, internationalization and QA.
 
-There are two layers:
+There are three layers:
 - **Learn:** [`GUIDE.md`](GUIDE.md) walks you from zero to launch to growth in 41 steps, explaining why each step matters. [`GLOSSARY.md`](GLOSSARY.md) explains the terms.
 - **Apply:** the standards, checklists and templates hold the testable rules, which you can apply by hand or through an AI coding agent.
+- **Reference:** [`reference/google-search/`](reference/google-search/) condenses every page of Google's Search and crawling documentation (184 pages) into notes. It holds every property, limit and exception behind the SEO rules.
 
 ## How to use
 
@@ -17,6 +18,7 @@ There are two layers:
 | Let an AI agent work on a website repo | Copy [`templates/AGENTS.md`](templates/AGENTS.md) into that repo |
 | Operate and grow a live site | [`checklists/3-monitoring.md`](checklists/3-monitoring.md) |
 | Pick tools | [`TOOLS.md`](TOOLS.md) |
+| Look up what Google says about any SEO topic | [`reference/google-search/`](reference/google-search/README.md) |
 
 ## Lifecycle
 
@@ -55,7 +57,8 @@ checklists/  1-preflight · 2-launch · 3-monitoring
 templates/   project-brief · content-brief · audit-report · url-map.csv · AGENTS · DESIGN · tokens.json
              head.html · robots.txt · _headers · security.txt · consent-default.html
              schema/ (site graph, local business, article, product) · ci/ (quality workflow, Lighthouse CI)
-scripts/     check.sh (rule ID consistency)
+reference/   google-search/ (notes on all 184 Google Search documentation pages)
+scripts/     check.sh (rule IDs, checklist coverage, reference coverage)
 ```
 
 ## Coverage
@@ -66,8 +69,8 @@ scripts/     check.sh (rule ID consistency)
 | Branding & design | `02-brand-design`, `templates/DESIGN.md`, `templates/tokens.json` |
 | UX/UI & conversion | `03-ux` |
 | Content, E-E-A-T & media | `04-content` |
-| SEO (technical, on-page, off-page, local, migration) | `05-seo` |
-| GEO & AEO (AI search) | `06-geo-aeo` |
+| SEO (technical, on-page, off-page, local, migration) | `05-seo`, `reference/google-search/` |
+| GEO & AEO (AI search) | `06-geo-aeo`, `reference/google-search/` |
 | Technical foundation, hosting, domains, DNS, integrations | `07-tech` |
 | Performance & Core Web Vitals | `08-performance` |
 | Accessibility | `09-accessibility` |

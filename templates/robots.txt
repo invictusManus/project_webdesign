@@ -1,10 +1,20 @@
-# robots.txt template. Replace www.example.com. Rules: SEO-03, GEO-03 (AI crawler policy).
+# robots.txt template. Replace www.example.com. Rules: SEO-03, SEO-38, GEO-03 (AI crawler policy).
+# Serve it with 200 at the root of every host (subdomains, other ports need their own). Never use it to hide private content.
 # Google honors only user-agent, allow, disallow and sitemap. Never use robots.txt to deindex (SEO-02).
 # A crawler that matches a named group ignores the "*" group, so repeat shared rules in named groups.
+# "*" does not match AdsBot crawlers: name AdsBot-Google (and AdsBot-Google-Mobile) explicitly if they need rules.
 
 User-agent: *
 Disallow: /api/
-# Keep CSS, JS and images crawlable.
+# State-changing and internal-search URLs (SEO-03). Uncomment the paths that exist; mind prefix matches.
+# Disallow: /cart
+# Disallow: /checkout
+# Disallow: /account
+# Disallow: /*?s=
+# Facets and sorting not meant to rank (SEO-13), for example:
+# Disallow: /*?*sort=
+# Disallow: /*?*color=
+# Keep CSS, JS, images and render-critical APIs crawlable.
 
 # AI search and user-initiated fetches (citations in ChatGPT, Claude, Perplexity) fall under "*" above.
 # Recommended: keep them allowed. OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot.

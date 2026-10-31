@@ -2,6 +2,8 @@
 
 **Why it matters:** Visitors judge credibility in seconds, mostly from visual quality and consistency. A documented brand plus design tokens keep every page consistent and make changes cheap. Guide: steps 11–13.
 
+Detail: `reference/google-search/` notes.
+
 Scope: corporate identity, design tokens, color, typography, layout, components, motion, imagery, brand assets. The brand spec lives in [`DESIGN.md`](../templates/DESIGN.md) and the values in [`tokens.json`](../templates/tokens.json).
 
 Last verified: 2026-10
@@ -17,7 +19,7 @@ Last verified: 2026-10
 | DES-07 | SHOULD | Each component is built once and reused, in the design library and in code. No one-off variants without review. | Library usage report |
 | DES-08 | SHOULD | Motion has a purpose: UI transitions take 150–300 ms and animate only `transform` and `opacity`, with a reduced-motion variant (A11Y-10). | Performance panel; OS setting |
 | DES-09 | SHOULD | Prefer authentic imagery (own team, products, customers) over stock. Art direction, aspect ratios and focal points are defined; image licenses are recorded (TEC-27). | Asset register |
-| DES-10 | MUST | Brand assets: SVG logo, favicon set (ICO 32 px, SVG, 180 px apple-touch icon, manifest icons 192 and 512 px), and a default plus per-page Open Graph image (1200×630). | [`head.html`](../templates/head.html) links resolve |
+| DES-10 | MUST | Brand assets: SVG logo; favicon set declared on the home page, one per hostname, at a stable URL that Googlebot-Image may crawl: a square ICO containing ≥ 48 px images plus a 192 px PNG (Google recommends larger than 48×48 and lists BMP, GIF, ICO, PNG, JPEG, PPM, TIFF, not SVG; an SVG icon is an optional extra); 180 px apple-touch icon; manifest icons 192 and 512 px; and a default plus per-page Open Graph image (≥ 1200 px wide, 16:9: 1200×675, SEO-19). | [`head.html`](../templates/head.html) links resolve; URL Inspection on the home page |
 | DES-11 | SHOULD | Before launch, production CSS is checked against `DESIGN.md`: no colors, font sizes or spacings outside the tokens. | CSS audit |
 | DES-12 | COULD | Dark mode follows `prefers-color-scheme` and offers a user toggle. | Manual check |
 
@@ -25,4 +27,5 @@ Last verified: 2026-10
 
 - [W3C DTCG: Design Tokens Format Module 2025.10](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/)
 - [MDN: Using CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) · [MDN: clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp)
+- [Google: Favicons in Search](https://developers.google.com/search/docs/appearance/favicon-in-search)
 - [web.dev: Manifest](https://web.dev/learn/pwa/web-app-manifest) · [MDN: prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)

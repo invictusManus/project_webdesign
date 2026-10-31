@@ -2,6 +2,8 @@
 
 **Why it matters:** Faster pages keep more visitors and convert better. Core Web Vitals measure what real users experience, and Google's ranking systems use them. Guide: step 26.
 
+Detail: `reference/google-search/` notes.
+
 Scope: Core Web Vitals, budgets, images, fonts, JavaScript, network and caching.
 
 Last verified: 2026-10
@@ -15,6 +17,7 @@ Last verified: 2026-10
 | PRF-03 | SHOULD | Key templates score ≥ 90 for Lighthouse mobile performance. | Lighthouse CI |
 | PRF-04 | SHOULD | Budgets per page: ≤ 1.5 MB transferred (landing pages ≤ 500 KB), ≤ 170 KB compressed JavaScript on content pages, TTFB ≤ 0.8 s at p75. | Lighthouse; WebPageTest |
 | PRF-05 | SHOULD | Real-user Core Web Vitals are collected per template (web-vitals library → analytics or RUM tool). | RUM dashboard |
+| PRF-22 | MUST | No HTML, CSS or JS file exceeds 2 MB uncompressed: Googlebot reads only the first 2 MB of each file (64 MB for PDFs) and ignores the rest. | Crawler file-size report; DevTools uncompressed size |
 
 ## Images & media
 
@@ -22,8 +25,8 @@ Last verified: 2026-10
 |---|---|---|---|
 | PRF-06 | MUST | Images are AVIF or WebP (`<picture>` fallback if needed), resized to their display size with `srcset`/`sizes`, and compressed. | Lighthouse image audits |
 | PRF-07 | MUST | Every `<img>`, `<video>` and `<iframe>` reserves its space with `width`/`height` or CSS `aspect-ratio`. | Lighthouse CLS diagnostics |
-| PRF-08 | MUST | The LCP image is in the initial HTML, never lazy-loaded, with `fetchpriority="high"`. Below-the-fold images use `loading="lazy"`. | Lighthouse "LCP request discovery" |
-| PRF-09 | SHOULD | No autoplaying hero video on mobile. Videos use a poster image and `preload="none"`. Third-party players load as placeholders (TEC-21). | Network panel |
+| PRF-08 | MUST | The LCP image is in the initial HTML, never lazy-loaded, with `fetchpriority="high"`. Below-the-fold images use `loading="lazy"` (SEO-40). | Lighthouse "LCP request discovery" |
+| PRF-09 | SHOULD | No autoplaying hero video on mobile. Videos use a poster image and `preload="none"`. Secondary third-party players load as placeholders (TEC-21); videos meant to rank do not wait for a click (SEO-45). | Network panel |
 
 ## Fonts
 
@@ -58,4 +61,5 @@ Last verified: 2026-10
 - [web.dev: LCP and INP now Baseline](https://web.dev/blog/lcp-and-inp-are-now-baseline-newly-available)
 - [web.dev: Font best practices](https://web.dev/articles/font-best-practices) · [Fetch priority](https://web.dev/articles/fetch-priority) · [bfcache](https://web.dev/articles/bfcache)
 - [Chrome: Prerender pages](https://developer.chrome.com/docs/web-platform/prerender-pages)
+- [Google: Googlebot file size limits](https://developers.google.com/search/docs/crawling-indexing/googlebot) · [Video best practices](https://developers.google.com/search/docs/appearance/video)
 - [Chrome: Lighthouse overview](https://developer.chrome.com/docs/lighthouse/overview)

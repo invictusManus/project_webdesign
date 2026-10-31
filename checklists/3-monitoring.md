@@ -19,10 +19,14 @@ Recurring checks for a live site. Each item names the rule it keeps true. Record
 - [ ] Dependency and CMS updates merged (TEC-25, SEC-15)
 - [ ] Broken internal links fixed (SEO-25)
 - [ ] New backlinks and brand mentions reviewed (SEO-26, GEO-10)
+- [ ] Search Console data exported and changes logged (MSR-26); clicks vs. organic sessions compared by trend (MSR-29)
+- [ ] Spam check: `site:` plus spam terms, Security issues, forwarded GSC messages (SEC-20)
+- [ ] After template releases: rich result, Merchant listings and Video reports (MSR-27)
 
 ## Quarterly
 
-- [ ] Content decay: update, merge or remove (CON-13)
+- [ ] Content decay: improve first, merge or remove only the unsalvageable (CON-13)
+- [ ] Crawl stats with Page indexing; Google-selected vs. declared canonicals (MSR-28)
 - [ ] Backlink profile review (SEO-28)
 - [ ] Security headers and TLS re-checked (SEC-01, SEC-03); DAST baseline scan (SEC-19)
 - [ ] Accessibility regression: automated scan plus manual spot check of one core flow (A11Y-23, A11Y-24)
@@ -45,7 +49,10 @@ Default thresholds; tune them per site.
 
 | Signal | Threshold | First action |
 |---|---|---|
-| Organic clicks drop | > 20 % week over week, not seasonal | Check indexing, manual actions, Google updates, tracking; crawl (QA-08) |
+| Organic clicks drop | > 20 % week over week, not seasonal | Triage per MSR-30 (anomalies, ranking updates, seasonality, search type), then indexing, manual actions, tracking; crawl (QA-08) |
+| Impressions stable, clicks down | Sustained | Review titles and snippets (SEO-15, SEO-16); check rich-result competitors |
+| Crawl stats: `5xx`, host unavailable, response time up | Any | Check server, CDN and WAF rules for Googlebot (TEC-29, TEC-30) |
+| Core update finished | Rollout end date | Wait a full week, compare with the week before it began (MSR-30) |
 | Indexed pages change | > 10 % up or down | Check noindex, canonicals, soft 404s, spam URLs (SEO-02, SEO-06, SEO-08) |
 | Conversion rate drop | > 15 % vs. 4-week average | Test forms and checkout end to end; verify key events (TEC-17, MSR-08) |
 | Core Web Vital not "good" | Any metric on any template | Apply the matching performance rules; re-test (PRF-01) |

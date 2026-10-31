@@ -2,10 +2,14 @@
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "@id": "https://www.example.com/blog/post-slug/#article",
-  "headline": "Article headline, same as the H1",
+  "headline": "Concise headline, same as the H1",
   "description": "Same text as the meta description.",
-  "image": ["https://www.example.com/images/post-16x9.jpg"],
-  "datePublished": "2026-10-01T09:00:00+02:00",
+  "image": [
+    "https://www.example.com/images/post-1x1.jpg",
+    "https://www.example.com/images/post-4x3.jpg",
+    "https://www.example.com/images/post-16x9.jpg"
+  ],
+  "datePublished": "2026-10-27T09:00:00+01:00",
   "dateModified": "2026-10-31T09:00:00+01:00",
   "inLanguage": "en",
   "author": {
@@ -16,6 +20,10 @@
     "url": "https://www.example.com/team/jane-doe/",
     "sameAs": ["https://www.linkedin.com/in/janedoe"]
   },
-  "publisher": { "@id": "https://www.example.com/#organization" },
-  "mainEntityOfPage": { "@id": "https://www.example.com/blog/post-slug/#webpage" }
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.example.com/#organization",
+    "name": "Example"
+  },
+  "mainEntityOfPage": "https://www.example.com/blog/post-slug/"
 }

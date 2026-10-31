@@ -28,5 +28,13 @@ for f in standards/[0-9]*.md; do
   grep -q '^Last verified: ' "$f" || err "$f has no 'Last verified:' line"
 done
 
+# Every Google doc page in the reference index has notes
+idx=reference/google-search/README.md
+if [ -f "$idx" ]; then
+  for u in $(grep -oE '\| \[[^]]+\]\(https://developers\.google\.com/[^)]+\)' "$idx" | sed -E 's/.*\((.*)\)/\1/' | sort -u); do
+    grep -qE "${u//./\\.}([^a-z0-9/-]|$)" reference/google-search/[0-9]*.md 2>/dev/null || err "no notes for $u"
+  done
+fi
+
 [ "$fail" -eq 0 ] && echo "OK: $(wc -l <<<"$defined" | tr -d ' ') rules, $(wc -l <<<"$musts" | tr -d ' ') MUST, all referenced and listed"
 exit "$fail"

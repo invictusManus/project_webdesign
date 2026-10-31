@@ -1,37 +1,68 @@
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "@id": "https://www.example.com/products/sku-123/#product",
-  "name": "Product name",
-  "description": "Visible product description.",
-  "image": ["https://www.example.com/images/sku-123-1x1.jpg"],
-  "sku": "SKU-123",
-  "gtin13": "0000000000000",
-  "brand": { "@type": "Brand", "name": "Example" },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.example.com/products/sku-123/",
-    "price": "49.90",
-    "priceCurrency": "EUR",
-    "availability": "https://schema.org/InStock",
-    "itemCondition": "https://schema.org/NewCondition",
-    "shippingDetails": {
-      "@type": "OfferShippingDetails",
-      "shippingRate": { "@type": "MonetaryAmount", "value": "4.90", "currency": "EUR" },
-      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "DE" },
-      "deliveryTime": {
-        "@type": "ShippingDeliveryTime",
-        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
-        "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" }
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://www.example.com/products/sku-123/#product",
+      "name": "Product name",
+      "description": "Visible product description.",
+      "image": [
+        "https://www.example.com/images/sku-123-1x1.jpg",
+        "https://www.example.com/images/sku-123-4x3.jpg",
+        "https://www.example.com/images/sku-123-16x9.jpg"
+      ],
+      "sku": "SKU-123",
+      "mpn": "REPLACE-MPN",
+      "gtin13": "REPLACE-GTIN13-OR-DELETE-THIS-LINE",
+      "brand": { "@type": "Brand", "name": "Example" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.example.com/products/sku-123/",
+        "price": "49.90",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "hasMerchantReturnPolicy": { "@id": "https://www.example.com/shipping-returns/#return-policy" },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "hasShippingService": { "@id": "https://www.example.com/shipping-returns/#shipping-service" }
+        }
       }
     },
-    "hasMerchantReturnPolicy": {
-      "@type": "MerchantReturnPolicy",
-      "applicableCountry": "DE",
-      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-      "merchantReturnDays": 14,
-      "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/FreeReturn"
+    {
+      "@type": ["Organization", "OnlineStore"],
+      "@id": "https://www.example.com/#organization",
+      "name": "Example",
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "@id": "https://www.example.com/shipping-returns/#return-policy",
+        "applicableCountry": "DE",
+        "returnPolicyCountry": "DE",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 14,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/FreeReturn"
+      },
+      "hasShippingService": {
+        "@type": "ShippingService",
+        "@id": "https://www.example.com/shipping-returns/#shipping-service",
+        "name": "Standard shipping",
+        "fulfillmentType": "https://schema.org/FulfillmentTypeDelivery",
+        "handlingTime": {
+          "@type": "ServicePeriod",
+          "duration": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" }
+        },
+        "shippingConditions": {
+          "@type": "ShippingConditions",
+          "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "DE" },
+          "shippingRate": { "@type": "MonetaryAmount", "value": 4.90, "currency": "EUR" },
+          "transitTime": {
+            "@type": "ServicePeriod",
+            "duration": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 3, "unitCode": "DAY" }
+          }
+        }
+      }
     }
-  }
+  ]
 }

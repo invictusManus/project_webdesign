@@ -1,25 +1,27 @@
 <!doctype html>
-<!-- Document head template. Rules: TEC-01, SEO-06, SEO-15, SEO-16, SEO-19, PRF-11, PRF-12. Replace every … and example.com. -->
+<!-- Document head template. Rules: TEC-01, TEC-02, SEO-06, SEO-15, SEO-16, SEO-19, DES-10, PRF-11, PRF-12. Replace every … and example.com. -->
+<!-- Keep <head> to title, meta, link, script, style, base, noscript, template: anything else (iframe, img) ends head parsing for Google (TEC-02). -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Primary topic – Brand</title>
-  <meta name="description" content="One-sentence summary of this page, about 120–160 characters.">
+  <meta name="description" content="One-sentence summary of this page, about 120–160 characters (house heuristic; Google sets no limit).">
+  <meta name="robots" content="max-image-preview:large">
   <link rel="canonical" href="https://www.example.com/en/page/">
 
-  <!-- Multilingual sites only (standards/12-i18n.md): one line per language version + x-default. -->
+  <!-- Multilingual sites only (standards/12-i18n.md): one line per language version + x-default, no other attributes. -->
   <link rel="alternate" hreflang="en" href="https://www.example.com/en/page/">
   <link rel="alternate" hreflang="de" href="https://www.example.com/de/seite/">
   <link rel="alternate" hreflang="x-default" href="https://www.example.com/en/page/">
 
-  <!-- Social previews -->
+  <!-- Social previews. og:image: at least 1200 px wide, 16:9 (1200×675) where Discover matters, relevant (no logo) (SEO-19). -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Primary topic">
   <meta property="og:description" content="…">
   <meta property="og:url" content="https://www.example.com/en/page/">
   <meta property="og:locale" content="en_US">
-  <meta property="og:image" content="https://www.example.com/og/page.png">
+  <meta property="og:image" content="https://www.example.com/og/page-1200x675.png">
   <meta property="og:image:alt" content="…">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -28,13 +30,15 @@
   <link rel="stylesheet" href="/assets/site.abc123.css">
 
   <!-- Icons and manifest -->
-  <link rel="icon" href="/favicon.ico" sizes="32x32">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <!-- Favicon (DES-10): square, larger than 48x48; Google lists BMP, GIF, ICO, PNG, JPEG, PPM, TIFF (not SVG). Declare on the home page; keep the URL stable and crawlable. -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml"> <!-- optional extra for browsers -->
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- Structured data: paste the matching graph from templates/schema/. -->
+  <!-- Structured data: paste the matching graph from templates/schema/. Organization: full node only on the home or About page, other pages reference its @id. WebSite: home page only. WebPage and BreadcrumbList: per page. -->
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[]}</script>
 
   <!-- If Google tags are used: templates/consent-default.html goes here. -->

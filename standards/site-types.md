@@ -1,14 +1,14 @@
 # Site types
 
-Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MUST · **Relax** = rule applies in reduced form · **Add** = type-specific requirement. All rules not mentioned apply unchanged. Mixed sites (e.g. SaaS marketing site + blog) combine profiles.
+Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MUST · **Relax** = rule applies in reduced form · **Add** = type-specific requirement. All rules not mentioned apply unchanged. Mixed sites (e.g. SaaS marketing site + blog) combine profiles. Detail: `reference/google-search/` notes.
 
 ## Corporate & service business
 
 - **Goal / KPI:** qualified leads, calls, bookings.
 - **Rendering:** static.
 - **Schema:** Organization, LocalBusiness subtype per location, BreadcrumbList, JobPosting on career pages.
-- **Raise:** SEO-31 (sites with several locations), UX-08, UX-12.
-- **Add:** career pages with JobPosting markup. Google's Indexing API is allowed only for JobPosting and livestream (BroadcastEvent) pages.
+- **Raise:** SEO-31 and SEO-56 (sites with several locations), UX-08, UX-12.
+- **Add:** career pages with JobPosting markup (SEO-51). Google's Indexing API is allowed only for JobPosting and livestream (BroadcastEvent) pages.
 
 ## Landing page (campaign)
 
@@ -27,13 +27,14 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
 - **Raise:** CON-03, CON-13, GEO-07, GEO-08.
 - **Add:**
   - RSS/Atom feed, author archives, paginated archives (SEO-14).
-  - Large images ≥ 1200 px wide with `max-image-preview:large` for Discover.
+  - Discover: large 16:9 images and `max-image-preview:large` (SEO-19). Treat Discover as supplemental and watch its Search Console report.
+  - Paywalled content: SEO-52.
 
 ## SaaS
 
 - **Goal / KPI:** trials, sign-ups, demo requests, activation.
 - **Rendering:** the marketing site is static. The app runs client-side behind login, on its own subdomain or path.
-- **Schema:** SoftwareApplication, Organization.
+- **Schema:** SoftwareApplication (required: `name`, `offers.price` with `0` if free, and `aggregateRating` or `review`), Organization.
 - **Raise:** SEC-17, SEC-19, MSR-11 (for self-serve purchases), UX-14.
 - **Add:**
   - App and account areas send `noindex` (SEO-02).
@@ -45,12 +46,15 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
 
 - **Goal / KPI:** revenue, conversion rate, average order value.
 - **Rendering:** category and product pages prerendered or server-rendered; cart and checkout dynamic.
-- **Schema:** Product with Offer, shipping details and MerchantReturnPolicy; BreadcrumbList; Organization (`OnlineStore`).
-- **Raise:** SEO-13, SEO-14, MSR-11, SEC-16, QA-06.
+- **Schema:** Product with Offer (SEO-48), ProductGroup for variants (SEO-49), shipping and return policy under Organization (`OnlineStore`, SEO-50); BreadcrumbList.
+- **Raise:** SEO-13, SEO-14, SEO-49, SEO-50, MSR-11, SEC-16, QA-06.
 - **Add:**
   - Out of stock: keep the page and mark its availability. Discontinued for good: 301 to the successor, or 410.
   - Payments through hosted fields of a PCI DSS–compliant provider.
   - Product feed matches the page.
+  - Category pages link directly to every product to be indexed (Googlebot does not use site search). Empty categories get `noindex` or `404` (SEO-08).
+  - Before launch, protect the site with a password (not robots.txt), or launch with products out of stock. Never disable add-to-cart: Google uses it to verify price, tax and shipping. Sign up for Merchant Center and watch Page indexing.
+  - No markup promoting firearms, recreational drugs, tobacco, vaping or gambling products. Adult-oriented products carry `hasAdultConsideration`.
   - Accessibility law applies (A11Y-02), as do the e-commerce duties (PRV-12).
 
 ## Web application
