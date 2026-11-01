@@ -40,7 +40,7 @@ https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing/Markup
 - `citeturn0search0` (wrapped in Private Use Area Unicode) at sentence ends, with the number after "search" rising through the text; a shorter form with only a number in PUA characters; image sets as `iturn0image0turn0image1...`; rarer `citeturn0news0`, `citeturn1file0`, `cite` plus a generated identifier. First seen February 2025. Occasionally appears as a ref name such as `0search12`.
 - JSON tails: `({"attribution":{"attributableIndex":"X-Y"}})` with rising indices, often with caret-bracket sentence wrappers (`^[...]`).
 - Also `utm_source=chatgpt.com` inside URLs (see the main page's utm_source section).
-#### Gemini: [cite: 1], [span_1](start_span), HTML mark tags
+#### Gemini: `[cite: 1]`, `[span_1](start_span)`, HTML mark tags
 - Reference markers `[1, 2]` or `[3, 12, 13]`, sometimes `[cite: 2, 6]`, and `[span_1](start_span)` ... `[span_1](end_span)`. In VisualEditor, URLs may appear inside the brackets with the number.
 ##### Unusual text highlighting
 - Text pasted from Gemini into VisualEditor may be wrapped in `<mark>...</mark>` and render highlighted: a remnant of Gemini's "Double-check response" highlighting. Examples show whole descriptive phrases wrapped (`<mark>prominent Australian nun and educator</mark>`, `<mark>celebrated Pakistani Punjabi folk singer</mark>`).

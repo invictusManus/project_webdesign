@@ -36,5 +36,9 @@ if [ -f "$idx" ]; then
   done
 fi
 
+# Relative Markdown links resolve
+broken=$(python3 scripts/check_links.py)
+[ -z "$broken" ] || err "broken relative links: $(echo $broken)"
+
 [ "$fail" -eq 0 ] && echo "OK: $(wc -l <<<"$defined" | tr -d ' ') rules, $(wc -l <<<"$musts" | tr -d ' ') MUST, all referenced and listed"
 exit "$fail"
