@@ -81,6 +81,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] SEO-40 Lazy content loads without interaction
 - [ ] SEO-15 Unique titles
 - [ ] SEO-16 Unique meta descriptions
+- [ ] SEO-58 Alt text on every informative image
 - [ ] SEO-17 One H1
 - [ ] SEO-21 Structured data valid and visible
 - [ ] SEO-46 Markup on crawlable pages, required properties, crawlable images

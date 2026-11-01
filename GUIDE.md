@@ -163,7 +163,8 @@ Build on a solid, boring foundation. Every shortcut here shows up later as a ran
   - Clean up the sitemap and set up [`robots.txt`](templates/robots.txt).
   - Make 404s real 404s and redirects single 301s.
   - Give every host its own `robots.txt`, and make canonical tags, sitemap, internal links and redirects all point to the same URL.
-- Done: SEO-02 to SEO-09, SEO-15, SEO-16, SEO-38, SEO-41.
+  - Write alt text for every informative image, descriptive headings, and titles built from real page data. Block crawl waste such as internal search results.
+- Done: SEO-02 to SEO-09, SEO-15, SEO-16, SEO-38, SEO-41, SEO-58 to SEO-63.
 
 **Step 25 · Add structured data.**
 - Why: structured data tells machines what a page is about (your organization, an article, a product, a location). It powers rich results and helps AI identify you as an entity.
