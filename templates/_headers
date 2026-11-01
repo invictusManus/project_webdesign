@@ -16,7 +16,7 @@
 
 # Agent discovery (GEO-17): add Link headers on the home page for what exists, e.g.
 # /
-#   Link: </.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="describedby"; type="text/markdown"
+#   Link: </llms.txt>; rel="describedby"; type="text/plain", </index.md>; rel="alternate"; type="text/markdown", </.well-known/api-catalog>; rel="api-catalog"
 
 # Fingerprinted build output: cache for a year. Match your build tool's folder (e.g. /_astro/*, /_next/static/*).
 /assets/*
