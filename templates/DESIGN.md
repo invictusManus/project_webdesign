@@ -30,7 +30,10 @@ Files, clear space, minimum size, allowed backgrounds, forbidden uses.
 | Role | Token | Use |
 |---|---|---|
 | Text | `semantic.color.text.default` | Body copy |
+| Secondary text | `semantic.color.text.secondary` | Lead, meta, captions |
 | Muted text | `semantic.color.text.muted` | Secondary info, never for essential content |
+| Disabled text | `semantic.color.text.disabled` | Inactive controls only |
+| Text on accent | `semantic.color.text.on-accent` | Labels on primary buttons |
 | Primary action | `semantic.color.action.primary` | One primary call to action per view (UX-06) |
 | Focus | `semantic.color.focus` | Focus ring, 2 px, offset 2 px |
 | Status | `semantic.color.status.*` | Always with icon or text, never color alone (A11Y-07) |
@@ -40,13 +43,37 @@ Files, clear space, minimum size, allowed backgrounds, forbidden uses.
 | Role | Token | Notes |
 |---|---|---|
 | Body | `semantic.text.body` | 1 rem (16–18 px), line-height 1.6, 45–75 characters per line |
+| Display | `semantic.text.display` | Hero only, 3.33 rem desktop |
 | H1–H4 | `semantic.text.h1`…`h4` | Golden-ratio scale: H4 1.272, H3 1.618, H2 2.058, H1 2.618 rem (desktop), via `clamp()` |
+| H5 · H6 | `semantic.text.h5` · `h6` | 1 rem/600 · 0.786 rem/600 (DES-24) |
+| Eyebrow | `semantic.text.eyebrow` | 0.786 rem/600, +0.08 em, ≤ 3 words, not a heading |
+| Lead | `semantic.text.lead` | 1.272 rem/400, line-height 1.5, first paragraph only |
+| Small · caption | `semantic.text.small` · `caption` | 0.786 rem, never smaller |
+| Footer · legal | `semantic.text.footer` | 0.875 rem |
+
+Vertical rhythm (DES-25): space above a heading ≥ φ × space below it.
 
 Families: `primitive.font.family.sans`; weights: 400 body, 500–600 labels, 600–700 headings (DES-15).
 
 ## Layout & spacing
 
-Breakpoints, max content width, grid columns, spacing scale (`primitive.space.*`), section rhythm (`semantic.space.section`).
+| Tier | Width | Columns | Gutter | Margin | Section padding |
+|---|---|---|---|---|---|
+| Mobile | 0–599 px | 4 | 16 | 16 | 42 |
+| Tablet | 600–1023 px | 8 | 26 | 26 | 68 |
+| Desktop | 1024–1439 px | 12 | 26 | 42 | 68–110 |
+| Wide | ≥ 1440 px | 12, capped | 26 | auto | 110 |
+
+Tokens: `primitive.breakpoint.*`, `semantic.width.*` (prose · wide), spacing `primitive.space.*`. Rules: LAY-01 to LAY-13.
+
+### Page types and section order (LAY-14)
+
+| Page type | Sections in order |
+|---|---|
+| Home / landing | hero → problem and value → proof → offer or how it works → FAQ → final call to action |
+| | |
+
+Header (LAY-15): [logo · nav items · utilities · call to action]. Footer (LAY-19): [columns · legal row].
 
 ## Components
 
@@ -54,7 +81,11 @@ Breakpoints, max content width, grid columns, spacing scale (`primitive.space.*`
 |---|---|---|
 | Button | default · hover · focus-visible · active · disabled · loading | Min height 44 px |
 | Form field | default · focus · error · disabled | Label always visible (A11Y-16) |
-| Card | default · hover · focus-within | |
+| Card | default · hover · focus-within | One link stretched over the card (CMP-02) |
+| Dialog | open · closing | Full screen below 600 px (CMP-11) |
+| [more from `16-components`] | | |
+
+Every component lists anatomy, variants, tokens, states, behavior per tier and its keyboard/ARIA pattern (CMP-01).
 
 ## Imagery & icons
 

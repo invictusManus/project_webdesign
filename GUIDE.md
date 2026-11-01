@@ -85,22 +85,22 @@ Design is how the site earns trust in the first seconds. Consistency comes from 
 **Step 12 · Turn the brand into design tokens.**
 - Why: tokens are named values (e.g. `color.action.primary`). Change one, and every button updates; nobody improvises a new blue.
 - Do: start from [`tokens.json`](templates/tokens.json): primitive values, then semantic roles, then components. Check that every text color pair passes contrast.
-- Done: DES-02, DES-03, DES-04, DES-05, DES-14. Type, spacing and radius follow the golden ratio (φ ≈ 1.618).
+- Done: DES-02, DES-03, DES-04, DES-05, DES-14, DES-24 to DES-30 (type roles, rhythm, text colors, emphasis, complete token set). Type, spacing and radius follow the golden ratio (φ ≈ 1.618).
 
 **Step 13 · Design mobile first, with reusable components.**
 - Why: most visits are on phones, and Google indexes the mobile version.
-- Do: design at 360 px first, then scale up. Build each component once, with all its states (hover, focus, error, loading, empty).
-- Done: UX-05, DES-05, DES-06, DES-07.
+- Do: design at 360 px first, then tablet (600–1023 px) and desktop (≥ 1024 px). Each tier has fixed columns, gutters and spacing. Build each component once from the catalogue, with all its states (hover, focus, error, loading, empty) and its behavior on touch, mouse and keyboard.
+- Done: UX-05, DES-05, DES-06, DES-07, LAY-01 to LAY-13, CMP-01 to CMP-06, CMP-11 to CMP-21.
 
 **Step 14 · Design the key pages.**
 - Why: visitors decide fast. The first screen must answer "what is this, is it for me, what do I do next?"
-- Do: give every page one primary call to action, put trust signals (reviews, logos, guarantees, real contact details) near decisions, and use no dark patterns.
-- Done: UX-06, UX-07, UX-08, UX-11, UX-17 (no pop-ups hiding the content), DES-21 (no generic AI look), and the psychology principles PSY-02 to PSY-13.
+- Do: give every page one primary call to action, put trust signals (reviews, logos, guarantees, real contact details) near decisions, and use no dark patterns. Build every page from the same regions: header, main, footer, with a documented section order.
+- Done: LAY-14 to LAY-20, CMP-22 to CMP-26, UX-06, UX-07, UX-08, UX-11, UX-17 (no pop-ups hiding the content), DES-21 (no generic AI look), and the psychology principles PSY-02 to PSY-13.
 
 **Step 15 · Design forms and states.**
 - Why: forms are where conversions happen, and where most of them get lost.
 - Do: ask for as little as possible. Use visible labels, error messages that explain the fix, and a confirmation that says what happens next.
-- Done: UX-09, UX-10, A11Y-16, A11Y-17.
+- Done: UX-09, UX-10, A11Y-16, A11Y-17, CMP-07 to CMP-10.
 
 **Step 16 · Build accessibility into the design.**
 - Why: about one in six people lives with a significant disability (WHO). Accessible design is also clearer for everyone, and the law requires it for many sites.

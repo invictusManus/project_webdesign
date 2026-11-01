@@ -23,7 +23,7 @@ Complete before design and build. Output: a signed [`project-brief.md`](../templ
 - [ ] UX-01 Information architecture validated
 - [ ] DES-13 Design intake: palette, style direction, light/dark, density
 - [ ] DES-01 `DESIGN.md` drafted
-- [ ] DES-02 `tokens.json` set up
+- [ ] DES-02 `tokens.json` set up · DES-30 complete token set · LAY-01 breakpoints
 
 ## C · Accounts & access (client-owned, 2FA, in the vault)
 

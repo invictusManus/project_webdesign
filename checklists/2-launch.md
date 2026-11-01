@@ -14,6 +14,13 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] DES-05 φ spacing scale · DES-14 palette structure · DES-16 golden-ratio layout
 - [ ] DES-17 shape system · DES-18 button tiers · DES-19 link styling
 - [ ] DES-21 No generic AI look
+- [ ] DES-24 type roles · DES-25 vertical rhythm · DES-27 text color roles · DES-28 emphasis budget · DES-30 complete token set
+- [ ] LAY-01 breakpoint tokens · LAY-02 grid per tier · LAY-03 content widths · LAY-04 responsive type · LAY-05 responsive spacing
+- [ ] LAY-06 predictable reflow · LAY-08 hover gated, touch targets · LAY-09 viewport, safe areas, orientation
+- [ ] LAY-11 content parity across tiers · LAY-12 responsive media · LAY-13 no page-level horizontal scroll
+- [ ] LAY-14 page regions · LAY-15 header · LAY-16 navigation per tier · LAY-17 hero · LAY-19 footer · LAY-20 fixed-element budget
+- [ ] CMP-01 component specs · CMP-02 cards · CMP-04 tables · CMP-07 choice controls · CMP-08 selects, dates, files · CMP-09 form layout
+- [ ] CMP-11 dialogs · CMP-13 toasts and alerts · CMP-14 tooltips · CMP-15 tabs · CMP-16 accordions · CMP-18 pagination · CMP-21 states · CMP-26 consent banner layout
 - [ ] CON-16 Every text passed the AI-writing checklist
 - [ ] PSY-01 Reviewed against UX psychology · PSY-14 heuristic evaluation done, no open P0/P1
 - [ ] PSY-02 Gestalt · PSY-03 hierarchy · PSY-04 Hick · PSY-05 Fitts · PSY-06 Jakob

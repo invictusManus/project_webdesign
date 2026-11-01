@@ -54,7 +54,7 @@ Every rule exists exactly once, in `standards/`, with a stable ID:
 README.md · GUIDE.md · GLOSSARY.md · AGENTS.md · TOOLS.md
 standards/   01-strategy · 02-brand-design · 03-ux · 04-content · 05-seo · 06-geo-aeo · 07-tech
              08-performance · 09-accessibility · 10-security-privacy · 11-measurement · 12-i18n · 13-qa
-             14-ux-psychology
+             14-ux-psychology · 15-layout-responsive · 16-components
              site-types
 checklists/  1-preflight · 2-launch · 3-monitoring
 templates/   project-brief · content-brief · audit-report · url-map.csv · AGENTS · DESIGN · tokens.json
@@ -70,7 +70,9 @@ scripts/     check.sh (rule IDs, checklist coverage, reference coverage)
 | Area | Rules |
 |---|---|
 | Strategy & competition | `01-strategy` |
-| Branding & design (golden-ratio system, design intake) | `02-brand-design`, `templates/DESIGN.md`, `templates/tokens.json` |
+| Branding & design (golden-ratio system, design intake, type roles, hierarchy, tokens) | `02-brand-design`, `templates/DESIGN.md`, `templates/tokens.json` |
+| Layout & responsive design (grid, breakpoints, desktop/tablet/mobile, page structure, header, footer) | `15-layout-responsive` |
+| UI components (cards, tables, forms, dialogs, tabs, accordions, states, patterns) | `16-components` |
 | UX/UI & conversion | `03-ux` |
 | UX psychology (Gestalt, Hick, Fitts, Jakob, Nielsen, cognitive load, social proof, ethical conversion) | `14-ux-psychology` |
 | Content, E-E-A-T & media, AI-writing review | `04-content`, `reference/ai-writing/` |

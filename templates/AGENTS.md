@@ -16,7 +16,7 @@ This website follows the Website Foundation blueprint: https://github.com/invict
 1. Read `DESIGN.md` before UI or copy work. Use tokens only; never raw colors, sizes or spacings.
 2. Read the blueprint standards for the area you touch. MUST rules are hard requirements.
 3. Content changes follow `url-map.csv`: one intent per URL, and no new indexable page without an entry.
-4. Standards 02 (design system), 03 (UX), 09 (accessibility) and 14 (UX psychology) are foundational requirements. If `DESIGN.md` has no intake answers, ask for palette and style direction first (DES-13).
+4. Standards 02 (design system), 03 (UX), 09 (accessibility), 14 (UX psychology), 15 (layout & responsive) and 16 (components) are foundational requirements. If `DESIGN.md` has no intake answers, ask for palette and style direction first (DES-13).
 5. Check every new or changed text line by line against the blueprint's `reference/ai-writing/checklist.md` (CON-16).
 
 ## Never, without explicit approval
