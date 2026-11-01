@@ -25,4 +25,5 @@ This repository is a web design 101: a step-by-step guide (`GUIDE.md`) on top of
 - When you re-check a file's rules against their sources, update its `Last verified` line.
 - Keep each standard under about 150 lines. Explanations belong in `GUIDE.md`, `GLOSSARY.md` or a standard's "Why it matters" line, never in rule rows. No lists of example repositories or projects.
 - `reference/google-search/` is a condensed copy of Google's own documentation, not opinion. Refresh it from the source pages; never invent content. Every page in its README index must keep a notes entry; `scripts/check.sh` enforces this.
+- `rules.csv` is generated: after changing any rule row, run `scripts/rules_index.py`.
 - Run `scripts/check.sh` before every commit. It must print `OK`.

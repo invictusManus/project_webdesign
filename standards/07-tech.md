@@ -4,7 +4,7 @@
 
 Detail: `reference/google-search/` notes.
 
-Scope: HTML/CSS/JS baseline, rendering, hosting, environments, domain, DNS, email, integrations (CMS, forms, APIs, third parties), maintenance and handover. Security headers and TLS: [`10-security-privacy.md`](10-security-privacy.md).
+Scope: HTML/CSS/JS baseline, rendering, hosting, environments, domain, DNS, email, integrations (CMS, forms, APIs, third parties), CMS validation and editorial workflow, maintenance and handover. Security headers and TLS: [`10-security-privacy.md`](10-security-privacy.md).
 
 Last verified: 2026-10
 
@@ -60,6 +60,15 @@ Last verified: 2026-10
 | TEC-20 | MUST | Every external script, embed, font or pixel is listed in the third-party inventory in [`project-brief.md`](../templates/project-brief.md): purpose, owner, consent category, data shared, performance cost, CSP origins. The default answer is no. | Inventory vs. network requests |
 | TEC-21 | SHOULD | Map, social and secondary video embeds load as click-to-load placeholders until the user interacts or consents. Videos meant to rank (SEO-45) keep their player element in the HTML without user action (a click or consent gate is a user action): self-host with `<video>`, `poster` and `preload="none"`, or use an iframe with `loading="lazy"`. | Network panel before interaction; URL Inspection for ranking videos |
 | TEC-22 | SHOULD | API calls run on the server with timeouts, retries with backoff, a fallback UI and failure monitoring. | Fault-injection test |
+
+## CMS and editors
+
+| ID | Level | Rule | Verify |
+|---|---|---|---|
+| TEC-34 | MUST | The CMS enforces on publish: title, meta description and alt text, or an explicit "decorative" flag (SEO-58); slug rules (SEO-12); minimum image sizes (SEO-19). A slug change creates a 301 automatically (SEO-09). Rich text allows only semantic elements (H2–H4, lists, links, tables with headers); no raw HTML, inline styles or colors outside the tokens (DES-11). | Try to publish an incomplete page; change a slug |
+| TEC-35 | SHOULD | Editorial workflow: roles with least privilege (author, editor, publisher, admin), an approval step for YMYL and legal pages (CON-11), scheduled publishing, and revision history with restore. Publishes feed the change log (MSR-26). | CMS roles review |
+| TEC-36 | SHOULD | Editors build pages from library blocks (CMP-01) within constraints: section order per page type (LAY-14), one hero, one primary call to action (UX-06). Each block has help text and character limits that match its component's content limits. | Build a test page in the CMS |
+| TEC-37 | SHOULD | Handover includes editor training (TEC-27): a short guide per content type, the style guide (CON-17), the AI-writing checklist (CON-16), and image preparation (formats, sizes, alt text). | Training record |
 
 ## Code quality, maintenance, handover
 

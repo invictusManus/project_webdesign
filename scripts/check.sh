@@ -36,6 +36,15 @@ if [ -f "$idx" ]; then
   done
 fi
 
+# Standards stay short and are all listed in README
+for f in standards/[0-9]*.md; do
+  n=$(wc -l <"$f"); [ "$n" -le 150 ] || err "$f has $n lines (limit 150)"
+  b=$(basename "$f" .md); grep -q "$b" README.md || err "$b not listed in README.md"
+done
+
+# rules.csv matches standards/
+python3 scripts/rules_index.py --check || err "rules.csv out of date"
+
 # Relative Markdown links resolve
 broken=$(python3 scripts/check_links.py)
 [ -z "$broken" ] || err "broken relative links: $(echo $broken)"

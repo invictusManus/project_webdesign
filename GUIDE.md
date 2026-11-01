@@ -68,7 +68,7 @@ Most website failures are planning failures: the wrong audience, an unclear offe
 **Step 10 · Clarify the legal side.**
 - Why: in the EU, missing legal pages or a wrong cookie banner can lead to fines and warning letters.
 - Do: decide who writes the privacy policy and Impressum. Check whether accessibility law applies (online shops usually), whether you sell online (extra duties) and whether you use AI features (disclosure).
-- Done: PRV-04, PRV-10, PRV-12, PRV-13, A11Y-02.
+- Done: PRV-04, PRV-10, PRV-12, PRV-13, A11Y-02 (template: [`accessibility-statement.md`](templates/accessibility-statement.md)).
 
 ---
 
@@ -95,6 +95,7 @@ Design is how the site earns trust in the first seconds. Consistency comes from 
 **Step 14 · Design the key pages.**
 - Why: visitors decide fast. The first screen must answer "what is this, is it for me, what do I do next?"
 - Do: give every page one primary call to action, put trust signals (reviews, logos, guarantees, real contact details) near decisions, and use no dark patterns. Build every page from the same regions: header, main, footer, with a documented section order.
+- Shops: product page, cart, checkout and confirmation follow UX-18 to UX-23. Sites with search: UX-24. Document each page type in [`page-blueprint.md`](templates/page-blueprint.md).
 - Done: LAY-14 to LAY-20, CMP-22 to CMP-26, UX-06, UX-07, UX-08, UX-11, UX-17 (no pop-ups hiding the content), DES-21 (no generic AI look), and the psychology principles PSY-02 to PSY-13.
 
 **Step 15 · Design forms and states.**
@@ -122,7 +123,7 @@ Content is why people come and why search engines and AI cite you.
 - Why: Google and AI systems reward pages with original value: real experience, data, examples. Rewritten generic text doesn't rank and doesn't get cited.
 - Do: lead with the answer. Use one idea per paragraph and headings that match real questions. Add something only you can say. Have experts review AI-assisted drafts.
 - Check every line against the AI-writing checklist before publishing.
-- Done: CON-04, CON-07, CON-08, CON-09, CON-16.
+- Done: CON-04, CON-07, CON-08, CON-09, CON-16, CON-17 to CON-21 (style guide, readability, content-type structures, inclusive language, provable claims).
 
 **Step 19 · Show who is behind the site.**
 - Why: trust is the core of E-E-A-T. Anonymous content is weaker for users, search and AI.
@@ -192,7 +193,7 @@ Build on a solid, boring foundation. Every shortcut here shows up later as a ran
 **Step 29 · Connect the CMS, forms and third parties.**
 - Why: editors need structured fields so every page ships with a title, description and alt text. Every external script costs speed and privacy.
 - Do: model content with required SEO and alt fields. Test every form end to end. Load embeds only on click.
-- Done: TEC-17, TEC-19, TEC-20, TEC-21.
+- Done: TEC-17, TEC-19, TEC-20, TEC-21, TEC-34 to TEC-37 (CMS validation, workflow, block constraints, editor training).
 
 **Step 30 · Going multilingual? Do it properly.**
 - Why: wrong language setup confuses search engines and shows visitors the wrong version.

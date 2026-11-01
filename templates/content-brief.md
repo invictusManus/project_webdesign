@@ -50,6 +50,11 @@ What only we can say: own data, experience, expert quotes, examples, tools.
 
 Images or diagrams, alt-text notes, video and transcript.
 
+## Content type structure (CON-19)
+
+Type: article · case study · product description · service page · location page · landing page
+Sections in the type's fixed order, checked against the style guide (CON-17) and readability target (CON-18):
+
 ## Metadata drafts
 
 - Title (≈ 50–60 characters):

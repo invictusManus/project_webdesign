@@ -58,11 +58,14 @@ standards/   01-strategy · 02-brand-design · 03-ux · 04-content · 05-seo · 
              site-types
 checklists/  1-preflight · 2-launch · 3-monitoring · 4-search-console
 templates/   project-brief · content-brief · audit-report · url-map.csv · AGENTS · DESIGN · tokens.json
+             component-spec · page-blueprint · accessibility-statement
              head.html · robots.txt · _headers · security.txt · consent-default.html
              schema/ (site graph, local business, article, product) · ci/ (quality workflow, Lighthouse CI)
 reference/   google-search/ (notes on all 184 Google Search documentation pages)
              ai-writing/ (Wikipedia: Signs of AI writing, notes and pre-publish checklist)
-scripts/     check.sh (rule IDs, checklist coverage, reference coverage)
+scripts/     check.sh (rule IDs, checklist coverage, reference coverage, file length, rules.csv)
+             rules_index.py (generates rules.csv)
+rules.csv    every rule as one row: id, level, tags, condition, standard, rule, verify
 ```
 
 ## Coverage
@@ -73,12 +76,12 @@ scripts/     check.sh (rule IDs, checklist coverage, reference coverage)
 | Branding & design (golden-ratio system, design intake, type roles, hierarchy, tokens) | `02-brand-design`, `templates/DESIGN.md`, `templates/tokens.json` |
 | Layout & responsive design (grid, breakpoints, desktop/tablet/mobile, page structure, header, footer) | `15-layout-responsive` |
 | UI components (cards, tables, forms, dialogs, tabs, accordions, states, patterns) | `16-components` |
-| UX/UI & conversion | `03-ux` |
+| UX/UI & conversion, product pages, cart, checkout, on-site search | `03-ux` |
 | UX psychology (Gestalt, Hick, Fitts, Jakob, Nielsen, cognitive load, social proof, ethical conversion) | `14-ux-psychology` |
-| Content, E-E-A-T & media, AI-writing review | `04-content`, `reference/ai-writing/` |
+| Content, E-E-A-T & media, editorial style guide, AI-writing review | `04-content`, `reference/ai-writing/` |
 | SEO (technical, on-page, off-page, local, migration) | `05-seo`, `reference/google-search/` |
 | GEO & AEO (AI search) | `06-geo-aeo`, `reference/google-search/` |
-| Technical foundation, hosting, domains, DNS, integrations | `07-tech` |
+| Technical foundation, hosting, domains, DNS, integrations, CMS and editors | `07-tech` |
 | Performance & Core Web Vitals | `08-performance` |
 | Accessibility | `09-accessibility` |
 | Security & compliance (OWASP, HTTPS, GDPR, consent, legal pages) | `10-security-privacy` |

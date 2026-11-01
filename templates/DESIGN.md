@@ -85,7 +85,7 @@ Header (LAY-15): [logo · nav items · utilities · call to action]. Footer (LAY
 | Dialog | open · closing | Full screen below 600 px (CMP-11) |
 | [more from `16-components`] | | |
 
-Every component lists anatomy, variants, tokens, states, behavior per tier and its keyboard/ARIA pattern (CMP-01).
+Every component lists anatomy, variants, tokens, states, behavior per tier and its keyboard/ARIA pattern (CMP-01): use [`component-spec.md`](component-spec.md). Page types: [`page-blueprint.md`](page-blueprint.md).
 
 ## Imagery & icons
 
@@ -94,6 +94,19 @@ Photo style, art direction, aspect ratios, focal points, illustration style, ico
 ## Motion
 
 Durations `primitive.duration.*`, easing `primitive.easing.standard`. Animate `transform`/`opacity` only. Reduced-motion fallback required (A11Y-10).
+
+## Style guide (CON-17)
+
+| Topic | Our rule |
+|---|---|
+| Spelling variant | e.g. en-US |
+| Capitalization | Sentence case for headings, buttons and navigation |
+| Numbers | e.g. one to nine in words, 10 and up as numerals |
+| Dates, times | e.g. 4 March 2026 · 14:30 CET (per locale, I18N-08) |
+| Units, currency | e.g. 5 km · €1,200 (non-breaking space per DES-26) |
+| Brand and product names | Exact spelling (GEO-05) |
+| Inclusive language | Per language (CON-20) |
+| Readability target | Flesch ≥ 60 / Amstad ≥ 60 (CON-18) |
 
 ## Glossary
 

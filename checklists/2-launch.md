@@ -32,6 +32,8 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] UX-09 Lean forms with confirmation
 - [ ] UX-10 Empty, loading and error states
 - [ ] UX-11 No dark patterns
+- [ ] *(shop)* UX-18 product page · UX-19 costs before checkout · UX-20 cart · UX-21 checkout · UX-23 order confirmation
+- [ ] CON-17 Style guide followed
 - [ ] CON-04 Every page adds original value
 - [ ] CON-05 About, bylines, sources
 - [ ] CON-06 Honest dates
@@ -60,7 +62,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] TEC-15 SPF, DKIM, DMARC
 - [ ] TEC-17 Every form tested end to end
 - [ ] TEC-18 Tracking-free spam protection
-- [ ] TEC-19 CMS fields incl. required alt text
+- [ ] TEC-19 CMS fields incl. required alt text · TEC-34 CMS enforces fields, auto-301 on slug change
 - [ ] TEC-20 Third-party inventory complete
 - [ ] TEC-25 No end-of-life software
 - [ ] TEC-29 CDN, WAF and firewall let Googlebot through

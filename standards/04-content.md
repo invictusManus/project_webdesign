@@ -27,10 +27,21 @@ Last verified: 2026-10
 | CON-15 | SHOULD | Reviews, comparisons and best-of pages show first-hand evidence: own testing or measurements, benefits and drawbacks, why an item is best, alternatives or several sellers. No thin summaries or copied merchant text. | Editorial review |
 | CON-16 | MUST | Before any website text is added or changed (pages, sections, blog posts, navigation, buttons, titles, meta descriptions), it is checked line by line against [`reference/ai-writing/checklist.md`](../reference/ai-writing/checklist.md) (Wikipedia: Signs of AI writing). Every match is rewritten. | Checklist pass noted in the commit or PR |
 
+## Editorial style
+
+| ID | Level | Rule | Verify |
+|---|---|---|---|
+| CON-17 | MUST | A written style guide in `DESIGN.md` fixes: spelling variant (e.g. en-US or en-GB), capitalization (sentence case, DES-15), numbers, dates, times, units and currency per locale (I18N-08), abbreviations, brand and product names (GEO-05), terminology (UX-15), link text (A11Y-15) and inclusive language (CON-20). All copy follows it. | Style guide exists; copy review |
+| CON-18 | SHOULD | [house] Readability for general audiences: sentences average ≤ 20 words, paragraphs ≤ 4 sentences, Flesch reading ease ≥ 60 for English (Amstad ≥ 60 for German). The brief may set another level for specialist audiences. Complements A11Y-21. | Readability tool on key pages |
+| CON-19 | SHOULD | Every recurring content type has a fixed structure in `content-brief.md`: article (answer first, sections, sources, author box), case study (client, problem, approach, measured result, quote), product description (benefit first, specifications, use and care, own text instead of manufacturer copy), service page, location page (SEO-31), landing page (ad promise, value, proof, offer, call to action, FAQ). | Sample per type |
+| CON-20 | SHOULD | Inclusive language: gender-inclusive forms as defined per language in the style guide, people-first wording, no ableist idioms, imagery that represents the audience authentically. Instructions never rely on color, shape or position alone ("the green button", "on the right", WCAG 1.3.3). | Copy review |
+| CON-21 | SHOULD | [EU] Claims are provable: prices, test results, superlatives ("best", "No. 1"), awards, certifications and statistics carry a source and date, and superlatives are backed by evidence (Germany: UWG §5). Flag for legal review. | Claims register |
+
 ## Sources
 
 - [Google: Creating helpful, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
 - [Google: Guidance on using generative AI content](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content)
 - [Google: Search Quality Rater Guidelines](https://guidelines.raterhub.com/searchqualityevaluatorguidelines.pdf)
 - [Google: Core updates](https://developers.google.com/search/docs/appearance/core-updates) · [Publication dates](https://developers.google.com/search/docs/appearance/publication-dates) · [Reviews system](https://developers.google.com/search/docs/appearance/reviews-system) · [Write high-quality reviews](https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews)
+- [W3C: WCAG 2.2, 1.3.3 Sensory characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html) · [UWG §5 (misleading commercial practices)](https://www.gesetze-im-internet.de/uwg_2004/__5.html)
 - [Google: Spam policies (scaled content abuse)](https://developers.google.com/search/docs/essentials/spam-policies)
