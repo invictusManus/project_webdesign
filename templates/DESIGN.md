@@ -6,7 +6,8 @@ The brand spec for people and AI agents (DES-01). Read it before any UI or copy 
 
 | Question | Answer |
 |---|---|
-| Color palette (or pick one of the suggested palettes) | |
+| Color palette, 60-30-10 (DES-14): primary 60 % · secondary 30 % · accent 10 % (hex), plus neutrals; or pick a suggested palette | |
+| Font family: category (sans-serif · serif · mono · display) and family name, max 2 (DES-04) | |
 | Style direction: minimal/simple · modern translucent · bold/expressive · editorial · classic/corporate · playful | |
 | Light, dark or both | |
 | Density: airy or compact | |
