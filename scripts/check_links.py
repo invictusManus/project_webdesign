@@ -3,8 +3,13 @@
 import glob, os, re
 
 for f in glob.glob("**/*.md", recursive=True):
-    text = re.sub(r"```.*?```", "", open(f).read(), flags=re.S)
-    text = re.sub(r"`[^`\n]*`", "", text)
+    lines, fenced = [], False
+    for line in open(f):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+        elif not fenced:
+            lines.append(line)
+    text = re.sub(r"`[^`\n]*`", "", "".join(lines))
     for t in re.findall(r"\]\(([^)\s]+)\)", text):
         if re.match(r"[a-z]+:|#", t):
             continue
