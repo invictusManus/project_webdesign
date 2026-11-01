@@ -22,7 +22,7 @@ Last verified: 2026-10
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| TEC-06 | MUST | Choose rendering per page type and document the choice in the site README. Default: static (prerendered). Server rendering only for per-request data. Client-only rendering only behind login. Dynamic rendering for bots is a discouraged workaround. | Site README; view source |
+| TEC-06 | MUST | [house] Choose rendering per page type and document the choice in the site README. Default: static (prerendered). Server rendering only for per-request data. Client-only rendering only behind login. Dynamic rendering for bots is a discouraged workaround. | Site README; view source |
 | TEC-28 | SHOULD | JavaScript-dependent content works in Google's renderer: feature-detect APIs (no WebGL, WebSockets or WebRTC without an HTTP fallback), no permission prompts, no reliance on cookies or Local/Session Storage across page loads. Light-DOM content in web components is projected with `<slot>`. | URL Inspection → rendered HTML and console |
 | TEC-07 | SHOULD | Choose framework and CMS for editor needs, prerender/SSR support, team skills, hosting fit and long-term support. No page builder without clean code or content export. | Decision record in project brief |
 
@@ -32,7 +32,7 @@ Last verified: 2026-10
 |---|---|---|---|
 | TEC-08 | MUST | Hosting provides a CDN, HTTP/2 or HTTP/3, Brotli/gzip compression and automatically renewed TLS certificates. | `curl -I --http3`; response headers |
 | TEC-09 | MUST | Deploys are atomic and can be rolled back in one step. Every change gets a preview deployment. | Run one rollback before launch |
-| TEC-10 | MUST | Environments are local → preview/staging → production. Staging requires authentication and sends `X-Robots-Tag: noindex`. It is never linked publicly. | `curl -I` on staging |
+| TEC-10 | MUST | [house] Environments are local → preview/staging → production. Staging requires authentication and sends `X-Robots-Tag: noindex`. It is never linked publicly. | `curl -I` on staging |
 | TEC-11 | MUST | Secrets live in environment variables or a secret store, never in the repository or the client bundle. `.env*` is git-ignored. | Secret scan; inspect bundle |
 | TEC-12 | MUST | Content, database and uploads are backed up daily and kept ≥ 30 days off-site. A restore is tested before launch and once a year. | Restore protocol |
 | TEC-29 | MUST | CDN, WAF and firewall let Google's crawlers through: no blocked Google IPs, DNS answers over UDP and TCP. Network timeouts, resets and DNS errors count as `5xx`, and URLs drop from the index within days. Claimed Googlebot traffic is verified by reverse+forward DNS or Google's published IP ranges, never by user agent alone. | URL Inspection live test; GSC Crawl stats; WAF logs |

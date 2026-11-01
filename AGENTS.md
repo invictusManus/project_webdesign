@@ -19,6 +19,7 @@ This repository is a web design 101: a step-by-step guide (`GUIDE.md`) on top of
 - Each rule exists once. Elsewhere, reference its ID instead of restating it.
 - Never renumber or reuse an ID. To retire a rule, set its level to `RETIRED` and name its replacement.
 - Cite official or primary sources only. Mark unofficial proposals with ⚗.
+- Search rules (SEO, GEO, crawling, indexing, structured data, Search Console) follow Google's documentation in `reference/google-search/`. A rule may be stricter than Google only when it is tagged `[house]`; it may never contradict Google. If they conflict, fix the rule.
 - When you re-check a file's rules against their sources, update its `Last verified` line.
 - Keep each standard under about 150 lines. Explanations belong in `GUIDE.md`, `GLOSSARY.md` or a standard's "Why it matters" line, never in rule rows. No lists of example repositories or projects.
 - `reference/google-search/` is a condensed copy of Google's own documentation, not opinion. Refresh it from the source pages; never invent content. Every page in its README index must keep a notes entry; `scripts/check.sh` enforces this.

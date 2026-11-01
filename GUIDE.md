@@ -1,6 +1,6 @@
 # Website 101: from zero to launch to growth
 
-This guide walks you through building a professional website, in the order a real project runs. Each step explains **why** it matters, **what to do**, and when it is **done**. "Done" points to rule IDs in [`standards/`](standards/); the rule itself holds the exact threshold and how to check it. Unfamiliar terms are explained in [`GLOSSARY.md`](GLOSSARY.md).
+This guide walks you through building a professional website, in the order a real project runs. Each step explains **why** it matters, **what to do**, and when it is **done**. "Done" points to rule IDs in [`standards/`](standards/); the rule itself holds the exact threshold and how to check it. For search topics, the rules follow Google's own documentation, condensed in [`reference/google-search/`](reference/google-search/README.md). Unfamiliar terms are explained in [`GLOSSARY.md`](GLOSSARY.md).
 
 You don't need every step on day one. Make every **MUST** rule pass before launch, then work through the **SHOULD** rules, and add **COULD** rules once the basics hold. Small sites can treat several steps as a five-minute decision.
 
@@ -94,7 +94,7 @@ Design is how the site earns trust in the first seconds. Consistency comes from 
 **Step 14 · Design the key pages.**
 - Why: visitors decide fast. The first screen must answer "what is this, is it for me, what do I do next?"
 - Do: give every page one primary call to action, put trust signals (reviews, logos, guarantees, real contact details) near decisions, and use no dark patterns.
-- Done: UX-06, UX-07, UX-08, UX-11.
+- Done: UX-06, UX-07, UX-08, UX-11, UX-17 (no pop-ups hiding the content).
 
 **Step 15 · Design forms and states.**
 - Why: forms are where conversions happen, and where most of them get lost.
@@ -125,7 +125,7 @@ Content is why people come and why search engines and AI cite you.
 **Step 19 · Show who is behind the site.**
 - Why: trust is the core of E-E-A-T. Anonymous content is weaker for users, search and AI.
 - Do: create About and team pages, put author bylines with credentials on articles, cite sources and show honest dates.
-- Done: CON-05, CON-06, GEO-07.
+- Done: CON-05, CON-06, GEO-07. Pages with reviews or comparisons also need first-hand evidence (CON-15).
 
 **Step 20 · Prepare media.**
 - Why: images make pages understandable, but they are also the main cause of slow pages.
@@ -150,8 +150,8 @@ Build on a solid, boring foundation. Every shortcut here shows up later as a ran
 
 **Step 23 · Make every page crawlable.**
 - Why: if the content only appears after JavaScript runs, or links aren't real links, search engines may never see it.
-- Do: render content and metadata into the HTML on the server or at build time. Use real `<a href>` links.
-- Done: SEO-10, SEO-11, SEO-01.
+- Do: render content and metadata into the HTML on the server or at build time. Use real `<a href>` links. Give phones the same content as desktops. Load lazy content when it scrolls into view, never only on click.
+- Done: SEO-01, SEO-10, SEO-11, SEO-39, SEO-40, TEC-28.
 
 **Step 24 · Get the SEO basics right.**
 - Why: these are the rules that decide whether a page can rank at all.
@@ -160,24 +160,26 @@ Build on a solid, boring foundation. Every shortcut here shows up later as a ran
   - Set a self-referencing canonical, a unique title and a meta description on every page.
   - Clean up the sitemap and set up [`robots.txt`](templates/robots.txt).
   - Make 404s real 404s and redirects single 301s.
-- Done: SEO-02 to SEO-09, SEO-15, SEO-16.
+  - Give every host its own `robots.txt`, and make canonical tags, sitemap, internal links and redirects all point to the same URL.
+- Done: SEO-02 to SEO-09, SEO-15, SEO-16, SEO-38, SEO-41.
 
 **Step 25 · Add structured data.**
 - Why: structured data tells machines what a page is about (your organization, an article, a product, a location). It powers rich results and helps AI identify you as an entity.
 - Do: adapt the [`schema/`](templates/schema/) templates, link profiles via `sameAs`, and mark up only what is visible on the page.
-- Done: SEO-21, GEO-06.
+- Done: SEO-21, SEO-46, GEO-06. Reviews, products, jobs, articles and local businesses have their own markup rules (SEO-47 to SEO-56); every property is listed in [`reference/google-search/`](reference/google-search/README.md).
 
 **Step 26 · Hit the performance budget.**
 - Why: slow pages lose visitors and conversions, and Core Web Vitals are part of Google's page experience signals.
 - Do:
   - Responsive modern images with fixed dimensions; the main hero image loads eagerly with high priority.
   - Self-hosted, subset fonts; deferred scripts; long caching for hashed files.
-- Done: PRF-02, PRF-06 to PRF-13, PRF-17.
+- Done: PRF-02, PRF-06 to PRF-13, PRF-17, PRF-22 (no file over 2 MB).
 
 **Step 27 · Secure the site.**
 - Why: even a brochure site can be hijacked for spam or used to attack visitors.
 - Do: HTTPS only, the header baseline from [`_headers`](templates/_headers), server-side validation, spam protection without tracking, MFA on admin logins, and automatic dependency updates.
-- Done: SEC-01 to SEC-04, SEC-08 to SEC-12, SEC-14, TEC-18, TEC-25.
+- Also make sure your CDN or firewall doesn't block Google's crawlers. To slow them down, answer with `503` or `429`, never other errors.
+- Done: SEC-01 to SEC-04, SEC-08 to SEC-12, SEC-14, TEC-18, TEC-25, TEC-29, TEC-30.
 
 **Step 28 · Set up consent and measurement.**
 - Why: in the EU, nothing non-essential may run before consent. Without measurement you're guessing.
@@ -242,7 +244,7 @@ A website is never finished. The routine in [`3-monitoring.md`](checklists/3-mon
 **Step 37 · Measure monthly.**
 - Why: one dashboard and a fixed review rhythm turn data into decisions.
 - Do: review traffic by channel, conversions, rankings, Core Web Vitals and AI visibility.
-- Done: MSR-24, MSR-25.
+- Done: MSR-24, MSR-25, MSR-26. If traffic drops, triage before changing anything (MSR-30).
 
 **Step 38 · Improve conversions.**
 - Why: doubling the conversion rate is often cheaper than doubling traffic.

@@ -10,11 +10,11 @@ Last verified: 2026-10
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| CON-01 | MUST | Each indexable URL serves one primary intent and one query cluster (`url-map.csv`). No two URLs target the same intent. | `url-map.csv`; GSC queries per page |
+| CON-01 | MUST | [house] Each indexable URL serves one primary intent and one query cluster (`url-map.csv`). No two URLs target the same intent. | `url-map.csv`; GSC queries per page |
 | CON-02 | MUST | Every page gets a content brief before writing: intent, audience, primary query, questions to answer, unique angle or evidence, outline, internal links, call to action, schema type. | Brief per URL |
-| CON-03 | SHOULD | Each core topic has a pillar page that links to cluster pages, each answering one specific sub-question (SEO-23). | Link graph |
-| CON-04 | MUST | People-first: every page adds something not available elsewhere, such as first-hand experience, original data, expert insight, worked examples or tools. No rewritten commodity content. | Editorial review vs. top results |
-| CON-05 | MUST | Trust (E-E-A-T): the site shows who is behind it (About, team, Impressum). Each article has a byline linking to an author page with credentials. Sources are cited for facts, figures and claims. No fabricated authors: no made-up names, AI-generated headshots or false credentials. | Page review |
+| CON-03 | SHOULD | [house] Each core topic has a pillar page that links to cluster pages, each answering one specific sub-question (SEO-23). | Link graph |
+| CON-04 | MUST | [house] People-first: every page adds something not available elsewhere, such as first-hand experience, original data, expert insight, worked examples or tools. No rewritten commodity content. | Editorial review vs. top results |
+| CON-05 | MUST | [house] Trust (E-E-A-T): the site shows who is behind it (About, team, Impressum). Each article has a byline linking to an author page with credentials. Sources are cited for facts, figures and claims. No fabricated authors: no made-up names, AI-generated headshots or false credentials. | Page review |
 | CON-06 | MUST | Articles show their published and updated dates, and `datePublished`/`dateModified` markup equals them (timezone included, no future dates). "Updated" changes only after a substantive edit, never for a date bump alone. | Version history vs. date |
 | CON-07 | SHOULD | Answer first: lead with the direct answer or key takeaway, then the detail. One idea per paragraph. Subheadings mirror real user questions. Use lists and tables for comparable data. | Editorial review |
 | CON-08 | SHOULD | Use plain, active language at the audience's reading level and the voice defined in `DESIGN.md`. No filler introductions. | Readability check |

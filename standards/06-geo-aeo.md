@@ -13,15 +13,15 @@ Last verified: 2026-10
 | ID | Level | Rule | Verify |
 |---|---|---|---|
 | GEO-01 | MUST | AI search work starts only once the SEO MUST rules pass. AI features draw on indexable, snippet-eligible pages. No separate AI versions of pages, and no splitting text into chunks just for AI. | Launch gate status |
-| GEO-02 | MUST | Key pages carry no `nosnippet`, `max-snippet:0` or `data-nosnippet` on core content; these also limit use in AI Overviews and AI Mode (not content supplied via structured data: change the markup for that). `data-nosnippet` sits on valid, closed `span`/`div`/`section` elements and is never toggled by JS. | Source review; URL Inspection |
+| GEO-02 | MUST | [house] Key pages carry no `nosnippet`, `max-snippet:0` or `data-nosnippet` on core content; these also limit use in AI Overviews and AI Mode (not content supplied via structured data: change the markup for that). `data-nosnippet` sits on valid, closed `span`/`div`/`section` elements and is never toggled by JS. | Source review; URL Inspection |
 | GEO-03 | MUST | AI crawler policy is decided and set in robots.txt. Search and user-initiated bots are allowed: OAI-SearchBot, ChatGPT-User, Claude-SearchBot, Claude-User, PerplexityBot. Training bots (GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, CCBot) are allowed or blocked by explicit decision. `Google-Extended` is a standalone token for Gemini training and grounding, not Search. The user-initiated `Google-Agent` ignores robots.txt: allow it in bot protection if agent tasks are wanted. CDN bot protection must not block the allowed bots. Template: [`robots.txt`](../templates/robots.txt). | robots.txt; CDN bot logs |
-| GEO-04 | SHOULD | Leave Search Console's generative-AI control at its default (included) unless there is a documented business reason to opt out. Opting out is not a ranking signal, but it removes the site from AI Overviews and AI Mode. | GSC settings |
+| GEO-04 | SHOULD | Leave Search Console's generative-AI control at its default (included) unless there is a documented business reason to opt out. Opting out removes the site from AI Overviews and AI Mode. | GSC settings |
 
 ## Entities & structured data
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| GEO-05 | MUST | One canonical brand name, one-sentence description and category, used identically on the site, in structured data, the Business Profile, social profiles and directories. | Profile audit |
+| GEO-05 | MUST | [house] One canonical brand name, one-sentence description and category, used identically on the site, in structured data, the Business Profile, social profiles and directories. | Profile audit |
 | GEO-06 | SHOULD | Organization (or Person) markup with a stable `@id`, logo (≥ 112×112 px, crawlable, legible on white), contact details and `sameAs` links to every official profile (Wikidata, LinkedIn, Business Profile …). The full node sits on the home or About page; other pages reference its `@id`. `name` and `alternateName` equal the site name (SEO-44). It serves entity clarity, rich results and other engines; Google AI search needs no special markup. Template: [`site-graph.jsonld`](../templates/schema/site-graph.jsonld). | Schema Markup Validator |
 | GEO-07 | SHOULD | Authors are entities: author pages carry `ProfilePage` with `Person` markup (credentials, `sameAs`), and bylines link to them (CON-05). | Validator; page review |
 
@@ -29,7 +29,7 @@ Last verified: 2026-10
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| GEO-08 | SHOULD | Write content that AI answers can cite: precise definitions, statistics with source and date, original data or research, step lists, comparison tables, and claims attributed to named experts. | Editorial review |
+| GEO-08 | SHOULD | [house] Write content that AI answers can cite: precise definitions, statistics with source and date, original data or research, step lists, comparison tables, and claims attributed to named experts. | Editorial review |
 | GEO-09 | SHOULD | Pages answer the topic's follow-up questions (People Also Ask, sales and support questions, related prompts) under descriptive headings, written for people. No separate page per query variation or fan-out query (scaled content abuse, SEO-33). | Content brief questions covered |
 | GEO-10 | SHOULD | Off-site presence: the brand is mentioned and described accurately in authoritative third-party sources: press, industry lists, review platforms, Wikipedia/Wikidata where notable, and communities where the audience asks questions. Mentions are earned and authentic; Google calls seeking inauthentic ones ineffective. | Mention monitoring |
 | GEO-11 | SHOULD | Bing Webmaster Tools and IndexNow are set up (MSR-04). Bing's index powers Microsoft Copilot answers. | Bing WMT |
@@ -39,7 +39,7 @@ Last verified: 2026-10
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| GEO-13 | SHOULD | Measure AI visibility monthly with three sources: Search Console's generative-AI report, Bing's AI Performance report, and a fixed set of 20–50 prompts run across the major assistants. Record mentions, citations, accuracy and sentiment vs. competitors. | Monthly report |
+| GEO-13 | SHOULD | Measure AI visibility monthly with three sources: Search Console's generative-AI report, Bing's AI Performance report, and a fixed set of 20–50 prompts (house heuristic) run across the major assistants. Record mentions, citations, accuracy and sentiment vs. competitors. | Monthly report |
 | GEO-14 | SHOULD | When AI answers describe the brand wrongly, trace the error to its source (an outdated page or third-party profile) and fix it there. | Issue log |
 
 ## Experimental

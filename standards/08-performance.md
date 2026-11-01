@@ -12,7 +12,7 @@ Last verified: 2026-10
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| PRF-01 | MUST | Core Web Vitals are "good" at the 75th percentile of real users, on mobile and on desktop: LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1. | PageSpeed Insights field data; GSC Core Web Vitals (≈ 28 days after launch) |
+| PRF-01 | MUST | [house] Core Web Vitals are "good" at the 75th percentile of real users, on mobile and on desktop: LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1. | PageSpeed Insights field data; GSC Core Web Vitals (≈ 28 days after launch) |
 | PRF-02 | MUST | Before launch, every key template passes in the lab: Lighthouse mobile, median of ≥ 3 runs, LCP ≤ 2.5 s, TBT ≤ 200 ms, CLS ≤ 0.1. | Lighthouse CI ([`lighthouserc.json`](../templates/ci/lighthouserc.json)) |
 | PRF-03 | SHOULD | Key templates score ≥ 90 for Lighthouse mobile performance. | Lighthouse CI |
 | PRF-04 | SHOULD | Budgets per page: ≤ 1.5 MB transferred (landing pages ≤ 500 KB), ≤ 170 KB compressed JavaScript on content pages, TTFB ≤ 0.8 s at p75. | Lighthouse; WebPageTest |

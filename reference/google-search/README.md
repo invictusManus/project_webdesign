@@ -5,6 +5,7 @@ Every page of Google's official Search documentation, read in full and condensed
 - **Scope:** 184 pages, retrieved 2026-10-31. Each note gives the source URL and the page's own "last updated" date.
 - **License:** Source content © Google, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). These notes are summarized and restructured. They are not an official Google document; when in doubt, the linked page wins.
 - **Use:** the standards hold the testable rules; these notes hold the detail behind them (every property, limit and exception). `scripts/check.sh` verifies that every page listed below has notes.
+- **Keeping it current:** `scripts/google-docs.py` compares the live documentation with the dates below and lists new, removed and changed pages. `--text DIR` saves the full text of those pages so their notes can be re-written. The `google-docs` GitHub workflow runs this weekly and fails when something changed. After refreshing notes, update the page's date here.
 
 ## Notes files
 

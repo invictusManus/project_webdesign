@@ -8,7 +8,7 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
 - **Rendering:** static.
 - **Schema:** Organization, LocalBusiness subtype per location, BreadcrumbList, JobPosting on career pages.
 - **Raise:** SEO-31 and SEO-56 (sites with several locations), UX-08, UX-12.
-- **Add:** career pages with JobPosting markup (SEO-51). Google's Indexing API is allowed only for JobPosting and livestream (BroadcastEvent) pages.
+- **Add:** career pages with JobPosting markup (SEO-51). Google recommends its Indexing API for JobPosting URLs and, for video, supports it only for livestreams (`BroadcastEvent`).
 
 ## Landing page (campaign)
 
@@ -16,7 +16,7 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
 - **Rendering:** static, single page.
 - **Schema:** WebPage plus Organization.
 - **Raise:** PRF-04 (≤ 500 KB), UX-08.
-- **Relax:** internal-linking rules (SEO-22 to SEO-24). Pages built only for paid traffic are `noindex` (SEO-02). A/B variants carry a canonical to the original (UX-16).
+- **Relax:** internal-linking rules (SEO-22 to SEO-24). [house] Pages built only for paid traffic are `noindex` (SEO-02). A/B variants carry a canonical to the original (UX-16).
 - **Add:** keep the ad promise and the landing page's message identical. Show ad-to-page relevance, transparency (who you are, price, terms) and an easy way to leave.
 
 ## Blog & publisher

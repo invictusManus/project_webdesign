@@ -12,14 +12,14 @@ Last verified: 2026-10
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| MSR-01 | MUST | A Search Console **Domain property** is verified by DNS TXT before launch. At least two people are owners, one of them the site owner. | GSC → Settings → Users |
-| MSR-02 | MUST | The XML sitemap is submitted in Search Console, and the Page indexing report shows no key URL excluded unexpectedly. | GSC Sitemaps; Page indexing |
+| MSR-01 | MUST | [house] A Search Console **Domain property** is verified by DNS TXT before launch. At least two people are owners, one of them the site owner. | GSC → Settings → Users |
+| MSR-02 | MUST | [house] The XML sitemap is submitted in Search Console, and the Page indexing report shows no key URL excluded unexpectedly. | GSC Sitemaps; Page indexing |
 | MSR-03 | MUST | On launch day, the home page and top money pages are checked with URL Inspection and indexing is requested for them. Everything else gets indexed through the sitemap and accurate `lastmod`. | GSC URL Inspection |
 | MSR-04 | SHOULD | Bing Webmaster Tools is verified (import from Search Console) with the sitemap submitted. An IndexNow key is hosted, and new or changed URLs are submitted automatically. | Bing WMT; IndexNow response 200/202 |
 | MSR-05 | SHOULD | Search Console and Bing email alerts are on, and Search Console messages are forwarded to a monitored mailbox. Search Console is linked to GA4. | Account settings |
 | MSR-26 | SHOULD | Search Console keeps only 16 months of data: bulk export to BigQuery (or the API) is on. Every significant title, content, template or migration change is logged with its date so traffic changes can be attributed. | GSC bulk export link; change log |
 | MSR-27 | SHOULD | After the first deploy and after every template release, the matching Search Console reports are checked: Rich result status (valid up, invalid not up), Unparsable structured data, Merchant listings and Product snippets (shops), Video indexing (video sites), Manual actions. Fixes are validated there. | GSC reports; URL Inspection |
-| MSR-28 | SHOULD | Quarterly (monthly for large sites), Crawl stats (host availability, `5xx`, response time) is read together with Page indexing, and the Google-selected canonical of key URLs is compared with the declared one. | GSC Crawl stats; URL Inspection |
+| MSR-28 | SHOULD | Quarterly (monthly for large sites; house heuristic), Crawl stats (host availability, `5xx`, response time) is read together with Page indexing, and the Google-selected canonical of key URLs is compared with the declared one. | GSC Crawl stats; URL Inspection |
 
 ## Analytics (GA4)
 
@@ -45,7 +45,7 @@ Last verified: 2026-10
 | MSR-17 | SHOULD | A UTM convention (lowercase, fixed vocabulary for `utm_source`, `utm_medium`, `utm_campaign`) is used for all campaigns, never on internal links. | Acquisition report: no "(other)" spikes |
 | MSR-18 | COULD | Server-side tagging on a first-party subdomain controls what data reaches vendors. | Server container |
 | MSR-19 | SHOULD | Ads conversions are imported from GA4 key events, or use the Ads tag with enhanced conversions. Both are consent-gated. | Google Ads → Conversions |
-| MSR-20 | MUST | E-commerce: Merchant Center gets its product feed by file, a platform integration or the Merchant API, never the sunset Content API for Shopping. Feed, on-page `Product` markup and the visible page agree on price, currency, availability and condition. Free listings are opted in, and Merchant Center updates price and availability automatically from the website when they differ. | Merchant Center diagnostics |
+| MSR-20 | MUST | [house] E-commerce: Merchant Center gets its product feed by file, a platform integration or the Merchant API, never the sunset Content API for Shopping. Feed, on-page `Product` markup and the visible page agree on price, currency, availability and condition. Free listings are opted in, and Merchant Center updates price and availability automatically from the website when they differ. | Merchant Center diagnostics |
 
 ## Monitoring
 

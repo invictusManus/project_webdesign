@@ -43,6 +43,8 @@ Every rule exists exactly once, in `standards/`, with a stable ID:
 - **COULD**: excellence. Worth doing once the MUST and SHOULD rules hold.
 - **[EU]**: legal requirement in the EU/DACH; other regions get short notes. These rules describe requirements; they are not legal advice.
 - **⚗**: experimental. No official support or proven effect, but cheap to adopt.
+- **[house]**: our own choice, stricter than or beyond what Google documents. It never contradicts Google.
+- **Source of truth for search:** Google's documentation, condensed in [`reference/google-search/`](reference/google-search/README.md). Where a rule and Google disagree, Google wins and the rule is fixed. Other areas follow their primary standard: W3C/WCAG for accessibility, OWASP/BSI for security, EU and German law for privacy.
 - Checklists reference rule IDs only. [`standards/site-types.md`](standards/site-types.md) raises or relaxes levels per site type.
 - IDs are never reused or renumbered. A removed rule keeps its row with level `RETIRED`.
 
