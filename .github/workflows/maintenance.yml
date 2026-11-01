@@ -1,0 +1,43 @@
+name: maintenance
+
+# Weekly report: changed Google Search docs and broken external links.
+# Never fails; opens or updates one issue when something needs attention.
+on:
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - name: Google docs changes
+        run: python3 scripts/google-docs.py > docs.txt || true
+      - name: External links
+        id: links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: false
+          output: lychee/out.md
+          # developers.google.com is covered by google-docs.py; it throttles parallel checks.
+          args: >-
+            --no-progress --max-concurrency 4 --max-retries 5 --retry-wait-time 10
+            --accept "200..=299,403,429"
+            --exclude "example\.com" --exclude "gesetze-im-internet\.de" --exclude "developers\.google\.com"
+            "./**/*.md"
+      - name: Report as issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          grep -E '^(NEW|REMOVED|CHANGED):' docs.txt > body.md || true
+          if [ -s body.md ]; then printf '\nRefresh: run `scripts/google-docs.py --text DIR`, update the notes and dates in reference/google-search/.\n' >> body.md; fi
+          if [ "${{ steps.links.outputs.exit_code }}" != "0" ]; then printf '\n## Broken external links\n\n' >> body.md; cat lychee/out.md >> body.md; fi
+          [ -s body.md ] || { echo "Nothing to report"; exit 0; }
+          n=$(gh issue list --state open --search "Weekly maintenance in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$n" ]; then gh issue comment "$n" --body-file body.md; else gh issue create --title "Weekly maintenance: Google docs or links changed" --body-file body.md; fi
