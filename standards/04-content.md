@@ -25,6 +25,7 @@ Last verified: 2026-10
 | CON-13 | SHOULD | Every quarter, pages with falling traffic or rankings are reviewed for usefulness. Improve them first; merge (301) or remove (410) only content that cannot be salvaged. Never add or delete content in bulk to look "fresh", and a drop after a core update alone is no reason to delete. No thin or outdated page stays indexable. | Decay report |
 | CON-14 | SHOULD | An editorial calendar follows the clusters and business priorities. Every piece has a distribution plan (newsletter, social, outreach). | Calendar |
 | CON-15 | SHOULD | Reviews, comparisons and best-of pages show first-hand evidence: own testing or measurements, benefits and drawbacks, why an item is best, alternatives or several sellers. No thin summaries or copied merchant text. | Editorial review |
+| CON-16 | MUST | Before any website text is added or changed (pages, sections, blog posts, navigation, buttons, titles, meta descriptions), it is checked line by line against [`reference/ai-writing/checklist.md`](../reference/ai-writing/checklist.md) (Wikipedia: Signs of AI writing). Every match is rewritten. | Checklist pass noted in the commit or PR |
 
 ## Sources
 

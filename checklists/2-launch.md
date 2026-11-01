@@ -11,6 +11,13 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] DES-04 Typography rules
 - [ ] DES-06 Component states documented
 - [ ] DES-10 Logo, favicons, OG images
+- [ ] DES-05 φ spacing scale · DES-14 palette structure · DES-16 golden-ratio layout
+- [ ] DES-17 shape system · DES-18 button tiers · DES-19 link styling
+- [ ] DES-21 No generic AI look
+- [ ] CON-16 Every text passed the AI-writing checklist
+- [ ] PSY-01 Reviewed against UX psychology · PSY-14 heuristic evaluation done, no open P0/P1
+- [ ] PSY-02 Gestalt · PSY-03 hierarchy · PSY-04 Hick · PSY-05 Fitts · PSY-06 Jakob
+- [ ] PSY-07 · PSY-08 Nielsen heuristics · PSY-09 cognitive load · PSY-13 ethical conversion
 - [ ] UX-02 Consistent navigation and footer
 - [ ] UX-05 No overflow from 360 to 1440 px, no hover-only functions
 - [ ] UX-06 One primary call to action per page
@@ -30,6 +37,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] GEO-03 AI crawler policy live; CDN doesn't block allowed bots
 - [ ] GEO-05 Consistent entity name and description
 - [ ] GEO-06 Organization graph with `sameAs`
+- [ ] GEO-17 · GEO-18 · GEO-19 isitagentready: Discoverability, Content, Bot Access Control 100 %
 
 ### Technical & SEO
 - [ ] TEC-01 Document head basics
@@ -82,6 +90,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] SEO-30 *(local)* NAP identical everywhere
 
 ### Performance
+- [ ] PRF-03 PageSpeed Insights ≥ 90 in all categories, mobile and desktop
 - [ ] PRF-02 Lab gate on every key template
 - [ ] PRF-06 Modern, responsive images
 - [ ] PRF-07 Media dimensions reserved

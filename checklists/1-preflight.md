@@ -21,6 +21,7 @@ Complete before design and build. Output: a signed [`project-brief.md`](../templ
 - [ ] CON-01 One intent per URL
 - [ ] CON-02 Content briefs for launch pages
 - [ ] UX-01 Information architecture validated
+- [ ] DES-13 Design intake: palette, style direction, light/dark, density
 - [ ] DES-01 `DESIGN.md` drafted
 - [ ] DES-02 `tokens.json` set up
 

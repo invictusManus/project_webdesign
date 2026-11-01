@@ -64,3 +64,20 @@ One tool per job, chosen from official or well-established tools. "Free" covers 
 **Not a replacement** for an SEO suite: no dashboards, history or scheduled tracking. Ahrefs, Similarweb and Sistrix are not available, and Semrush works only with your own key.
 
 **Alternative:** at steady high volume, go to the data providers (e.g. DataForSEO) directly.
+
+## Quality gates
+
+| Tool | Target |
+|---|---|
+| [PageSpeed Insights](https://pagespeed.web.dev) | ≥ 90 in Performance, Accessibility, Best Practices and SEO, on Mobile and Desktop (PRF-03) |
+| [isitagentready](https://isitagentready.com) (Cloudflare) | Discoverability, Content, Bot Access Control 100 % (MUST); API, Auth, MCP & Skill Discovery (SHOULD); Commerce (optional) (GEO-17 to GEO-21) |
+
+## Design and animation helpers (optional)
+
+Our standards (02, 03, 09, 14) are binding. These helpers may speed up work but never override them.
+
+| Helper | Use |
+|---|---|
+| `ui-ux-pro-max-skill` (agent skill) | Design reasoning and style references for AI agents |
+| `hallmark` (agent skill) | Review against generic "AI slop" design; complements DES-21 |
+| React Bits, Magic UI, Motion Primitives | Animated components for React/Tailwind projects; adapt them to the tokens and DES-08/DES-23. Other stacks: CSS and the Web Animations API |

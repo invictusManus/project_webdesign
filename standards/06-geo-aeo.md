@@ -42,12 +42,22 @@ Last verified: 2026-10
 | GEO-13 | SHOULD | Measure AI visibility monthly with three sources: Search Console's generative-AI report, Bing's AI Performance report, and a fixed set of 20–50 prompts (house heuristic) run across the major assistants. Record mentions, citations, accuracy and sentiment vs. competitors. | Monthly report |
 | GEO-14 | SHOULD | When AI answers describe the brand wrongly, trace the error to its source (an outdated page or third-party profile) and fix it there. | Issue log |
 
+## Agent readiness (isitagentready.com)
+
+| ID | Level | Rule | Verify |
+|---|---|---|---|
+| GEO-17 | MUST | [house] Discoverability scores 100 %: valid `robots.txt` with sitemap directive (SEO-03), XML sitemap (SEO-07), discovery `Link` headers on the home page (RFC 8288, e.g. `rel="describedby"`, `rel="api-catalog"`), and DNS records for AI discovery (DNS-AID) where the DNS provider supports them. | isitagentready.com, Discoverability |
+| GEO-18 | MUST | [house] Content scores 100 %: pages answer `Accept: text/markdown` with a Markdown rendering of the same content at the same URL, with `Vary: Accept` (e.g. the CDN's Markdown-for-agents feature or build-time Markdown). Same content in another format, not a separate AI version (GEO-01). | isitagentready.com, Content; `curl -H "Accept: text/markdown"` |
+| GEO-19 | MUST | [house] Bot Access Control scores 100 %: explicit AI bot rules in robots.txt (GEO-03), a `Content-Signal` line in the `User-agent: *` group stating `search`, `ai-input` and `ai-train`, and Web Bot Auth support (verifying signed bot requests, usually a CDN setting). | isitagentready.com, Bot Access Control |
+| GEO-20 | SHOULD | API, Auth, MCP & Skill Discovery: publish what actually exists: API catalog (`/.well-known/api-catalog`, RFC 9727), OAuth and protected-resource metadata (RFC 8414, RFC 9728), `auth.md`, MCP server card, agent skills index, WebMCP, ARD manifest. Never publish files for services that don't exist. | isitagentready.com, API, Auth, MCP & Skill Discovery |
+| GEO-21 | COULD | Commerce (shops only): agent payment and checkout protocols the payment provider supports (x402, MPP, UCP, ACP). | isitagentready.com, Commerce |
+
 ## Experimental
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
 | GEO-15 | COULD | ⚗ `/llms.txt`: a curated Markdown index of key pages. It is an unofficial proposal that Google does not use, and its effect is unproven, but it is cheap. | File reachable |
-| GEO-16 | COULD | ⚗ Content-usage signals (`Content-Signal` in robots.txt) and agent-discovery files. Unofficial; follow IETF AIPREF standardization before relying on them. | Watch list |
+| GEO-16 | RETIRED | Replaced by GEO-19 and GEO-20. ⚗ Content-usage signals (`Content-Signal` in robots.txt) and agent-discovery files. Unofficial; follow IETF AIPREF standardization before relying on them. | Watch list |
 
 ## Sources
 
@@ -56,3 +66,4 @@ Last verified: 2026-10
 - [Google: Common crawlers incl. Google-Extended](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers) · [Organization markup](https://developers.google.com/search/docs/appearance/structured-data/organization) · [Profile page](https://developers.google.com/search/docs/appearance/structured-data/profile-page) · [Robots meta tag](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag)
 - [OpenAI crawlers](https://developers.openai.com/api/docs/bots) · [Anthropic crawlers](https://support.claude.com/en/articles/8896518) · [Perplexity crawlers](https://docs.perplexity.ai/guides/bots) · [Applebot-Extended](https://support.apple.com/en-us/119829)
 - [IndexNow](https://www.indexnow.org/faq) · [llms.txt proposal](https://llmstxt.org/) · [IETF AIPREF](https://datatracker.ietf.org/wg/aipref/about/)
+- [isitagentready (Cloudflare)](https://isitagentready.com) · [RFC 9727 api-catalog](https://www.rfc-editor.org/rfc/rfc9727) · [RFC 9728 protected resource metadata](https://www.rfc-editor.org/rfc/rfc9728)

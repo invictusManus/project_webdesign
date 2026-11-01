@@ -1,0 +1,33 @@
+# 14 · UX psychology
+
+**Why it matters:** People perceive, decide and remember in predictable ways. Designs that follow these principles feel effortless and trustworthy and convert better; designs that fight them create friction, errors and distrust. These are requirements, not inspiration. Guide: steps 13–16 and 38.
+
+Scope: Gestalt, visual hierarchy, Hick's, Fitts's and Jakob's laws, Nielsen's 10 usability heuristics, cognitive load, response time, attention and memory effects, social proof, ethical conversion psychology, evaluation. Accessibility: [`09-accessibility.md`](09-accessibility.md). Design system: [`02-brand-design.md`](02-brand-design.md).
+
+Last verified: 2026-11
+
+| ID | Level | Rule | Verify |
+|---|---|---|---|
+| PSY-01 | MUST | Every page, component and flow is designed and reviewed against this file and standards 02, 03 and 09. When principles conflict, usability and accessibility win over aesthetics and persuasion. | Review protocol (PSY-14) |
+| PSY-02 | MUST | Gestalt: related items sit closer together than unrelated ones (proximity, ≥ one φ step, DES-05); the same function looks the same (similarity); groups share a common region (card, background, border); elements share alignment lines (continuity); overlays and dialogs separate clearly from the page (figure-ground). | Squint test; grid overlay |
+| PSY-03 | MUST | Visual hierarchy: each view has one focal point (headline or primary call to action). Importance is shown through size, weight, contrast, color and position. Text pages support F-pattern scanning (front-loaded headings, short paragraphs); landing sections follow a Z-pattern. | Blur test: the focal point stays identifiable |
+| PSY-04 | MUST | Hick's Law: few choices per decision. ≤ 7 top-level navigation items (UX-02), one primary action per view (UX-06), ≤ 4 pricing plans with one recommended, filters and advanced options behind progressive disclosure. | Choice count per view |
+| PSY-05 | MUST | Fitts's Law: frequent and primary actions are large and close to the user's attention and thumb: targets ≥ 44 × 44 px (A11Y-13), full-width primary buttons in mobile forms, primary actions within thumb reach on mobile, whole cards or rows clickable when they are one target. Destructive actions are smaller and placed away from the primary action. | Mobile walkthrough; target audit |
+| PSY-06 | MUST | Jakob's Law: follow conventions users know from other sites: logo top-left linking home, main navigation at the top (menu button on mobile), search and cart top-right, underlined text links, legal and contact links in the footer, standard icons. Deviate only with a tested benefit (UX-13). | Convention checklist |
+| PSY-07 | MUST | Nielsen heuristics 1–5: system status is visible (feedback ≤ 100 ms, progress indicator for waits > 1 s); the site speaks the users' language (UX-01); users stay in control (undo, cancel, back, Esc closes dialogs); consistency and standards (DES-07, PSY-06); errors are prevented (constraints, sensible defaults, confirmation before destructive or costly actions). | Heuristic evaluation (PSY-14) |
+| PSY-08 | MUST | Nielsen heuristics 6–10: recognition over recall (visible options, persistent labels, remembered input); flexibility and efficiency (autofill, shortcuts, saved progress); aesthetic and minimalist design (every element earns its place); errors explained in plain words with a fix (UX-15, A11Y-17); help available where needed (A11Y-19). | Heuristic evaluation (PSY-14) |
+| PSY-09 | MUST | Cognitive load: chunk content and fields into groups of about 4; one main task per screen in flows; forms with more than about 7 fields become steps with a progress indicator; no competing animations, banners or pop-ups during a task; plain language (CON-08); explanations sit next to the point of use. | Field and choice counts; task walkthrough |
+| PSY-10 | SHOULD | Response time: every interaction is acknowledged within 100 ms and completes or shows progress within 400 ms (Doherty threshold). Use optimistic UI where it is safe. Complements INP (PRF-01). | Performance panel |
+| PSY-11 | SHOULD | Attention and memory: the most important items come first or last in lists (serial position effect); the primary action looks distinct from everything else (isolation effect); the end of each journey (confirmation, thank-you, error) gets deliberate care (peak-end rule). | Design review |
+| PSY-12 | SHOULD | Social proof is real and verifiable: testimonials with full name, role and photo (with consent), ratings from third-party platforms with their source, customer counts and logos with date and permission, placed near decisions (UX-08). Never fabricated or selectively edited (SEO-47). | Source for every claim |
+| PSY-13 | MUST | Ethical conversion psychology: show the value before any ask; remove friction (UX-09); reverse risk with real guarantees and transparent prices; urgency, scarcity, reference prices and defaults must be true and in the user's interest (EU: discounts reference the lowest price of the previous 30 days). Test: the user would still agree after learning how the design works. No dark patterns (UX-11). | Review against UX-11; legal check |
+| PSY-14 | MUST | Evaluation: before launch and after major changes, at least 2 reviewers run a heuristic evaluation of key flows against PSY-02 to PSY-13. Findings are rated with QA-10 severities; P0 and P1 are fixed before launch, the rest are tracked. Existing sites get the same audit first. | Evaluation report |
+| PSY-15 | SHOULD | Tesler's Law: the system absorbs complexity: smart defaults, autofill (e.g. city from postcode), remembered choices, inline calculations instead of manual steps. | Flow review |
+| PSY-16 | SHOULD | Aesthetic-usability effect: consistent spacing, alignment and typography raise perceived quality and trust. Polish never hides a usability problem found in testing. | Visual QA (QA-12) |
+
+## Sources
+
+- [Nielsen Norman Group: 10 Usability Heuristics](https://www.nngroup.com/articles/ten-usability-heuristics/)
+- [Laws of UX](https://lawsofux.com/) (Hick, Fitts, Jakob, Doherty, serial position, von Restorff, peak-end, Tesler, aesthetic-usability, Gestalt)
+- [Sweller (1988): Cognitive load during problem solving](https://doi.org/10.1207/s15516709cog1202_4)
+- [EU Digital Services Act, Art. 25 (dark patterns)](https://eur-lex.europa.eu/eli/reg/2022/2065/oj) · [PAngV §11 (price reductions)](https://www.gesetze-im-internet.de/pangv_2022/__11.html)

@@ -12,6 +12,8 @@ This repository is a web design 101: a step-by-step guide (`GUIDE.md`) on top of
 6. Rules tagged `[EU]` describe legal requirements, not legal advice. Flag them for human review.
 7. Never submit real forms, send emails, make purchases, or change DNS, analytics or consent settings without explicit approval.
 8. To make an AI agent apply the blueprint in a website repository, copy `templates/AGENTS.md` into that repository.
+9. When building or editing a website, use the ponytail skill at level full (`/ponytail full`). If it isn't installed, stop and ask the user to install it first (marketplace `DietrichGebert/ponytail`).
+10. UI and copy work: standards 02 (design system), 03 (UX), 09 (accessibility) and 14 (UX psychology) are foundational requirements, not suggestions. Run the design intake (DES-13) before designing. Check every text against `reference/ai-writing/checklist.md` before publishing (CON-16).
 
 ## Editing this repository
 

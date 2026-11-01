@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-ID='(STR|DES|UX|CON|SEO|GEO|TEC|PRF|A11Y|SEC|PRV|MSR|I18N|QA)-[0-9]{2}'
+ID='(STR|DES|UX|CON|SEO|GEO|TEC|PRF|A11Y|SEC|PRV|MSR|I18N|QA|PSY)-[0-9]{2}'
 fail=0
 err() { echo "FAIL: $*"; fail=1; }
 

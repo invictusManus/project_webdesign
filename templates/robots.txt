@@ -5,6 +5,8 @@
 # "*" does not match AdsBot crawlers: name AdsBot-Google (and AdsBot-Google-Mobile) explicitly if they need rules.
 
 User-agent: *
+# Content usage preferences (GEO-19); set ai-train=no to opt out of model training.
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Disallow: /api/
 # State-changing and internal-search URLs (SEO-03). Uncomment the paths that exist; mind prefix matches.
 # Disallow: /cart
@@ -28,7 +30,5 @@ Disallow: /api/
 # User-agent: CCBot
 # Disallow: /
 
-# Experimental (unofficial, not used by Google): content usage signals.
-# Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 Sitemap: https://www.example.com/sitemap.xml

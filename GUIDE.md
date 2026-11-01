@@ -79,12 +79,13 @@ Design is how the site earns trust in the first seconds. Consistency comes from 
 **Step 11 · Write the brand spec.**
 - Why: one written source keeps designers, developers, writers and AI agents consistent.
 - Do: fill in [`DESIGN.md`](templates/DESIGN.md): personality, voice, logo use, color roles, type, imagery, glossary.
-- Done: DES-01.
+- Start with the design intake: palette (or suggestions) and style direction (DES-13).
+- Done: DES-13, DES-01.
 
 **Step 12 · Turn the brand into design tokens.**
 - Why: tokens are named values (e.g. `color.action.primary`). Change one, and every button updates; nobody improvises a new blue.
 - Do: start from [`tokens.json`](templates/tokens.json): primitive values, then semantic roles, then components. Check that every text color pair passes contrast.
-- Done: DES-02, DES-03, DES-04.
+- Done: DES-02, DES-03, DES-04, DES-05, DES-14. Type, spacing and radius follow the golden ratio (φ ≈ 1.618).
 
 **Step 13 · Design mobile first, with reusable components.**
 - Why: most visits are on phones, and Google indexes the mobile version.
@@ -94,7 +95,7 @@ Design is how the site earns trust in the first seconds. Consistency comes from 
 **Step 14 · Design the key pages.**
 - Why: visitors decide fast. The first screen must answer "what is this, is it for me, what do I do next?"
 - Do: give every page one primary call to action, put trust signals (reviews, logos, guarantees, real contact details) near decisions, and use no dark patterns.
-- Done: UX-06, UX-07, UX-08, UX-11, UX-17 (no pop-ups hiding the content).
+- Done: UX-06, UX-07, UX-08, UX-11, UX-17 (no pop-ups hiding the content), DES-21 (no generic AI look), and the psychology principles PSY-02 to PSY-13.
 
 **Step 15 · Design forms and states.**
 - Why: forms are where conversions happen, and where most of them get lost.
@@ -120,7 +121,8 @@ Content is why people come and why search engines and AI cite you.
 **Step 18 · Write for people first.**
 - Why: Google and AI systems reward pages with original value: real experience, data, examples. Rewritten generic text doesn't rank and doesn't get cited.
 - Do: lead with the answer. Use one idea per paragraph and headings that match real questions. Add something only you can say. Have experts review AI-assisted drafts.
-- Done: CON-04, CON-07, CON-08, CON-09.
+- Check every line against the AI-writing checklist before publishing.
+- Done: CON-04, CON-07, CON-08, CON-09, CON-16.
 
 **Step 19 · Show who is behind the site.**
 - Why: trust is the core of E-E-A-T. Anonymous content is weaker for users, search and AI.
@@ -205,7 +207,7 @@ Test like a visitor, a crawler and an attacker, on real devices.
 **Step 31 · Let the machines check first.**
 - Why: automated checks catch regressions on every change, for free.
 - Do: run HTML validation, a link check, Lighthouse CI and an automated accessibility scan in CI ([`lighthouserc.json`](templates/ci/lighthouserc.json)).
-- Done: QA-03, QA-04, A11Y-23.
+- Done: QA-03, QA-04, A11Y-23, PRF-03 (PageSpeed ≥ 90 everywhere), GEO-17 to GEO-19 (isitagentready 100 %).
 
 **Step 32 · Test by hand.**
 - Why: tools find only part of the problems, especially accessibility ones.

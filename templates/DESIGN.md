@@ -2,6 +2,15 @@
 
 The brand spec for people and AI agents (DES-01). Read it before any UI or copy work. Values live in `tokens.json` (DES-02): reference token names here, never raw values.
 
+## Design intake (DES-13)
+
+| Question | Answer |
+|---|---|
+| Color palette (or pick one of the suggested palettes) | |
+| Style direction: minimal/simple · modern translucent · bold/expressive · editorial · classic/corporate · playful | |
+| Light, dark or both | |
+| Density: airy or compact | |
+
 ## Brand
 
 - **Positioning:** [statement from project brief, STR-03]
@@ -30,10 +39,10 @@ Files, clear space, minimum size, allowed backgrounds, forbidden uses.
 
 | Role | Token | Notes |
 |---|---|---|
-| Body | `semantic.text.body` | ≥ 16 px, line-height 1.5, 45–75 characters per line |
-| H1–H3 | `semantic.text.h1`…`h3` | Fluid via `clamp()` |
+| Body | `semantic.text.body` | 1 rem (16–18 px), line-height 1.6, 45–75 characters per line |
+| H1–H4 | `semantic.text.h1`…`h4` | Golden-ratio scale: H4 1.272, H3 1.618, H2 2.058, H1 2.618 rem (desktop), via `clamp()` |
 
-Families: `primitive.font.family.sans`; weights: regular, medium, semibold only.
+Families: `primitive.font.family.sans`; weights: 400 body, 500–600 labels, 600–700 headings (DES-15).
 
 ## Layout & spacing
 

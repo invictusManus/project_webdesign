@@ -14,6 +14,10 @@
   X-Frame-Options: DENY
   Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' https://www.googletagmanager.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; style-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
 
+# Agent discovery (GEO-17): add Link headers on the home page for what exists, e.g.
+# /
+#   Link: </.well-known/api-catalog>; rel="api-catalog", </llms.txt>; rel="describedby"; type="text/markdown"
+
 # Fingerprinted build output: cache for a year. Match your build tool's folder (e.g. /_astro/*, /_next/static/*).
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
