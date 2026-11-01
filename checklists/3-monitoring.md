@@ -5,7 +5,7 @@ Recurring checks for a live site. Each item names the rule it keeps true. Record
 ## Weekly
 
 - [ ] Uptime incidents and error-tracker alerts reviewed (MSR-21, MSR-23)
-- [ ] Search Console: Page indexing, manual actions, security issues (MSR-02)
+- [ ] Search Console: Page indexing, manual actions, security issues (MSR-34, MSR-35); full routine in [`4-search-console.md`](4-search-console.md)
 - [ ] Rankings for the core keyword set, by device and market (MSR-24)
 - [ ] Synthetic test submission of the main form arrives (TEC-17)
 - [ ] Backups ran successfully (TEC-12)

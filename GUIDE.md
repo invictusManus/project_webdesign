@@ -235,8 +235,8 @@ Test like a visitor, a crawler and an attacker, on real devices.
 
 **Step 36 · Watch the first 14 days.**
 - Why: problems show up in Search Console and logs within days. Catch them before rankings are affected.
-- Do: follow § C. Relaunching an existing site? § D (redirect map, content parity) is mandatory.
-- Done: SEO-34 to SEO-37 (relaunch).
+- Do: follow § C. Relaunching an existing site? § D (redirect map, content parity) is mandatory. Work through the [Search Console runbook](checklists/4-search-console.md): read every "not indexed" reason, fix the real defects and validate the fix.
+- Done: SEO-34 to SEO-37 (relaunch), MSR-32 to MSR-34.
 
 ---
 

@@ -161,7 +161,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] PRV-13 *(EU)* AI disclosure and labels
 
 ### Measurement
-- [ ] MSR-01 Search Console domain property
+- [ ] MSR-01 Search Console domain property · MSR-31 permissions (runbook: [`4-search-console.md`](4-search-console.md))
 - [ ] MSR-06 Measurement plan
 - [ ] MSR-07 GA4 configured
 - [ ] MSR-08 Key events tested
@@ -205,7 +205,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 ## C · First 14 days
 
 - [ ] Daily: error tracking, server 404 log, uptime alerts
-- [ ] Day 2: Search Console Page indexing and Crawl stats show no unexpected errors (MSR-02)
+- [ ] Day 2: Search Console Page indexing and Crawl stats show no unexpected errors (MSR-02); Day 3–7: not-indexed reasons triaged (MSR-34); weekly: manual actions and security issues (MSR-35)
 - [ ] Day 3: key events arrive in GA4 with plausible counts (MSR-08)
 - [ ] Day 7: 404s from old or external links are redirected (SEO-08, SEO-35)
 - [ ] Day 14: first ranking and traffic snapshot vs. baseline; open issues triaged

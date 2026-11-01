@@ -56,7 +56,7 @@ standards/   01-strategy · 02-brand-design · 03-ux · 04-content · 05-seo · 
              08-performance · 09-accessibility · 10-security-privacy · 11-measurement · 12-i18n · 13-qa
              14-ux-psychology · 15-layout-responsive · 16-components
              site-types
-checklists/  1-preflight · 2-launch · 3-monitoring
+checklists/  1-preflight · 2-launch · 3-monitoring · 4-search-console
 templates/   project-brief · content-brief · audit-report · url-map.csv · AGENTS · DESIGN · tokens.json
              head.html · robots.txt · _headers · security.txt · consent-default.html
              schema/ (site graph, local business, article, product) · ci/ (quality workflow, Lighthouse CI)
@@ -82,7 +82,7 @@ scripts/     check.sh (rule IDs, checklist coverage, reference coverage)
 | Performance & Core Web Vitals | `08-performance` |
 | Accessibility | `09-accessibility` |
 | Security & compliance (OWASP, HTTPS, GDPR, consent, legal pages) | `10-security-privacy` |
-| Google ecosystem (Search Console, GA4, GTM, sitemaps, indexing, conversions) | `11-measurement` |
+| Google ecosystem (Search Console, GA4, GTM, sitemaps, indexing, conversions) | `11-measurement`, `checklists/4-search-console.md` |
 | Internationalization | `12-i18n` |
 | Quality assurance | `13-qa`, `templates/ci/` |
 | Monitoring & growth | `11-measurement`, `checklists/3-monitoring.md` |
