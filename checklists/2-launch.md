@@ -34,6 +34,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] UX-11 No dark patterns
 - [ ] *(shop)* UX-18 product page · UX-19 costs before checkout · UX-20 cart · UX-21 checkout · UX-23 order confirmation
 - [ ] CON-17 Style guide followed
+- [ ] *(chat)* UX-25 Chatbot disclosed, accessible, human handoff
 - [ ] CON-04 Every page adds original value
 - [ ] CON-05 About, bylines, sources
 - [ ] CON-06 Honest dates

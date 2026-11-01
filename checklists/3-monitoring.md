@@ -15,7 +15,8 @@ Recurring checks for a live site. Each item names the rule it keeps true. Record
 - [ ] KPI dashboard review: traffic by channel, key events, conversion rate (MSR-25)
 - [ ] Field Core Web Vitals per template (PRF-01, PRF-05)
 - [ ] AI visibility: prompt set, Search Console and Bing AI reports (GEO-13); wrong brand facts traced (GEO-14)
-- [ ] Funnel drop-off reviewed, 1–3 conversion hypotheses prioritized (UX-14, UX-16)
+- [ ] Funnel drop-off reviewed, 1–3 conversion hypotheses prioritized (UX-14, UX-16); onboarding activation (UX-26)
+- [ ] *(chat)* Chatbot answers reviewed for accuracy (UX-25); zero-result site searches reviewed (UX-24)
 - [ ] Dependency and CMS updates merged (TEC-25, SEC-15)
 - [ ] Broken internal links fixed (SEO-25)
 - [ ] New backlinks and brand mentions reviewed (SEO-26, GEO-10)
@@ -31,6 +32,8 @@ Recurring checks for a live site. Each item names the rule it keeps true. Record
 - [ ] Security headers and TLS re-checked (SEC-01, SEC-03); DAST baseline scan (SEC-19)
 - [ ] Accessibility regression: automated scan plus manual spot check of one core flow (A11Y-23, A11Y-24)
 - [ ] Third-party inventory matches live network requests (TEC-20)
+- [ ] Local listings (Business Profile, Apple, Bing, directories) match NAP and hours (SEO-30, SEO-64)
+- [ ] Postmaster Tools spam rate < 0.3 % *(marketing email)* (TEC-39)
 - [ ] Access review: remove leavers, confirm 2FA (TEC-13, TEC-27)
 - [ ] Standards re-verified against the watch list in the README
 
@@ -42,6 +45,7 @@ Recurring checks for a live site. Each item names the rule it keeps true. Record
 - [ ] Every page past its review date reviewed (CON-12)
 - [ ] Domain renewal, registrar lock and DNS records checked (TEC-13, TEC-14, TEC-15)
 - [ ] Tool stack review ([`TOOLS.md`](../TOOLS.md))
+- [ ] Cleanup of unused pages, media, fonts and scripts; hosting energy check (PRF-23)
 
 ## Triggers → action
 

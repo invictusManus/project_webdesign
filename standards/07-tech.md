@@ -4,9 +4,9 @@
 
 Detail: `reference/google-search/` notes.
 
-Scope: HTML/CSS/JS baseline, rendering, hosting, environments, domain, DNS, email, integrations (CMS, forms, APIs, third parties), CMS validation and editorial workflow, maintenance and handover. Security headers and TLS: [`10-security-privacy.md`](10-security-privacy.md).
+Scope: HTML/CSS/JS baseline, rendering, hosting, environments, domain, DNS, email, integrations (CMS, forms, APIs, third parties), CMS validation and editorial workflow, transactional and marketing email, maintenance and handover. Security headers and TLS: [`10-security-privacy.md`](10-security-privacy.md).
 
-Last verified: 2026-10
+Last verified: 2026-11
 
 ## Markup, styles, scripts
 
@@ -49,6 +49,8 @@ Last verified: 2026-10
 | TEC-14 | SHOULD | A CAA record limits certificate issuers. DNSSEC is on where the registrar supports it. All name servers return the right A/CNAME records (changes take up to 72 h). Lower TTLs to a few hours or less at least 7 days before a DNS migration. | `dig CAA`; `dig` per name server; DNSSEC analyzer |
 | TEC-15 | MUST | Every domain that sends email has SPF, DKIM and DMARC. Start DMARC at `p=none` with reports, then move to `quarantine` and `reject`. | MXToolbox; DMARC reports |
 | TEC-16 | SHOULD | Transactional email (forms, orders) goes through a dedicated provider on its own subdomain, with aligned SPF/DKIM. | Header check of a test email |
+| TEC-38 | SHOULD | Transactional emails (confirmations, orders, password resets): HTML plus a plain-text part, one column ≤ 600 px, live text instead of images, `lang` set, layout tables with `role="presentation"`, alt text, body text ≥ 16 px, absolute links with descriptive text, token colors that pass A11Y-07, and a logo that works in dark mode. The sender name is consistent and replies reach a monitored inbox. No marketing content or tracking without a legal basis (PRV-01). Tested in Gmail, Outlook and Apple Mail, light and dark. | Test sends; email client previews |
+| TEC-39 | SHOULD | Marketing email follows Gmail's sender guidelines: aligned SPF, DKIM and DMARC (TEC-15), valid forward and reverse DNS, TLS, one-click unsubscribe (`List-Unsubscribe` with an HTTPS URI plus `List-Unsubscribe-Post: List-Unsubscribe=One-Click`, both covered by DKIM, RFC 8058) and a visible unsubscribe link in the body, honored within 48 hours, and a user-reported spam rate below 0.3 % in Postmaster Tools (aim below 0.1 %). Gmail enforces the unsubscribe and DMARC parts for bulk senders (about 5,000 messages a day to Gmail); follow them at any volume. Consent per PRV-11. | Message headers; Postmaster Tools |
 
 ## Integrations
 
@@ -82,9 +84,10 @@ Last verified: 2026-10
 
 ## Sources
 
+- [Google: Email sender guidelines](https://support.google.com/mail/answer/81126) · [Sender guidelines FAQ](https://support.google.com/a/answer/14229414) · [RFC 8058: One-click unsubscribe](https://www.rfc-editor.org/rfc/rfc8058)
 - [MDN: Webpage metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) · [WHATWG HTML](https://html.spec.whatwg.org/)
 - [web.dev: Rendering on the web](https://web.dev/articles/rendering-on-the-web)
-- [Google: Email sender guidelines](https://support.google.com/a/answer/81126) · [RFC 7489 DMARC](https://www.rfc-editor.org/rfc/rfc7489)
+- [RFC 9989 DMARC](https://www.rfc-editor.org/rfc/rfc9989) (obsoletes RFC 7489) · [Google: Video best practices](https://developers.google.com/search/docs/appearance/video)
 - [RFC 8659 CAA](https://www.rfc-editor.org/rfc/rfc8659)
 - [Google: Valid page metadata](https://developers.google.com/search/docs/crawling-indexing/valid-page-metadata) · [Fix JavaScript issues](https://developers.google.com/search/docs/crawling-indexing/javascript/fix-search-javascript) · [Dynamic rendering](https://developers.google.com/search/docs/crawling-indexing/javascript/dynamic-rendering)
 - [Google: Reduce crawl rate](https://developers.google.com/crawling/docs/crawlers-fetchers/reduce-crawl-rate) · [Verify Google requests](https://developers.google.com/crawling/docs/crawlers-fetchers/verify-google-requests) · [DNS and network errors](https://developers.google.com/crawling/docs/troubleshooting/dns-network-errors) · [Crawler overview (caching)](https://developers.google.com/crawling/docs/crawlers-fetchers/overview-google-crawlers)

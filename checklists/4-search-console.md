@@ -4,7 +4,7 @@ Everything to do in Google Search Console, in order, from setup to routine. Each
 
 ## 1 · Setup (before launch)
 
-- [ ] Domain property verified by DNS TXT; token kept permanently (MSR-01, MSR-31)
+- [ ] Domain property verified by DNS TXT; the site owner's token kept, leavers' tokens removed (MSR-01, MSR-31)
 - [ ] ≥ 2 owners incl. the site owner; agencies and tools Full or Restricted (MSR-01, MSR-31)
 - [ ] Email notifications on, messages forwarded to a monitored mailbox (MSR-05, SEC-20)
 - [ ] Associations: GA4 (MSR-05) · *(shop)* Merchant Center · Google Ads where used (MSR-37)
@@ -14,14 +14,14 @@ Everything to do in Google Search Console, in order, from setup to routine. Each
 ## 2 · Launch day
 
 - [ ] robots.txt report: every host "Fetched", no `Disallow: /` (MSR-33, SEO-04)
-- [ ] Sitemap index submitted, status "Success" (MSR-02, MSR-32)
+- [ ] Sitemap index submitted by an owner, status "Success" (MSR-02, MSR-32)
 - [ ] URL Inspection live test on the home page and top money pages: indexable, rendered HTML complete, canonical correct; then Request indexing (MSR-03, MSR-34)
 - [ ] *(relaunch, new domain)* Change of address for every old verified variant (SEO-37)
 
 ## 3 · First 14 days
 
 - [ ] Day 2: Page indexing and Crawl stats show no unexpected errors (MSR-02, MSR-28)
-- [ ] Day 3–7: every "not indexed" reason classified; defects fixed and "Validate fix" started (MSR-34)
+- [ ] Day 3–7: every "not indexed" reason classified; defects fixed and "Validate Fix" started (MSR-34)
 - [ ] Day 7: Sitemaps discovered count ≈ indexable URLs (MSR-32)
 - [ ] Day 7: rich result, Merchant listings and Video reports checked (MSR-27)
 - [ ] Day 14: Performance baseline recorded: clicks, impressions, CTR, position by page (MSR-36)

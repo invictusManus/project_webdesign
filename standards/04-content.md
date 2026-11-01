@@ -6,7 +6,7 @@ Detail: `reference/google-search/` notes.
 
 Scope: content strategy, topic clusters, E-E-A-T, copywriting, media, AI-assisted content, governance. Per-page planning: [`content-brief.md`](../templates/content-brief.md).
 
-Last verified: 2026-10
+Last verified: 2026-11
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
@@ -18,7 +18,7 @@ Last verified: 2026-10
 | CON-06 | MUST | Articles show their published and updated dates, and `datePublished`/`dateModified` markup equals them (timezone included, no future dates). "Updated" changes only after a substantive edit, never for a date bump alone. | Version history vs. date |
 | CON-07 | SHOULD | Answer first: lead with the direct answer or key takeaway, then the detail. One idea per paragraph. Subheadings mirror real user questions. Use lists and tables for comparable data. | Editorial review |
 | CON-08 | SHOULD | Use plain, active language at the audience's reading level and the voice defined in `DESIGN.md`. No filler introductions. | Readability check |
-| CON-09 | MUST | AI-assisted content gets expert review, a fact check of every claim and an original contribution. Disclose AI use where readers would expect it (and per PRV-13). Review also covers `<title>`, meta description, structured data and alt text. AI-generated images carry IPTC `DigitalSourceType` `TrainedAlgorithmicMedia`; AI-written product titles and descriptions are labeled as such in Merchant Center. Never publish at scale without review (SEO-33). | Editorial log |
+| CON-09 | MUST | AI-assisted content gets expert review, a fact check of every claim and an original contribution. Disclose AI use where readers would expect it (and per PRV-13). Review also covers `<title>`, meta description, structured data and alt text. In Merchant Center feeds, AI-generated images carry IPTC `DigitalSourceType` `TrainedAlgorithmicMedia`; AI-written product titles and descriptions are labeled as such in Merchant Center. Never publish at scale without review (SEO-33). | Editorial log |
 | CON-10 | SHOULD | Prefer original images and diagrams to stock. Use captions where they add context. Videos get a transcript and chapter markers. Alt text follows A11Y-06. | Media review |
 | CON-11 | SHOULD | Health, finance, legal and safety topics (YMYL) are written or reviewed by named, qualified experts. | Byline and reviewer |
 | CON-12 | MUST | Each page has an owner and a review date. YMYL pages are reviewed every 6 months, all others at least yearly. Dated markup (events, offers, jobs) is kept current. | `url-map.csv` owner and review_date |
@@ -35,7 +35,7 @@ Last verified: 2026-10
 | CON-18 | SHOULD | [house] Readability for general audiences: sentences average ≤ 20 words, paragraphs ≤ 4 sentences, Flesch reading ease ≥ 60 for English (Amstad ≥ 60 for German). The brief may set another level for specialist audiences. Complements A11Y-21. | Readability tool on key pages |
 | CON-19 | SHOULD | Every recurring content type has a fixed structure in `content-brief.md`: article (answer first, sections, sources, author box), case study (client, problem, approach, measured result, quote), product description (benefit first, specifications, use and care, own text instead of manufacturer copy), service page, location page (SEO-31), landing page (ad promise, value, proof, offer, call to action, FAQ). | Sample per type |
 | CON-20 | SHOULD | Inclusive language: gender-inclusive forms as defined per language in the style guide, people-first wording, no ableist idioms, imagery that represents the audience authentically. Instructions never rely on color, shape or position alone ("the green button", "on the right", WCAG 1.3.3). | Copy review |
-| CON-21 | SHOULD | [EU] Claims are provable: prices, test results, superlatives ("best", "No. 1"), awards, certifications and statistics carry a source and date, and superlatives are backed by evidence (Germany: UWG §5). Flag for legal review. | Claims register |
+| CON-21 | SHOULD | [EU] Claims are provable: statements about prices, test results, awards and certifications must not mislead (UWG §5 Abs. 2 Nr. 1–3; Directive 2005/29/EC Art. 6), price reductions must be provable (UWG §5 Abs. 5), and superlatives ("best", "No. 1") need evidence under case law on §5. [house] Every such claim and statistic carries a source and date. Flag for legal review. | Claims register |
 
 ## Sources
 
@@ -43,5 +43,5 @@ Last verified: 2026-10
 - [Google: Guidance on using generative AI content](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content)
 - [Google: Search Quality Rater Guidelines](https://guidelines.raterhub.com/searchqualityevaluatorguidelines.pdf)
 - [Google: Core updates](https://developers.google.com/search/docs/appearance/core-updates) · [Publication dates](https://developers.google.com/search/docs/appearance/publication-dates) · [Reviews system](https://developers.google.com/search/docs/appearance/reviews-system) · [Write high-quality reviews](https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews)
-- [W3C: WCAG 2.2, 1.3.3 Sensory characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html) · [UWG §5 (misleading commercial practices)](https://www.gesetze-im-internet.de/uwg_2004/__5.html)
+- [W3C: WCAG 2.2, 1.3.3 Sensory characteristics](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics.html) · [UWG §5 (misleading commercial practices)](https://www.gesetze-im-internet.de/uwg_2004/__5.html) · [Directive 2005/29/EC (Unfair Commercial Practices)](https://eur-lex.europa.eu/eli/dir/2005/29/oj)
 - [Google: Spam policies (scaled content abuse)](https://developers.google.com/search/docs/essentials/spam-policies)

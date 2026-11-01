@@ -66,7 +66,7 @@ Last verified: 2026-10
 ## Sources
 
 - [OWASP Top 10:2025](https://owasp.org/Top10/) · [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/) · [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
-- [MDN: HTTP security headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) · [MDN HTTP Observatory](https://developer.mozilla.org/en-US/observatory)
+- [MDN: HTTP security headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers) · [MDN HTTP Observatory](https://developer.mozilla.org/en-US/observatory)
 - [BSI TR-02102-2 (TLS)](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/TechnischeRichtlinien/TR02102/BSI-TR-02102-2.html) · [RFC 9116 security.txt](https://www.rfc-editor.org/rfc/rfc9116)
 - [Google: Prevent malware](https://developers.google.com/search/docs/monitor-debug/security/prevent-malware) · [Social engineering](https://developers.google.com/search/docs/monitor-debug/security/social-engineering) · [Repeat Offenders](https://developers.google.com/search/docs/monitor-debug/security/safe-browsing-repeat-offenders) · [`site:` operator](https://developers.google.com/search/docs/monitor-debug/search-operators/all-search-site)
 - [NIST SP 800-63B-4](https://pages.nist.gov/800-63-4/sp800-63b.html)

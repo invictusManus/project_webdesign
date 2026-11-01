@@ -57,8 +57,8 @@ Most website failures are planning failures: the wrong audience, an unclear offe
 
 **Step 8 · Set up accounts, owned by the client.**
 - Why: an agency or ex-employee holding the domain or analytics account is a common, expensive disaster.
-- Do: register the domain, hosting, Git, CMS, Search Console, analytics and consent tool in the site owner's name. Turn on 2FA and store every login in a shared vault.
-- Done: TEC-13, MSR-01, MSR-04 (see [`1-preflight.md`](checklists/1-preflight.md) § C).
+- Do: register the domain, hosting, Git, CMS, Search Console, analytics and consent tool in the site owner's name. Local businesses also claim Google Business Profile, Apple Business and Bing Places. Turn on 2FA and store every login in a shared vault.
+- Done: TEC-13, MSR-01, MSR-04, SEO-29, SEO-64 (see [`1-preflight.md`](checklists/1-preflight.md) § C).
 
 **Step 9 · Make the technical decisions.**
 - Why: rendering and platform choices are hard to undo, and they decide speed and SEO.
@@ -101,7 +101,8 @@ Design is how the site earns trust in the first seconds. Consistency comes from 
 **Step 15 · Design forms and states.**
 - Why: forms are where conversions happen, and where most of them get lost.
 - Do: ask for as little as possible. Use visible labels, error messages that explain the fix, and a confirmation that says what happens next.
-- Done: UX-09, UX-10, A11Y-16, A11Y-17, CMP-07 to CMP-10.
+- Confirmation emails are part of the form: readable in every mail client, light and dark (TEC-38).
+- Done: UX-09, UX-10, A11Y-16, A11Y-17, CMP-07 to CMP-10, TEC-38.
 
 **Step 16 · Build accessibility into the design.**
 - Why: about one in six people lives with a significant disability (WHO). Accessible design is also clearer for everyone, and the law requires it for many sites.
@@ -177,7 +178,8 @@ Build on a solid, boring foundation. Every shortcut here shows up later as a ran
 - Do:
   - Responsive modern images with fixed dimensions; the main hero image loads eagerly with high priority.
   - Self-hosted, subset fonts; deferred scripts; long caching for hashed files.
-- Done: PRF-02, PRF-06 to PRF-13, PRF-17, PRF-22 (no file over 2 MB).
+  - Host on renewable energy and keep pages light; it saves energy as well as time (⚗).
+- Done: PRF-02, PRF-06 to PRF-13, PRF-17, PRF-22 (no file over 2 MB), PRF-23.
 
 **Step 27 · Secure the site.**
 - Why: even a brochure site can be hijacked for spam or used to attack visitors.
@@ -252,8 +254,8 @@ A website is never finished. The routine in [`3-monitoring.md`](checklists/3-mon
 
 **Step 38 · Improve conversions.**
 - Why: doubling the conversion rate is often cheaper than doubling traffic.
-- Do: find where visitors drop off, form a hypothesis, and test one change at a time.
-- Done: UX-14, UX-16.
+- Do: find where visitors drop off, form a hypothesis, and test one change at a time. For SaaS and apps, measure how many new users reach the first moment of value.
+- Done: UX-14, UX-16, UX-26.
 
 **Step 39 · Build content and authority.**
 - Why: rankings and AI citations grow with topical depth and with other sites referencing you.

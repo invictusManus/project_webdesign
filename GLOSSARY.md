@@ -72,6 +72,6 @@ Plain-language definitions of the terms used in this blueprint, in alphabetical 
 | **Toast** | A short, temporary message (e.g. "Saved") that appears at the edge of the screen and disappears on its own. |
 | **TTFB** | Time to First Byte: how fast the server starts answering. Good: ≤ 0.8 s. |
 | **UTM parameters** | Tags added to campaign links (`utm_source`, `utm_medium`, `utm_campaign`) so analytics can attribute visits. |
-| **Validate fix** | A Search Console button that asks Google to recrawl the affected URLs after you fixed an indexing or enhancement issue. |
+| **Validate Fix** | A Search Console button that asks Google to recrawl the affected URLs after you fixed an indexing or enhancement issue. |
 | **WCAG** | Web Content Accessibility Guidelines (W3C). Level AA of version 2.2 is the target in this blueprint. |
 | **YMYL** | "Your Money or Your Life": topics (health, finance, legal, safety) where bad information can cause real harm, judged more strictly. |

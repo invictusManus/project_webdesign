@@ -6,7 +6,7 @@ Detail: `reference/google-search/` notes.
 
 Scope: Core Web Vitals, budgets, images, fonts, JavaScript, network and caching.
 
-Last verified: 2026-10
+Last verified: 2026-11
 
 ## Targets
 
@@ -15,7 +15,7 @@ Last verified: 2026-10
 | PRF-01 | MUST | [house] Core Web Vitals are "good" at the 75th percentile of real users, on mobile and on desktop: LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1. | PageSpeed Insights field data; GSC Core Web Vitals (≈ 28 days after launch) |
 | PRF-02 | MUST | Before launch, every key template passes in the lab: Lighthouse mobile, median of ≥ 3 runs, LCP ≤ 2.5 s, TBT ≤ 200 ms, CLS ≤ 0.1. | Lighthouse CI ([`lighthouserc.json`](../templates/ci/lighthouserc.json)) |
 | PRF-03 | MUST | [house] PageSpeed Insights ([pagespeed.web.dev](https://pagespeed.web.dev)) scores ≥ 90 in all four categories (Performance, Accessibility, Best Practices, SEO) on both Mobile and Desktop for every key template. | PageSpeed Insights; Lighthouse CI (QA-04) |
-| PRF-04 | SHOULD | Budgets per page: ≤ 1.5 MB transferred (landing pages ≤ 500 KB), ≤ 170 KB compressed JavaScript on content pages, TTFB ≤ 0.8 s at p75. | Lighthouse; WebPageTest |
+| PRF-04 | SHOULD | [house] Budgets per page: ≤ 1.5 MB transferred (landing pages ≤ 500 KB), ≤ 170 KB compressed JavaScript on content pages. TTFB ≤ 0.8 s (web.dev's "good" threshold), measured at p75 in CrUX. | Lighthouse; WebPageTest |
 | PRF-05 | SHOULD | Real-user Core Web Vitals are collected per template (web-vitals library → analytics or RUM tool). | RUM dashboard |
 | PRF-22 | MUST | No HTML, CSS or JS file exceeds 2 MB uncompressed: Googlebot reads only the first 2 MB of each file (64 MB for PDFs) and ignores the rest. | Crawler file-size report; DevTools uncompressed size |
 
@@ -32,8 +32,8 @@ Last verified: 2026-10
 
 | ID | Level | Rule | Verify |
 |---|---|---|---|
-| PRF-10 | MUST | Fonts are self-hosted WOFF2, subset to the scripts in use, and limited to the weights in use (one variable font beats several static files). | Network panel |
-| PRF-11 | MUST | `font-display: swap` or `optional`, with a metric-matched fallback (`size-adjust`, `ascent-override`). Preload at most the 1–2 fonts used above the fold. | Lighthouse; CLS on font swap |
+| PRF-10 | MUST | Fonts are WOFF2 ([house] self-hosted, which also avoids a third-party request, PRV-07), subset to the scripts in use, and limited to the weights in use (one variable font beats several static files). | Network panel |
+| PRF-11 | MUST | `font-display: swap` or `optional`, with a metric-matched fallback (`size-adjust`, `ascent-override`). [house] Preload at most the 1–2 fonts used above the fold. | Lighthouse; CLS on font swap |
 
 ## JavaScript & CSS
 
@@ -50,16 +50,20 @@ Last verified: 2026-10
 | ID | Level | Rule | Verify |
 |---|---|---|---|
 | PRF-17 | MUST | Fingerprinted static assets send `Cache-Control: public, max-age=31536000, immutable`. HTML is revalidated (`no-cache` or short `max-age`). | `curl -I` |
-| PRF-18 | SHOULD | `preconnect` only to critical third-party origins (≤ 3). No unused preloads. | Lighthouse warnings |
-| PRF-19 | COULD | Multi-page sites prerender likely next pages with Speculation Rules (`moderate` eagerness). | DevTools → Speculative loads |
+| PRF-18 | SHOULD | `preconnect` only to critical third-party origins (≤ 2, Lighthouse warns above that). No unused preloads. | Lighthouse warnings |
+| PRF-19 | COULD | Multi-page sites prerender likely next pages with Speculation Rules (`moderate` eagerness). | DevTools → Application → Background services → Speculative loads |
 | PRF-20 | COULD | Cross-document View Transitions are added as progressive enhancement and respect `prefers-reduced-motion`. | Manual check |
 | PRF-21 | COULD | Page weight and request count are tracked as a proxy for energy use. Static, cached delivery is preferred. | Monthly budget report |
+| PRF-23 | SHOULD | ⚗ Sustainable delivery (W3C Web Sustainability Guidelines, draft): hosting runs on verified renewable energy (Green Web Foundation check or the provider's published report); video does not autoplay by default (PRF-09) and users control playback and resolution. [house] Hosting sits in a region close to the audience, video streams adaptively, and unused pages, media, fonts and third-party scripts are removed at least yearly (TEC-20). | Green Web check; yearly cleanup record |
+| PRF-24 | COULD | ⚗ The CO₂ estimate per page view of each key template is calculated with the Sustainable Web Design Model (e.g. CO2.js), recorded with PRF-21, and does not rise between releases. | Monthly budget report |
 
 ## Sources
 
+- ⚗ [W3C: Web Sustainability Guidelines](https://www.w3.org/TR/web-sustainability-guidelines/) · [Green Web Foundation](https://www.thegreenwebfoundation.org/) · [Sustainable Web Design: Estimating digital emissions](https://sustainablewebdesign.org/estimating-digital-emissions/)
 - [web.dev: Web Vitals](https://web.dev/articles/vitals) · [INP](https://web.dev/articles/inp) · [LCP](https://web.dev/articles/lcp) · [CLS](https://web.dev/articles/cls) · [TTFB](https://web.dev/articles/ttfb)
 - [web.dev: LCP and INP now Baseline](https://web.dev/blog/lcp-and-inp-are-now-baseline-newly-available)
 - [web.dev: Font best practices](https://web.dev/articles/font-best-practices) · [Fetch priority](https://web.dev/articles/fetch-priority) · [bfcache](https://web.dev/articles/bfcache)
-- [Chrome: Prerender pages](https://developer.chrome.com/docs/web-platform/prerender-pages)
+- [Chrome: Prerender pages](https://developer.chrome.com/docs/web-platform/prerender-pages) · [Debug speculation rules](https://developer.chrome.com/docs/devtools/application/debugging-speculation-rules) · [Cross-document view transitions](https://developer.chrome.com/docs/web-platform/view-transitions/cross-document)
+- [MDN: Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) · [MDN: ascent-override](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@font-face/ascent-override) · [web.dev: TTFB](https://web.dev/articles/ttfb)
 - [Google: Googlebot file size limits](https://developers.google.com/search/docs/crawling-indexing/googlebot) · [Video best practices](https://developers.google.com/search/docs/appearance/video)
 - [Chrome: Lighthouse overview](https://developer.chrome.com/docs/lighthouse/overview)
