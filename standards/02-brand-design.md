@@ -4,7 +4,7 @@
 
 Detail: `reference/google-search/` notes.
 
-Scope: design intake, identity, tokens, color, typography, hierarchy, spacing, shape, buttons, links, inputs, icons, data visualization, dark and forced-colors modes, motion, imagery, brand assets, handoff. Grid, breakpoints, devices and page structure: [`15-layout-responsive.md`](15-layout-responsive.md). Component catalogue: [`16-components.md`](16-components.md). The brand spec lives in [`DESIGN.md`](../templates/DESIGN.md), the values in [`tokens.json`](../templates/tokens.json). Perception and usability principles: [`14-ux-psychology.md`](14-ux-psychology.md).
+Scope: design intake, identity, tokens (states, elevation, borders, composite typography, themes, governance), color, typography, hierarchy, spacing, shape, buttons, links, inputs, icons, data visualization, dark and forced-colors modes, motion, imagery, brand assets, handoff. Grid, breakpoints, devices and page structure: [`15-layout-responsive.md`](15-layout-responsive.md). Component catalogue: [`16-components.md`](16-components.md). The brand spec lives in [`DESIGN.md`](../templates/DESIGN.md), the values in [`tokens.json`](../templates/tokens.json). Perception and usability principles: [`14-ux-psychology.md`](14-ux-psychology.md).
 
 Last verified: 2026-11
 
@@ -69,6 +69,12 @@ Last verified: 2026-11
 | DES-32 | SHOULD | Dark mode, if offered (DES-12): surfaces get lighter with elevation instead of relying on shadows, accent and status colors are adjusted to pass A11Y-07 on dark surfaces, no pure black (#000) behind long text, logos and images have dark-safe variants, and every component is checked in both themes. | Screenshots in both themes |
 | DES-34 | SHOULD | Charts: a categorical palette of ≤ 8 colors that stays distinguishable with color-vision deficiencies, marks ≥ 3:1 against the background (A11Y-07), meaning never in color alone (direct labels, patterns or shapes), direct labels over legends, bar axes starting at zero, and a text summary or data table (A11Y-06). | Color-blindness simulation; screen reader check |
 | DES-35 | SHOULD | Handoff: design files use variables and styles named and structured exactly like `tokens.json`. Tokens flow from one source into CSS by a build step; nobody copies values by hand. | Compare design variables with the token file |
+| DES-36 | MUST | State tokens: every interactive token has hover, pressed, focus, disabled and (where it applies) selected values. A hover effect combines at most two of: one color step, a state layer (hover ≈ 8 %, pressed ≈ 12 % opacity), a lift ≤ 2 px, a scale ≤ 1.02, one shadow level up, an underline change. Timing comes from the transition tokens (DES-08); hover effects are gated by LAY-08 and never the only state cue. | Component audit in all states |
+| DES-37 | MUST | Elevation: `shadow` tokens for three levels plus an inset, each tied to one use (level 1 card, level 2 dropdown and popover, level 3 dialog and toast) and matched to z-index tokens (DES-30). No other shadows. Dark mode raises surfaces by lightness instead (DES-32). | Token file; CSS grep for raw `box-shadow` |
+| DES-38 | MUST | Borders and outlines: composite `border` tokens (color, width, style) for default, subtle, divider and input states (default, hover, focus, error, disabled). The focus outline is a token (2 px solid, 2 px offset, inset variant for clipped containers) that reaches 3:1 against every surface it appears on (A11Y-07). | Token file; contrast check |
+| DES-39 | SHOULD | Every type role (DES-24) is one composite `typography` token (family, size, weight, line height, letter spacing). Fluid roles record their mobile and desktop sizes for `clamp()` (LAY-04). Components reference the composite, not single properties. | Token file review |
+| DES-40 | SHOULD | Themes override semantic tokens only, never primitives or components: a dark set if dark mode is offered (DES-12, DES-32), an optional high-contrast set, and a documented forced-colors mapping to CSS system colors (DES-31). Every semantic color exists in every theme. | Token build per theme; contrast check per theme |
+| DES-41 | SHOULD | Token governance: names follow `tier.category.role.state` in lowercase kebab case; semantic and component tokens carry a `$description`; retired tokens stay one release with `$deprecated` naming the replacement; changes are logged in `DESIGN.md`. A validator checks references, types, units and contrast pairs in CI. | `scripts/check_tokens.py` |
 
 ## Handcrafted look, style directions, motion
 
@@ -90,7 +96,8 @@ Last verified: 2026-11
 
 ## Sources
 
-- [W3C DTCG: Design Tokens Format Module 2025.10](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/)
+- [W3C DTCG: Design Tokens Format Module 2025.10](https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/) (composite types: border, shadow, transition, typography, gradient)
+- [Material Design 3: States (state layers)](https://m3.material.io/foundations/interaction/states/overview)
 - [MDN: Using CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) · [MDN: clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp) · [MDN: text-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap)
 - [MDN: font-variant-numeric](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric) · [MDN: hyphens](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/hyphens) · [MDN: forced-colors](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) · [MDN: font-synthesis](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-synthesis)
 - [W3C: WCAG 2.2, 1.4.11 Non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html)

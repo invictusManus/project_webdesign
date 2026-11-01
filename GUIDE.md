@@ -85,7 +85,7 @@ Design is how the site earns trust in the first seconds. Consistency comes from 
 **Step 12 · Turn the brand into design tokens.**
 - Why: tokens are named values (e.g. `color.action.primary`). Change one, and every button updates; nobody improvises a new blue.
 - Do: start from [`tokens.json`](templates/tokens.json): primitive values, then semantic roles, then components. Check that every text color pair passes contrast.
-- Done: DES-02, DES-03, DES-04, DES-05, DES-14, DES-24 to DES-30 (type roles, rhythm, text colors, emphasis, complete token set). Type, spacing and radius follow the golden ratio (φ ≈ 1.618).
+- Done: DES-02, DES-03, DES-04, DES-05, DES-14, DES-24 to DES-30 (type roles, rhythm, text colors, emphasis, complete token set), DES-36 to DES-41 (states and hover, elevation, borders and focus, composite type, themes, governance). `scripts/check_tokens.py` validates the token files. Type, spacing and radius follow the golden ratio (φ ≈ 1.618).
 
 **Step 13 · Design mobile first, with reusable components.**
 - Why: most visits are on phones, and Google indexes the mobile version.

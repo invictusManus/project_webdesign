@@ -35,7 +35,11 @@ Files, clear space, minimum size, allowed backgrounds, forbidden uses.
 | Muted text | `semantic.color.text.muted` | Secondary info, never for essential content |
 | Disabled text | `semantic.color.text.disabled` | Inactive controls only |
 | Text on accent | `semantic.color.text.on-accent` | Labels on primary buttons |
-| Primary action | `semantic.color.action.primary` | One primary call to action per view (UX-06) |
+| Primary (60 %) | `primitive.color.primary.*`, `semantic.color.bg.brand` | Brand color and tints on large surfaces (DES-14) |
+| Secondary (30 %) | `primitive.color.secondary.*`, `semantic.color.bg.secondary` | Sections, cards, illustrations |
+| Accent (10 %) | `semantic.color.action.primary` | Primary call to action and key highlights only, one per view (UX-06) |
+| States | `semantic.color.action.*-hover`, `*-pressed`, `disabled` | Every interactive color has its states (DES-36) |
+| Surfaces | `semantic.color.surface.*` | Raised, sunken, overlay, skeleton |
 | Focus | `semantic.color.focus` | Focus ring, 2 px, offset 2 px |
 | Status | `semantic.color.status.*` | Always with icon or text, never color alone (A11Y-07) |
 
@@ -55,6 +59,23 @@ Files, clear space, minimum size, allowed backgrounds, forbidden uses.
 Vertical rhythm (DES-25): space above a heading ≥ φ × space below it.
 
 Families: `primitive.font.family.sans`; weights: 400 body, 500–600 labels, 600–700 headings (DES-15).
+
+## Elevation, borders, states
+
+| Use | Token | Rule |
+|---|---|---|
+| Card · dropdown · dialog | `semantic.elevation.card` · `dropdown` · `dialog` | Three levels only (DES-37) |
+| Borders | `semantic.border.*` (input, input-hover, input-focus, input-error, divider) | Composite border tokens (DES-38) |
+| Focus outline | `semantic.border.focus`, offset `semantic.focus.offset` | 2 px, ≥ 3:1 on every surface |
+| Hover | `semantic.state.*`, `semantic.transition.hover` | At most two hover effects at once (DES-36) |
+
+Themes: `tokens.dark.json` overrides semantic tokens only (DES-40). Forced-colors mapping: buttons → `ButtonText`/`ButtonFace`, links → `LinkText`, focus → `Highlight`.
+
+## Token change log (DES-41)
+
+| Date | Token | Change | Reason |
+|---|---|---|---|
+| | | | |
 
 ## Layout & spacing
 

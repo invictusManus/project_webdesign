@@ -1,0 +1,233 @@
+{
+  "$description": "Dark theme (DES-32, DES-40): overrides semantic tokens of tokens.json only. Load after tokens.json; references point into its primitives.",
+  "semantic": {
+    "color": {
+      "text": {
+        "default": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.50}"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.200}"
+        },
+        "muted": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.300}"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.500}"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.900}"
+        },
+        "on-accent": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.950}"
+        },
+        "link": {
+          "$type": "color",
+          "$value": "{primitive.color.primary.300}"
+        },
+        "link-hover": {
+          "$type": "color",
+          "$value": "{primitive.color.primary.200}"
+        },
+        "link-visited": {
+          "$type": "color",
+          "$value": "{primitive.color.primary.200}"
+        }
+      },
+      "bg": {
+        "default": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.900}"
+        },
+        "subtle": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.800}"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{primitive.color.secondary.900}"
+        },
+        "brand": {
+          "$type": "color",
+          "$value": "{primitive.color.primary.800}"
+        },
+        "inverse": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.50}"
+        }
+      },
+      "surface": {
+        "raised": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.800}"
+        },
+        "sunken": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.950}"
+        },
+        "overlay": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.950}"
+        },
+        "skeleton": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.800}"
+        },
+        "skeleton-highlight": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.700}"
+        }
+      },
+      "border": {
+        "default": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.700}"
+        },
+        "subtle": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.800}"
+        },
+        "strong": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.500}"
+        },
+        "input": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.400}"
+        },
+        "input-hover": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.300}"
+        },
+        "input-focus": {
+          "$type": "color",
+          "$value": "{primitive.color.primary.300}"
+        },
+        "input-error": {
+          "$type": "color",
+          "$value": "{primitive.color.red.300}"
+        },
+        "input-disabled": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.700}"
+        }
+      },
+      "action": {
+        "primary": {
+          "$type": "color",
+          "$value": "{primitive.color.accent.400}"
+        },
+        "primary-hover": {
+          "$type": "color",
+          "$value": "{primitive.color.accent.300}"
+        },
+        "primary-pressed": {
+          "$type": "color",
+          "$value": "{primitive.color.accent.200}"
+        },
+        "on-primary": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.950}"
+        },
+        "secondary": {
+          "$type": "color",
+          "$value": "{primitive.color.primary.300}"
+        },
+        "secondary-hover-bg": {
+          "$type": "color",
+          "$value": "{primitive.color.primary.900}"
+        },
+        "secondary-pressed-bg": {
+          "$type": "color",
+          "$value": "{primitive.color.primary.800}"
+        },
+        "disabled": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.800}"
+        },
+        "on-disabled": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.500}"
+        },
+        "state-layer": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.0}"
+        }
+      },
+      "focus": {
+        "$type": "color",
+        "$value": "{primitive.color.primary.300}"
+      },
+      "focus-inverse": {
+        "$type": "color",
+        "$value": "{primitive.color.primary.600}"
+      },
+      "selection": {
+        "$type": "color",
+        "$value": "{primitive.color.primary.800}"
+      },
+      "status": {
+        "success": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitive.color.green.900}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{primitive.color.green.700}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitive.color.green.100}"
+          },
+          "icon": {
+            "$type": "color",
+            "$value": "{primitive.color.green.300}"
+          }
+        },
+        "warning": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitive.color.amber.900}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{primitive.color.amber.700}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitive.color.amber.100}"
+          },
+          "icon": {
+            "$type": "color",
+            "$value": "{primitive.color.amber.300}"
+          }
+        },
+        "danger": {
+          "bg": {
+            "$type": "color",
+            "$value": "{primitive.color.red.900}"
+          },
+          "border": {
+            "$type": "color",
+            "$value": "{primitive.color.red.700}"
+          },
+          "text": {
+            "$type": "color",
+            "$value": "{primitive.color.red.100}"
+          },
+          "icon": {
+            "$type": "color",
+            "$value": "{primitive.color.red.300}"
+          }
+        }
+      }
+    }
+  }
+}

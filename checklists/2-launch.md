@@ -15,6 +15,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] DES-17 shape system · DES-18 button tiers · DES-19 link styling
 - [ ] DES-21 No generic AI look
 - [ ] DES-24 type roles · DES-25 vertical rhythm · DES-27 text color roles · DES-28 emphasis budget · DES-30 complete token set
+- [ ] DES-36 state tokens and hover limits · DES-37 three elevation levels · DES-38 borders and focus outline ≥ 3:1
 - [ ] LAY-01 breakpoint tokens · LAY-02 grid per tier · LAY-03 content widths · LAY-04 responsive type · LAY-05 responsive spacing
 - [ ] LAY-06 predictable reflow · LAY-08 hover gated, touch targets · LAY-09 viewport, safe areas, orientation
 - [ ] LAY-11 content parity across tiers · LAY-12 responsive media · LAY-13 no page-level horizontal scroll

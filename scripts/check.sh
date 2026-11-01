@@ -42,6 +42,9 @@ for f in standards/[0-9]*.md; do
   b=$(basename "$f" .md); grep -q "$b" README.md || err "$b not listed in README.md"
 done
 
+# Design tokens: types, units, references, dark coverage, contrast (DES-03, DES-41)
+python3 scripts/check_tokens.py || err "templates/tokens*.json invalid"
+
 # rules.csv matches standards/
 python3 scripts/rules_index.py --check || err "rules.csv out of date"
 
