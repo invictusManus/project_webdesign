@@ -38,6 +38,8 @@ Last verified: 2026-11
 | CMP-32 | MUST | *(orders, payments, sign-ups)* Submit stays enabled and focusable; after the first activation it is `aria-disabled` with a loading state (CMP-21) and ignores repeats. The server de-duplicates retries (idempotency key or one-time form token, ⚗ IETF draft). Input survives an error. | Double-click and Enter twice on throttled 4G: exactly one record |
 | CMP-33 | SHOULD | `autofocus` only where one input is the page's task (search, sign-in), on desktop only, never skipping the page heading; dialogs follow CMP-11. | Grep `autofocus`; screen reader test |
 | CMP-34 | SHOULD | Dialogs, drawers, sheets and inner scroll areas set `overscroll-behavior: contain` so scrolling never chains to the page; never `overscroll-behavior: none` page-wide ([house], it disables swipe navigation). | Scroll to the end of a panel on touch and trackpad: the page stays still |
+| CMP-35 | SHOULD | Password fields offer a show/hide toggle (a button with `aria-pressed`); paste and password managers stay allowed (CMP-28, A11Y-20). | Keyboard and screen reader test |
+| CMP-36 | SHOULD | Essential content (price, availability, date, name, error text) is never clamped or cut with an ellipsis; any other truncated text is reachable by keyboard and touch, not only via a `title` tooltip; chip and tag rows wrap before they shrink. | 200 % zoom and 320 px with long-string fixtures |
 
 ## Overlays and feedback
 

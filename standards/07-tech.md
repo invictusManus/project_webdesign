@@ -81,12 +81,14 @@ Last verified: 2026-11
 |---|---|---|---|
 | TEC-23 | SHOULD | Code is in version control with a protected main branch, reviewed pull requests and CI on every pull request ([`ci/quality.yml`](../templates/ci/quality.yml)). | Repository settings |
 | TEC-24 | SHOULD | Use a formatter and a linter with default settings, one package manager, a lockfile (SEC-14) and `.editorconfig`. | CI lint step |
+| TEC-43 | SHOULD | Code comments explain why, not what: no banner or separator comments, step narration (`// Step 1`), end-of-block markers, doc blocks that only repeat the signature, or emoji; every `TODO` names an owner or issue. | Grep; lint step (TEC-24) |
 | TEC-25 | MUST | No end-of-life runtime, framework, CMS or plugin in production. Dependency updates are automated and merged at least monthly. | Update bot dashboard; endoflife.date |
 | TEC-26 | SHOULD | The site repository has a README (run, build, deploy, rollback, owners) and an `AGENTS.md` ([template](../templates/AGENTS.md)). | Repository |
 | TEC-27 | SHOULD | Handover package: who has access to what, credentials in the vault, runbook, and licenses for fonts, images and code. | Handover sign-off |
 
 ## Sources
 
+- [PEP 8: Comments](https://peps.python.org/pep-0008/#comments) · [Google Python Style Guide: Comments](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)
 - [Google: Email sender guidelines](https://support.google.com/mail/answer/81126) · [Sender guidelines FAQ](https://support.google.com/a/answer/14229414) · [RFC 8058: One-click unsubscribe](https://www.rfc-editor.org/rfc/rfc8058)
 - [MDN: Webpage metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) · [WHATWG HTML](https://html.spec.whatwg.org/)
 - [web.dev: Rendering on the web](https://web.dev/articles/rendering-on-the-web)

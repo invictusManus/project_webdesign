@@ -34,3 +34,9 @@ Use the first option that does the job.
 | [unDraw](https://undraw.co/license) | Own free license: no attribution needed; no redistribution in packs, no AI training, no replicating the service | Flat illustrations recolored to the brand; use inside the site only |
 
 Own or commissioned illustrations beat both (DES-09, DES-21).
+
+## Design intake inspiration (⚗)
+
+| Source | License | What it offers | Caveats |
+|---|---|---|---|
+| [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) data CSVs (checked 2026-11) | MIT | ~50 active style names, palettes for 192 product types, 34 landing section orders, font-pairing names | Unofficial and "derived" by its own provenance file. Palettes must be re-derived into 60-30-10 (DES-14) and contrast-checked (12 accents fail 3:1). Font pairings load Google Fonts from a CDN, which conflicts with PRF-10 and PRV-07: use the names only. Its motion presets (glow, parallax) conflict with DES-21 and DES-43. |

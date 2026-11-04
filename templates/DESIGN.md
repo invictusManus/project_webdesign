@@ -11,6 +11,14 @@ The brand spec for people and AI agents (DES-01). Read it before any UI or copy 
 | Style direction: minimal/simple · modern translucent · bold/expressive · editorial · classic/corporate · playful | |
 | Light, dark or both | |
 | Density: airy or compact | |
+| References: 2–3 sites the client likes and 1 they dislike, with why | |
+| What must stay untouched | |
+| 8–12 facts only this client has (name meaning, place, materials, real numbers) | |
+| 2–3 personality words (not "clean", "modern", "premium") | |
+
+## Overview
+
+One paragraph on the atmosphere of the site, then 5–8 signature traits an agent can check against (e.g. "photography always shows real staff", "one serif headline per view").
 
 ## Brand
 
@@ -60,6 +68,15 @@ Vertical rhythm (DES-25): space above a heading ≥ φ × space below it.
 
 Families: `primitive.font.family.sans`; weights: 400 body, 500–600 labels, 600–700 headings (DES-15).
 
+## Shapes and depth
+
+| Item | Rule |
+|---|---|
+| Radius per component type | e.g. controls 10, cards 16, panels 26, tags pill; full-bleed media square |
+| Depth model | One of: shadow · surface shift · hairline · blur (DES-37) |
+| Decorative motifs | Named motif or "none" (DES-46); where allowed, how built, contrast check |
+| Brand gradients | Where allowed (e.g. hero only) or "none" (DES-21) |
+
 ## Elevation, borders, states
 
 | Use | Token | Rule |
@@ -88,6 +105,22 @@ Themes: `tokens.dark.json` overrides semantic tokens only (DES-40). Forced-color
 
 Tokens: `primitive.breakpoint.*`, `semantic.width.*` (prose · wide), spacing `primitive.space.*`. Rules: LAY-01 to LAY-13.
 
+### Density by context
+
+| Context | Section gap | Row height | Body size |
+|---|---|---|---|
+| Marketing | | | |
+| App / account | | | |
+| Data tables | | | |
+
+### Collapsing strategy (LAY-06)
+
+| Component | Mobile | Tablet | Desktop |
+|---|---|---|---|
+| Navigation | menu button | menu button | inline |
+| Card grid | 1 column | 2 columns | 3–4 columns |
+| Table | cards or scroll | scroll | full |
+
 ### Page types and section order (LAY-14)
 
 | Page type | Sections in order |
@@ -106,6 +139,8 @@ Header (LAY-15): [logo · nav items · utilities · call to action]. Footer (LAY
 | Card | default · hover · focus-within | One link stretched over the card (CMP-02) |
 | Dialog | open · closing | Full screen below 600 px (CMP-11) |
 | [more from `16-components`] | | |
+
+**Signature components:** brand-specific components that make the site recognisable (name, anatomy, tokens, where used).
 
 Every component lists anatomy, variants, tokens, states, behavior per tier and its keyboard/ARIA pattern (CMP-01): use [`component-spec.md`](component-spec.md). Page types: [`page-blueprint.md`](page-blueprint.md).
 
@@ -136,6 +171,28 @@ Durations `primitive.duration.*`, easings `primitive.easing.*`, transitions `sem
 | Brand and product names | Exact spelling (GEO-05) |
 | Inclusive language | Per language (CON-20) |
 | Readability target | Flesch ≥ 60 / Amstad ≥ 60 (CON-18) |
+
+## Typography details
+
+Fallback stack with metric overrides (PRF-11) · OpenType features in use (tabular numerals, stylistic sets) · tracking per size · number and code roles.
+
+## Photography
+
+| Use | Aspect ratio | Crop and focal point | Mobile crop | Treatment |
+|---|---|---|---|---|
+| Hero | | | | one shared grade (DES-47) |
+| Card | | | | |
+| Avatar | 1:1 | face centered | | |
+
+## Known gaps
+
+What this spec does not define yet. Agents ask instead of inventing values for these.
+
+## Agent usage
+
+- Use token names, never raw values (DES-02); validate with `scripts/check_tokens.py`.
+- Build one component at a time from the catalogue (CMP-01); check it against this file's do's and don'ts.
+- Non-negotiables for this brand: [list].
 
 ## Glossary
 

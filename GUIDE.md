@@ -95,8 +95,10 @@ Design is how the site earns trust in the first seconds. Consistency comes from 
 **Step 14 · Design the key pages.**
 - Why: visitors decide fast. The first screen must answer "what is this, is it for me, what do I do next?"
 - Do: give every page one primary call to action, put trust signals (reviews, logos, guarantees, real contact details) near decisions, and use no dark patterns. Build every page from the same regions: header, main, footer, with a documented section order.
+- Before layout, write each section as one claim plus its proof; drop sections without a claim.
+- Critique in two passes: first look at screenshots only (hierarchy, specificity, heuristics, swap test), then run the tools (axe, contrast, token and CSS greps). Fix in this order: blocked paths, missing states, drift from the system, visual polish.
 - Shops: product page, cart, checkout and confirmation follow UX-18 to UX-23. Sites with search: UX-24. Document each page type in [`page-blueprint.md`](templates/page-blueprint.md).
-- Done: LAY-14 to LAY-20, CMP-22 to CMP-26, UX-06, UX-07, UX-08, UX-11, UX-17 (no pop-ups hiding the content), DES-21 (no generic AI look), and the psychology principles PSY-02 to PSY-13.
+- Done: LAY-14 to LAY-20, CMP-22 to CMP-26, UX-06, UX-07, UX-08, UX-11, UX-17 (no pop-ups hiding the content), DES-21 (no generic AI look), DES-45 to DES-51, LAY-24 to LAY-27, and the psychology principles PSY-02 to PSY-13.
 
 **Step 15 · Design forms and states.**
 - Why: forms are where conversions happen, and where most of them get lost.

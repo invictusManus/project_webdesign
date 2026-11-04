@@ -31,12 +31,20 @@ Date: [YYYY-MM-DD] · Auditor: [name] · Blueprint version: [commit or tag]
 
 ## 4. Findings
 
-Status: pass · fail · n/a · not verified. Severity per QA-10.
+Status: pass · fail · n/a · needs validation (name the missing fact and who can check it) · rejected (a suspected issue that was disproved, with the reason). Severity per QA-10.
 
 | Rule | Status | Evidence | Severity | Fix | Owner | Due |
 |---|---|---|---|---|---|---|
 | SEO-08 | fail | `/old-page/` returns 200 with home-page content | P1 | 301 to `/new-page/` | | |
 | | | | | | | |
+
+## 4a. Attack surface (QA-15)
+
+| Entry point | Type (form, API, upload, auth, webhook, redirect, admin, WebSocket) | Rules checked | Status |
+|---|---|---|---|
+| | | | |
+
+Anything not reviewed is listed as "not covered", never as passed.
 
 ## 5. Action plan
 

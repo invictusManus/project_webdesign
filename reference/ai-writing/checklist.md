@@ -111,6 +111,20 @@ Any hit here is unambiguous. Fix the text, then re-verify all claims and links i
 - M7. Hidden comments. Look for: HTML comments (`<!-- ... -->`) that contain instructions, notes, TODOs or submission notes from a chatbot. Fix: strip all hidden comments from the source before publishing.
 - M8. Email or form leftovers. Look for: `Subject:` lines, signature blocks, `Dear ...`. See S13.
 
+## W. Web-copy additions (not from Wikipedia)
+
+House additions from UX and style-guide sources and from AI-slop reviews of website copy. Weak alone, like V10; act on clusters.
+
+- W1. Hype words. Look for: `seamless`, `unlock`, `supercharge`, `elevate`, `empower`, `effortless`, `revolutionize`, `game-changing`, `next-gen`, `world-class`, `industry-leading`, `powerful`, `AI-powered` as a modifier, abstract `journey`. Fix: state the concrete benefit or fact (NN/g objective-copy study).
+- W2. Signposting. Look for: "Let's dive in", "Here's what you need to know", "In this article we'll explore", "Without further ado". Fix: delete; start with the point (digital.gov plain language).
+- W3. Fake-candid and authority openers. Look for: "Honestly?", "Here's the thing", "Real talk", "At its core", "The real question is", "What really matters". Fix: delete.
+- W4. Aphorism formulas and false ranges. Look for: "X is the currency of Y", "not a tool but a mirror", "from onboarding to scale and everything in between". Fix: say what the product does.
+- W5. Staccato runs and tailing negations. Look for: "No templates. No defaults. No limits.", "…no guessing". Fix: one plain sentence.
+- W6. UI punctuation. Look for: exclamation marks in headings, buttons or labels, trailing periods on UI strings, all-caps emphasis, scare quotes around ordinary words. Fix: per CON-17.
+- W7. Stacked hedges and mind-verbs. Look for: "could potentially possibly", "the dashboard understands", "the data tells us". Fix: one hedge at most; name the actor.
+- W8. Generic call-to-action labels. Look for: standalone "Get started", "Learn more", "Try now", "Explore", "Discover", "Submit". Fix: verb plus object (UX-15).
+- W9. Sample data. Look for: `John Doe`, `Sarah Chen`, `Acme`, `[X]`, `123,456`, `10,000+`, `99.9 %` without a source. Fix: real data or remove (QA-09, PSY-12).
+
 ## False-positive guards
 
 Each of these alone does not indicate AI. Do not rewrite good copy because of one.
