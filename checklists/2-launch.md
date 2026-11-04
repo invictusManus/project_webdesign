@@ -34,6 +34,9 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] UX-09 Lean forms with confirmation
 - [ ] UX-10 Empty, loading and error states
 - [ ] UX-11 No dark patterns
+- [ ] UX-28 Destructive actions named, undo or confirm
+- [ ] CMP-28 Paste never blocked · CMP-30 inputs ≥ 16 px on touch · CMP-32 *(orders, payments, sign-ups)* no double submit
+- [ ] LAY-23 Stress fixtures pass at 320 px
 - [ ] *(shop)* UX-18 product page · UX-19 costs before checkout · UX-20 cart · UX-21 checkout · UX-23 order confirmation
 - [ ] CON-17 Style guide followed
 - [ ] *(chat)* UX-25 Chatbot disclosed, accessible, human handoff
@@ -59,7 +62,8 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] TEC-08 CDN, HTTP/2+, compression, auto-TLS
 - [ ] TEC-09 Rollback tested
 - [ ] TEC-10 Staging protected and noindexed
-- [ ] TEC-11 No secrets in repo or bundle
+- [ ] TEC-11 No secrets in repo or bundle · TEC-41 history scanned, leaked secrets rotated
+- [ ] TEC-40 *(CMS)* Drafts and previews not exposed
 - [ ] TEC-12 Backup and tested restore
 - [ ] TEC-13 Domain owned by client, 2FA, auto-renew
 - [ ] TEC-15 SPF, DKIM, DMARC
@@ -130,6 +134,7 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] A11Y-12 Visible, unobscured focus
 - [ ] A11Y-13 Target size
 - [ ] A11Y-14 Drag alternatives
+- [ ] A11Y-27 *(shortcuts)* Character key shortcuts can be turned off
 - [ ] A11Y-15 Meaningful link text
 - [ ] A11Y-16 Labelled form fields
 - [ ] A11Y-17 Clear error messages
@@ -151,6 +156,10 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] SEC-12 CSRF protection and rate limits
 - [ ] SEC-13 *(accounts)* Password and MFA policy
 - [ ] SEC-14 Supply-chain controls
+- [ ] SEC-24 Safe redirects · SEC-28 no injection sinks · SEC-29 host header not trusted · SEC-36 no debug or admin exposure · SEC-37 sanitized HTML and URL schemes · SEC-45 origin not reachable directly
+- [ ] *(server code)* SEC-23 SSRF · SEC-25 CORS · SEC-26 path traversal · SEC-27 upload serving · SEC-35 webhook signatures · SEC-38 postMessage and WebSockets
+- [ ] *(accounts)* SEC-30 private caching · SEC-31 session lifecycle · SEC-32 recovery tokens, no enumeration · SEC-33 JWT/OAuth · SEC-34 object-level authorization
+- [ ] *(shop)* SEC-46 server-side prices and totals
 - [ ] SEC-15 Patch SLAs agreed
 
 ### Privacy & legal

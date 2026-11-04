@@ -30,6 +30,8 @@ Last verified: 2026-10
 | A11Y-08 | MUST | Content reflows at 320 CSS px and 200 % zoom without loss or 2-D scrolling (data tables and maps excepted). Text-spacing overrides don't break the layout. Zoom is never disabled. | Browser zoom; text-spacing bookmarklet |
 | A11Y-09 | MUST | Videos have captions and audio has transcripts. No audio autoplays. Anything that moves for more than 5 s can be paused. | Manual review |
 | A11Y-10 | MUST | Animation respects `prefers-reduced-motion`. Nothing flashes more than 3 times per second. | OS reduced-motion setting |
+| A11Y-26 | SHOULD | The reduced-motion variant removes movement, not feedback: no translate, scale, rotate, zoom or parallax, no autoplaying background video or looping decoration, `scroll-behavior: auto`, infinite spinners replaced by a static or text status; opacity and color cross-fades ≤ 150 ms stay so state changes remain visible (WCAG 2.3.3). | OS setting or emulation: `document.getAnimations()` holds no transform animations; hover, focus and dialog still change visibly |
+| A11Y-27 | MUST | *(keyboard shortcuts)* Single-character shortcuts can be turned off, remapped or work only on focus (WCAG 2.1.4). Handlers match `event.key` for characters, so they work on non-QWERTY layouts, and show the platform modifier (⌘ or Ctrl). | Test with an AZERTY layout; turn shortcuts off |
 
 ## Operable
 
@@ -63,6 +65,7 @@ Last verified: 2026-10
 
 ## Sources
 
+- [W3C: WCAG 2.2, 2.3.3 Animation from interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html) · [2.1.4 Character key shortcuts](https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts.html) · [web.dev: prefers-reduced-motion](https://web.dev/articles/prefers-reduced-motion)
 - [W3C: What's new in WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/) · [WCAG 2.2 as ISO/IEC 40500:2025](https://www.w3.org/WAI/news/2025-10-21/wcag22-iso/)
 - [W3C: WCAG 3 introduction](https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/) · [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)
 - [EU: European Accessibility Act](https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/union-equality-strategy-rights-persons-disabilities-2021-2030/european-accessibility-act_en)

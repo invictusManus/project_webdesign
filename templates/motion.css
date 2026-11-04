@@ -1,9 +1,10 @@
-/* Motion starter (DES-08, DES-23, DES-36, DES-43). Values come from tokens.json; fallbacks keep it working before the token build. */
+/* Motion starter (DES-08, DES-23, DES-36, DES-43, A11Y-26). Values come from tokens.json; fallbacks keep it working before the token build. */
 
 :root {
   --motion-fast: var(--primitive-duration-fast, 150ms);
   --motion-base: var(--primitive-duration-base, 250ms);
   --motion-slow: var(--primitive-duration-slow, 400ms);
+  --motion-large: var(--primitive-duration-large, 500ms);
   --motion-stagger: var(--primitive-duration-stagger, 60ms);
   --ease-standard: var(--primitive-easing-standard, cubic-bezier(0.2, 0, 0, 1));
   --ease-enter: var(--primitive-easing-enter, cubic-bezier(0, 0, 0, 1));
@@ -12,41 +13,60 @@
   --hover-scale: var(--semantic-state-hover-scale, 1.02);
 }
 
-/* Hover only where a fine pointer exists (LAY-08); at most two effects at once (DES-36). */
-.hover-lift,
+/* State feedback: no delay, ≤ fast, listed properties only (no `transition: all`). */
+.hover-lift { transition: transform var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard); }
 .hover-scale,
-.press {
-  transition: transform var(--motion-fast) var(--ease-standard), box-shadow var(--motion-fast) var(--ease-standard),
-    background-color var(--motion-fast) var(--ease-standard);
+.press { transition: transform var(--motion-fast) var(--ease-standard); }
+
+/* Movement only when the user hasn't asked for less (A11Y-26) and only with a fine pointer (LAY-08). */
+@media (prefers-reduced-motion: no-preference) {
+  @media (any-hover: hover) and (any-pointer: fine) {
+    .hover-lift:hover { transform: translateY(calc(-1 * var(--hover-lift))); box-shadow: var(--semantic-elevation-dropdown, 0 4px 12px rgb(20 25 34 / 0.12)); }
+    .hover-scale:hover { transform: scale(var(--hover-scale)); }
+  }
+  .press:active { transform: scale(0.98); }
 }
 
-@media (any-hover: hover) and (any-pointer: fine) {
-  .hover-lift:hover { transform: translateY(calc(-1 * var(--hover-lift))); box-shadow: var(--semantic-elevation-dropdown, 0 4px 12px rgb(20 25 34 / 0.12)); }
-  .hover-scale:hover { transform: scale(var(--hover-scale)); }
+/* Dialogs, popovers, toasts: enter decelerates over `base`, exit accelerates over `fast` (exit ≤ enter). */
+.fade-in,
+.fade-in::backdrop {
+  transition: opacity var(--motion-base) var(--ease-enter), overlay var(--motion-base) allow-discrete,
+    display var(--motion-base) allow-discrete;
+  @starting-style { opacity: 0; }
 }
 
-.press:active { transform: scale(0.98); }
-
-/* Enter and exit for dialogs, popovers and toasts. */
-.fade-in {
-  transition: opacity var(--motion-base) var(--ease-enter), transform var(--motion-base) var(--ease-enter),
-    overlay var(--motion-base) allow-discrete, display var(--motion-base) allow-discrete;
-  @starting-style { opacity: 0; transform: translateY(8px); }
-}
-
-.fade-in:not(:popover-open, [open]):is([popover], dialog) {
+.fade-in:not(:popover-open, [open]):is([popover], dialog),
+.fade-in:not(:popover-open, [open]):is([popover], dialog)::backdrop {
   opacity: 0;
   transition-duration: var(--motion-fast);
   transition-timing-function: var(--ease-exit);
 }
 
-/* Reveal once on scroll, never the LCP element (DES-23). Without support, content is simply visible. */
-@supports (animation-timeline: view()) {
-  .reveal {
-    animation: reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 40%;
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    transition-property: opacity, transform, overlay, display;
+    @starting-style { transform: translateY(8px); }
   }
+
+  /* Reveal scrubbed within the entry range (DES-23). The hidden state exists only inside the animation,
+     so content stays visible without support, without JS and under reduced motion. Never on the LCP element. */
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+
+  /* Stagger: set --i on each child (style="--i: 2"). Capped at 5 steps so the group ends within 500 ms;
+     uses animation-delay, so hover and focus feedback on the children is never delayed. */
+  .stagger > * {
+    animation: reveal var(--motion-base) var(--ease-enter) both;
+    animation-delay: calc(min(var(--i, 0), 4) * var(--motion-stagger));
+  }
+
+  /* Page transitions between same-origin documents (PRF-20). Remove if the brief doesn't want them. */
+  @view-transition { navigation: auto; }
 }
 
 @keyframes reveal {
@@ -54,20 +74,9 @@
   to { opacity: 1; transform: none; }
 }
 
-/* Stagger children: set --i on each child (style="--i: 2"). */
-.stagger > * { transition-delay: calc(var(--i, 0) * var(--motion-stagger)); }
-
-/* Page transitions between documents (PRF-20). */
-@view-transition { navigation: auto; }
-
-/* Reduced motion (A11Y-10): keep opacity changes, drop movement. */
+/* Reduced motion: state changes stay visible as short cross-fades (A11Y-26). */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  .hover-lift:hover, .hover-scale:hover, .press:active { transform: none; }
-  @view-transition { navigation: none; }
+  html { scroll-behavior: auto; }
+  .fade-in,
+  .fade-in::backdrop { transition-duration: var(--motion-fast); }
 }
