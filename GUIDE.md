@@ -89,8 +89,8 @@ Design is how the site earns trust in the first seconds. Consistency comes from 
 
 **Step 13 · Design mobile first, with reusable components.**
 - Why: most visits are on phones, and Google indexes the mobile version.
-- Do: design at 360 px first, then tablet (600–1023 px) and desktop (≥ 1024 px). Each tier has fixed columns, gutters and spacing. Build each component once from the catalogue, with all its states (hover, focus, error, loading, empty) and its behavior on touch, mouse and keyboard.
-- Done: UX-05, DES-05, DES-06, DES-07, LAY-01 to LAY-13, CMP-01 to CMP-06, CMP-11 to CMP-21.
+- Do: design at 360 px first, then tablet (600–1023 px) and desktop (≥ 1024 px). Each tier has fixed columns, gutters and spacing. Pick one icon library and start motion from `templates/motion.css` (sources: `reference/assets/`). Build each component once from the catalogue, with all its states (hover, focus, error, loading, empty) and its behavior on touch, mouse and keyboard.
+- Done: UX-05, DES-05, DES-06, DES-07, DES-42 to DES-44, LAY-01 to LAY-13, CMP-01 to CMP-06, CMP-11 to CMP-21.
 
 **Step 14 · Design the key pages.**
 - Why: visitors decide fast. The first screen must answer "what is this, is it for me, what do I do next?"

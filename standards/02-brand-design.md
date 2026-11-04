@@ -4,7 +4,7 @@
 
 Detail: `reference/google-search/` notes.
 
-Scope: design intake, identity, tokens (states, elevation, borders, composite typography, themes, governance), color, typography, hierarchy, spacing, shape, buttons, links, inputs, icons, data visualization, dark and forced-colors modes, motion, imagery, brand assets, handoff. Grid, breakpoints, devices and page structure: [`15-layout-responsive.md`](15-layout-responsive.md). Component catalogue: [`16-components.md`](16-components.md). The brand spec lives in [`DESIGN.md`](../templates/DESIGN.md), the values in [`tokens.json`](../templates/tokens.json). Perception and usability principles: [`14-ux-psychology.md`](14-ux-psychology.md).
+Scope: design intake, identity, icon and animation sourcing, tokens (states, elevation, borders, composite typography, themes, governance), color, typography, hierarchy, spacing, shape, buttons, links, inputs, icons, data visualization, dark and forced-colors modes, motion, imagery, brand assets, handoff. Grid, breakpoints, devices and page structure: [`15-layout-responsive.md`](15-layout-responsive.md). Component catalogue: [`16-components.md`](16-components.md). The brand spec lives in [`DESIGN.md`](../templates/DESIGN.md), the values in [`tokens.json`](../templates/tokens.json). Perception and usability principles: [`14-ux-psychology.md`](14-ux-psychology.md).
 
 Last verified: 2026-11
 
@@ -57,6 +57,7 @@ Last verified: 2026-11
 | DES-19 | MUST | Links in running text are underlined (or carry another non-color cue) and differ from body text in color. They have hover and focus-visible states, and say when they open a new tab. Link text names the target (A11Y-15). Links navigate; buttons act. | Page review |
 | DES-20 | SHOULD | Inputs: label above the field, 44 px height, one border style, focus ring in the focus token, error state with icon and text (A11Y-17). A placeholder never replaces the label. | Form review |
 | DES-33 | SHOULD | Icons: one set on a 24 px grid (sizes 16, 20, 24, 32), colored with `currentColor`. Decorative icons are `aria-hidden`; standalone icons have an accessible name (A11Y-06). Only universally known icons (search, menu, close, home, cart) stand without a text label. Directional icons mirror in RTL (I18N-10). | Component audit |
+| DES-42 | MUST | Icon sourcing: one library per site from [`reference/assets/`](../reference/assets/README.md), imported icon by icon as inline SVG (tree-shaken); no icon fonts, no full-set bundles, no mixing sets. Size and stroke come from `iconSize`/`iconStroke` (DES-33). The library and license are recorded in the third-party inventory (TEC-20) and the handover (TEC-27). | Bundle analyzer; inventory entry |
 | DES-06 | MUST | Component inventory: every component documents its states (default, hover, focus-visible, active, disabled, loading, error, empty) and its responsive behavior. | Component library or `DESIGN.md` |
 | DES-07 | SHOULD | Each component is built once and reused, in the design library and in code. No one-off variants without review. | Library usage report |
 
@@ -84,6 +85,8 @@ Last verified: 2026-11
 | DES-22 | SHOULD | Translucent style (if chosen): translucency only for navigation, overlays and floating surfaces, never behind long text. `backdrop-filter` gets an opaque `@supports` fallback, contrast is measured against the worst-case background (A11Y-07), blur ≤ 20 px. | Contrast check; low-end device test |
 | DES-08 | SHOULD | Motion has a purpose (feedback, state change, orientation): UI transitions 150–300 ms, large elements ≤ 500 ms, one standard easing, only `transform` and `opacity` animated, plus a reduced-motion variant (A11Y-10). | Performance panel; OS setting |
 | DES-23 | SHOULD | Micro-animations make the interface feel alive without distracting: hover and press feedback on interactive elements, smooth state changes, reveal on scroll once (≤ 400 ms, stagger ≤ 60 ms). Never animate the LCP element in, no scroll-jacking, no looping motion near text, nothing that delays content or input (PRF-01). Prefer CSS and the Web Animations API; reuse a small set of animated components. | Performance trace; reduced-motion check |
+| DES-43 | MUST | Animation stack: use the first option that does the job: CSS and the Web Animations API ([`motion.css`](../templates/motion.css)), then AutoAnimate or Motion, then GSAP or Lottie with a reason recorded in the brief. Durations and easings come from the transition tokens; every animation has a `prefers-reduced-motion` variant (A11Y-10); animation JavaScript counts against the JS budget (PRF-04). | Code review; bundle analyzer; reduced-motion check |
+| DES-44 | SHOULD | Illustration and animated assets: one illustration style per site from own work or [`reference/assets/`](../reference/assets/README.md), recolored to the tokens. Lottie files load lazily below the fold with a static poster, stay ≤ 150 KB ([house]), and never carry essential information alone (A11Y-06). | Network panel; asset register |
 
 ## Imagery, assets, QA
 

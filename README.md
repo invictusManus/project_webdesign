@@ -58,11 +58,12 @@ standards/   01-strategy · 02-brand-design · 03-ux · 04-content · 05-seo · 
              site-types
 checklists/  1-preflight · 2-launch · 3-monitoring · 4-search-console
 templates/   project-brief · content-brief · audit-report · url-map.csv · AGENTS · DESIGN · tokens.json · tokens.dark.json
-             component-spec · page-blueprint · accessibility-statement
+             component-spec · page-blueprint · accessibility-statement · motion.css · icon
              head.html · robots.txt · _headers · security.txt · consent-default.html
              schema/ (site graph, local business, article, product) · ci/ (quality workflow, Lighthouse CI)
 reference/   google-search/ (notes on all 184 Google Search documentation pages)
              ai-writing/ (Wikipedia: Signs of AI writing, notes and pre-publish checklist)
+             assets/ (vetted icon, animation and illustration sources with licenses)
 scripts/     check.sh (rule IDs, checklist coverage, reference coverage, file length, rules.csv)
              rules_index.py (generates rules.csv) · check_tokens.py (validates design tokens)
 rules.csv    every rule as one row: id, level, tags, condition, standard, rule, verify

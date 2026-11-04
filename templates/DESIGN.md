@@ -111,11 +111,18 @@ Every component lists anatomy, variants, tokens, states, behavior per tier and i
 
 ## Imagery & icons
 
-Photo style, art direction, aspect ratios, focal points, illustration style, icon set and stroke width, alt-text rules (A11Y-06).
+Photo style, art direction, aspect ratios, focal points, illustration style, alt-text rules (A11Y-06).
+
+| Item | Choice | License |
+|---|---|---|
+| Icon library (DES-42; default Lucide) | | |
+| Illustration source (DES-44) | | |
+
+Usage: [`icon.md`](icon.md). Sources: [`reference/assets/`](../reference/assets/README.md).
 
 ## Motion
 
-Durations `primitive.duration.*`, easing `primitive.easing.standard`. Animate `transform`/`opacity` only. Reduced-motion fallback required (A11Y-10).
+Durations `primitive.duration.*`, easings `primitive.easing.*`, transitions `semantic.transition.*`. Animate `transform`/`opacity` only. Reduced-motion fallback required (A11Y-10). Start from [`motion.css`](motion.css); a JavaScript library only per DES-43 (record which and why):
 
 ## Style guide (CON-17)
 
