@@ -56,7 +56,7 @@ Files, clear space, minimum size, allowed backgrounds, forbidden uses.
 | Role | Token | Notes |
 |---|---|---|
 | Body | `semantic.text.body` | 1 rem (16–18 px), line-height 1.6, 45–75 characters per line |
-| Display | `semantic.text.display` | Hero only, 3.33 rem desktop |
+| Display | `semantic.text.display` | Hero only, 4.236 rem desktop, 3.33 rem mobile |
 | H1–H4 | `semantic.text.h1`…`h4` | Golden-ratio scale: H4 1.272, H3 1.618, H2 2.058, H1 2.618 rem (desktop), via `clamp()` |
 | H5 · H6 | `semantic.text.h5` · `h6` | 1 rem/600 · 0.786 rem/600 (DES-24) |
 | Eyebrow | `semantic.text.eyebrow` | 0.786 rem/600, +0.08 em, ≤ 3 words, not a heading |

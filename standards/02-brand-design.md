@@ -12,7 +12,7 @@ Last verified: 2026-11
 
 | Scale | Values (base 16 px) |
 |---|---|
-| Type, step √φ ≈ 1.272 | 12.6 small · caption · H6 · **16 body** · H5 · 20.4 H4 · lead · 25.9 H3 · 32.9 H2 · 41.9 H1 · 53.3 display |
+| Type, step √φ ≈ 1.272 | 12.6 small · caption · H6 · **16 body** · H5 · 20.4 H4 · lead · 25.9 H3 · 32.9 H2 · 41.9 H1 · 67.8 display (two steps above H1) |
 | Space, step φ | 4 · 6 · 10 · 16 · 26 · 42 · 68 · 110 · 178 px |
 | Radius, step φ | 6 · 10 · 16 · 26 px · pill |
 | Layout split | 61.8 % / 38.2 % (content/aside, text/image, hero columns) |

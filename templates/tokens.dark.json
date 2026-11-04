@@ -38,6 +38,10 @@
         "link-visited": {
           "$type": "color",
           "$value": "{primitive.color.primary.200}"
+        },
+        "on-footer": {
+          "$type": "color",
+          "$value": "{primitive.color.secondary.100}"
         }
       },
       "bg": {
@@ -60,9 +64,17 @@
         "inverse": {
           "$type": "color",
           "$value": "{primitive.color.neutral.50}"
+        },
+        "footer": {
+          "$type": "color",
+          "$value": "{primitive.color.secondary.900}"
         }
       },
       "surface": {
+        "card": {
+          "$type": "color",
+          "$value": "{primitive.color.neutral.800}"
+        },
         "raised": {
           "$type": "color",
           "$value": "{primitive.color.neutral.800}"
@@ -137,15 +149,15 @@
         },
         "secondary": {
           "$type": "color",
-          "$value": "{primitive.color.primary.300}"
+          "$value": "{primitive.color.neutral.100}"
         },
         "secondary-hover-bg": {
           "$type": "color",
-          "$value": "{primitive.color.primary.900}"
+          "$value": "{primitive.color.neutral.800}"
         },
         "secondary-pressed-bg": {
           "$type": "color",
-          "$value": "{primitive.color.primary.800}"
+          "$value": "{primitive.color.neutral.700}"
         },
         "disabled": {
           "$type": "color",

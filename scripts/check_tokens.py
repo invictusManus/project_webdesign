@@ -69,7 +69,7 @@ def check(tokens, theme):
     sc = "semantic.color."
     pairs = [("text.default", "bg.default", 4.5), ("text.secondary", "bg.default", 4.5), ("text.muted", "bg.default", 4.5),
              ("text.link", "bg.default", 4.5), ("text.link-hover", "bg.default", 4.5), ("text.default", "surface.raised", 4.5),
-             ("text.default", "bg.subtle", 4.5), ("text.default", "bg.secondary", 4.5), ("text.inverse", "bg.inverse", 4.5),
+             ("text.default", "bg.subtle", 4.5), ("text.default", "surface.card", 4.5), ("text.on-footer", "bg.footer", 4.5), ("action.secondary", "surface.card", 4.5), ("text.default", "bg.secondary", 4.5), ("text.inverse", "bg.inverse", 4.5),
              ("action.on-primary", "action.primary", 4.5), ("action.on-primary", "action.primary-hover", 4.5),
              ("action.on-primary", "action.primary-pressed", 4.5), ("action.secondary", "bg.default", 4.5),
              ("action.secondary", "action.secondary-hover-bg", 4.5), ("focus", "bg.default", 3), ("focus", "surface.raised", 3),
