@@ -64,6 +64,8 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] TEC-10 Staging protected and noindexed
 - [ ] TEC-11 No secrets in repo or bundle · TEC-41 history scanned, leaked secrets rotated
 - [ ] TEC-40 *(CMS)* Drafts and previews not exposed
+- [ ] *(reference stack)* STK-02 supported, locked versions · STK-03 Server Components, content in HTML · STK-04 JS budget per route · STK-05 Metadata API, sitemap, robots, `<Link>`
+- [ ] *(reference stack)* STK-06 next/font and next/image · STK-07 token-only Tailwind · STK-09 shared Zod schemas, authorized Server Actions · STK-13 headers, CSP, no secrets in `NEXT_PUBLIC_` · STK-14 CI toolchain
 - [ ] *(PWA)* TEC-44 manifest and icons · TEC-45 service worker and offline page
 - [ ] PRJ-08 Handover signed, accounts transferred, warranty agreed
 - [ ] TEC-12 Backup and tested restore

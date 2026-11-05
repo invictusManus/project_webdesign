@@ -1,6 +1,6 @@
 # Website Foundation
 
-A complete, practical handbook for planning, designing, building, launching and running professional websites. It works for any tech stack, and both people and AI coding agents can follow it.
+A complete, practical handbook for planning, designing, building, launching and running professional websites. It works for any tech stack, recommends one reference stack (Next.js, React, Tailwind CSS), and both people and AI coding agents can follow it.
 
 ## What you get
 
@@ -58,6 +58,7 @@ The work follows the web development life cycle. Each phase has its own files.
 | Content | Content plans, trust signals, style guide, readability, AI-writing review | `04-content`, `reference/ai-writing/` |
 | SEO | Crawling, indexing, titles, alt text, structured data, links, local SEO, migrations | `05-seo`, `reference/google-search/` |
 | AI search | Being found and cited in AI answers (Google AI Overviews, ChatGPT and others) | `06-geo-aeo` |
+| Reference stack | Next.js, React, TypeScript, Tailwind CSS (token-only), Radix UI, forms, CMS, testing, hosting | `18-stack`, `templates/stack/` |
 | Tech | HTML and CSS basics, hosting, domains, email, CMS and editors, installable web apps (PWA) | `07-tech` |
 | Performance | Core Web Vitals, images, fonts, JavaScript, energy use | `08-performance` |
 | Accessibility | WCAG 2.2 AA, keyboard, screen readers, motion, EU accessibility law | `09-accessibility` |
@@ -119,12 +120,12 @@ Each standard shows when its rules were last checked against their sources (`Las
 README.md · GUIDE.md · GLOSSARY.md · AGENTS.md · TOOLS.md · rules.csv
 standards/   01-strategy · 02-brand-design · 03-ux · 04-content · 05-seo · 06-geo-aeo · 07-tech
              08-performance · 09-accessibility · 10-security-privacy · 11-measurement · 12-i18n · 13-qa
-             14-ux-psychology · 15-layout-responsive · 16-components · 17-project · site-types
+             14-ux-psychology · 15-layout-responsive · 16-components · 17-project · 18-stack · site-types
 checklists/  1-preflight · 2-launch · 3-monitoring · 4-search-console
 templates/   project-brief · content-brief · url-map.csv · audit-report · AGENTS · DESIGN
-             tokens.json · tokens.dark.json · tokens.css (generated) · motion.css · icon
+             tokens.json · tokens.dark.json · tokens.css and tailwind-theme.css (generated) · motion.css · icon
              component-spec · page-blueprint · accessibility-statement
-             project-plan · handover · maintenance-agreement
+             project-plan · handover · maintenance-agreement · stack/ (reference stack starter)
              head.html · robots.txt · _headers · security.txt · consent-default.html
              schema/ (structured data examples) · ci/ (quality workflow, Lighthouse CI)
 reference/   google-search/ (all 184 Google Search documentation pages, condensed)
