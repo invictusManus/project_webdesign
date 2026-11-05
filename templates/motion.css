@@ -65,8 +65,8 @@
     animation-delay: calc(min(var(--i, 0), 4) * var(--motion-stagger));
   }
 
-  /* Page transitions between same-origin documents (PRF-20). Remove if the brief doesn't want them. */
-  @view-transition { navigation: auto; }
+  /* Page transitions between same-origin documents are opt-in (PRF-20 is COULD). Uncomment if the brief wants them:
+  @view-transition { navigation: auto; } */
 }
 
 @keyframes reveal {
