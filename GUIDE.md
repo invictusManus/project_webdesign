@@ -64,7 +64,8 @@ Most website failures are planning failures: the wrong audience, an unclear offe
 **Step 9 · Make the technical decisions.**
 - Why: rendering and platform choices are hard to undo, and they decide speed and SEO.
 - Do: render pages statically by default, render on the server only for per-request data, and render client-side only behind a login. Pick the framework or CMS your editors can actually use. Start a third-party inventory whose default answer is "no".
-- Done: TEC-06, TEC-07, TEC-20.
+- Default: the reference stack in [`18-stack.md`](standards/18-stack.md) (Next.js, React, TypeScript, Tailwind CSS), set up from [`templates/stack/`](templates/stack/README.md).
+- Done: TEC-06, TEC-07, TEC-20, STK-01 to STK-16.
 
 **Step 10 · Clarify the legal side.**
 - Why: in the EU, missing legal pages or a wrong cookie banner can lead to fines and warning letters.

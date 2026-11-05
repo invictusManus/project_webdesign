@@ -68,6 +68,7 @@ Plain-language definitions of the terms used in this blueprint, in alphabetical 
 | **Schema.org / structured data** | Shared vocabulary for describing content to machines (Organization, Product, Article …). |
 | **Search Console** | Google's free tool showing how your site performs in Search, with indexing reports and alerts. |
 | **SERP** | Search Engine Results Page. |
+| **Server Components** | React components that run only on the server and send finished HTML, so the browser downloads less JavaScript and search engines see the content directly. |
 | **Service worker** | A small script the browser runs in the background; it caches files so a site works offline and can receive push messages. |
 | **Sitemap (XML)** | File listing the URLs you want indexed, with last-modified dates. |
 | **Skeleton** | A grey placeholder in the shape of the coming content, shown while it loads. |
@@ -76,6 +77,7 @@ Plain-language definitions of the terms used in this blueprint, in alphabetical 
 | **Stress fixture** | Test content at the extremes (empty, very long, unbroken strings, RTL, many items) used to check that layouts don't break. |
 | **svh / dvh** | Viewport-height units that account for mobile browser toolbars: small (svh) and dynamic (dvh) viewport height. |
 | **Tabular numerals** | Digits of equal width, so numbers line up in columns (`font-variant-numeric: tabular-nums`). |
+| **Tailwind CSS** | A styling tool where short class names (e.g. `p-4`, `bg-action-primary`) apply design values; here it is limited to the design tokens. |
 | **TBT** | Total Blocking Time: lab metric for how long scripts block the page. Proxy for INP in lab tests. |
 | **TLS / HTTPS** | Encryption between browser and server. |
 | **Toast** | A short, temporary message (e.g. "Saved") that appears at the edge of the screen and disappears on its own. |
