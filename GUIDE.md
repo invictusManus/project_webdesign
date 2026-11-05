@@ -187,7 +187,8 @@ Build on a solid, boring foundation. Every shortcut here shows up later as a ran
 - Why: even a brochure site can be hijacked for spam or used to attack visitors.
 - Do: HTTPS only, the header baseline from [`_headers`](templates/_headers), server-side validation, spam protection without tracking, MFA on admin logins, and automatic dependency updates.
 - Also make sure your CDN or firewall doesn't block Google's crawlers. To slow them down, answer with `503` or `429`, never other errors.
-- Done: SEC-01 to SEC-04, SEC-08 to SEC-12, SEC-14, TEC-18, TEC-25, TEC-29, TEC-30.
+- Sites with server code, accounts or a shop: work through the attack-surface list in the audit report and the matching rules (SSRF, redirects, CORS, uploads, sessions, per-object access, webhooks, prices computed on the server).
+- Done: SEC-01 to SEC-04, SEC-08 to SEC-12, SEC-14, SEC-23 to SEC-46 (those that apply), TEC-18, TEC-25, TEC-29, TEC-30, QA-15.
 
 **Step 28 · Set up consent and measurement.**
 - Why: in the EU, nothing non-essential may run before consent. Without measurement you're guessing.

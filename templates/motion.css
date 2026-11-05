@@ -1,4 +1,4 @@
-/* Motion starter (DES-08, DES-23, DES-36, DES-43, A11Y-26). Values come from tokens.json; fallbacks keep it working before the token build. */
+/* Motion starter (DES-08, DES-23, DES-36, DES-43, A11Y-26). Load after tokens.css (scripts/tokens_to_css.py); fallbacks keep it working without it. */
 
 :root {
   --motion-fast: var(--primitive-duration-fast, 150ms);

@@ -23,6 +23,7 @@ Plain-language definitions of the terms used in this blueprint, in alphabetical 
 | **Consent Mode** | Google's mechanism that tells its tags what the visitor agreed to (ads, analytics …). |
 | **Container query** | CSS that adapts a component to the width of its container instead of the whole viewport (`@container`). |
 | **Core Web Vitals (CWV)** | Google's three user-experience metrics: LCP (loading), INP (responsiveness), CLS (visual stability). |
+| **CORS** | Cross-Origin Resource Sharing: HTTP headers that decide which other websites may read responses from your server. |
 | **Crawl / render / index / rank** | How search works: fetch pages by following links, run them like a browser, store what they're about, order them per query. |
 | **CSP** | Content Security Policy: a header that tells the browser which scripts and sources may run. Blocks most injection attacks. |
 | **CTA** | Call to action: the button or link for the step you want visitors to take. |
@@ -32,23 +33,27 @@ Plain-language definitions of the terms used in this blueprint, in alphabetical 
 | **E-E-A-T** | Experience, Expertise, Authoritativeness, Trust. Google's framework for judging content quality; trust matters most. |
 | **Entity** | A uniquely identifiable thing (your company, a person, a product) that search engines and AI recognize across the web. |
 | **Eyebrow** | A short label above a heading (e.g. "Case study"). Styled small and often uppercase; not a heading in the outline. |
+| **Fetch Metadata** | Browser request headers (`Sec-Fetch-Site` and others) that tell the server where a request came from, so cross-site requests can be refused. |
 | **Forced colors** | An OS mode (e.g. Windows contrast themes) that replaces site colors with a user-chosen palette. |
 | **GA4** | Google Analytics 4, Google's analytics product. |
 | **GTM** | Google Tag Manager: a container for adding and controlling tracking tags without code changes. |
 | **hreflang** | Annotation telling search engines which language/region version of a page to show to whom. |
 | **HSTS** | Header that forces browsers to use HTTPS for your domain. |
 | **Hydration** | JavaScript taking over server-rendered HTML to make it interactive. Less hydration = faster pages. |
+| **Idempotency** | Doing the same request twice has the same effect as doing it once, e.g. a double-clicked "Pay" creates one order. |
 | **Impressum** | Legal notice with provider details, mandatory for commercial websites in Germany (DDG §5). |
 | **IndexNow** | Protocol to notify Bing and other engines instantly about new or changed URLs. |
 | **INP** | Interaction to Next Paint: how quickly the page responds to clicks and taps. Good: ≤ 200 ms. |
 | **Intent** | What the searcher actually wants: information, comparison, purchase or a specific site. |
 | **JSON-LD** | The recommended format for structured data: a script block describing the page in Schema.org terms. |
+| **JWT / OAuth** | JWT: a signed token that carries login information. OAuth: the standard behind "Sign in with …" and delegated access. |
 | **Key event** | A GA4 event marked as important (formerly "conversion"), e.g. a completed form. |
 | **Landmarks** | HTML regions (`header`, `nav`, `main`, `footer`) that let screen-reader users jump around a page. |
 | **LCP** | Largest Contentful Paint: when the main content (often the hero image) has loaded. Good: ≤ 2.5 s. |
 | **Lighthouse** | Google's automated lab audit for performance, accessibility, SEO and best practices. |
 | **llms.txt** | Unofficial proposal for a Markdown index of a site for AI tools. Not used by Google. |
 | **noindex** | Directive that keeps a page out of search results. |
+| **OKLCH** | A color space that matches how people perceive lightness, used to build even color scales. |
 | **Open Graph** | Meta tags that control the preview (title, image) when a page is shared on social media or in messengers. |
 | **Orphan page** | A page no other page links to; hard for users and crawlers to find. |
 | **Owner / Full / Restricted** | Search Console permission levels: owners manage users and settings, full users see all data and act, restricted users mostly view. |
@@ -65,6 +70,8 @@ Plain-language definitions of the terms used in this blueprint, in alphabetical 
 | **Sitemap (XML)** | File listing the URLs you want indexed, with last-modified dates. |
 | **Skeleton** | A grey placeholder in the shape of the coming content, shown while it loads. |
 | **SPF / DKIM / DMARC** | DNS records that prove email from your domain is genuine and stop spoofing. |
+| **SSRF** | Server-Side Request Forgery: tricking a server into fetching internal or private addresses on the attacker's behalf. |
+| **Stress fixture** | Test content at the extremes (empty, very long, unbroken strings, RTL, many items) used to check that layouts don't break. |
 | **svh / dvh** | Viewport-height units that account for mobile browser toolbars: small (svh) and dynamic (dvh) viewport height. |
 | **Tabular numerals** | Digits of equal width, so numbers line up in columns (`font-variant-numeric: tabular-nums`). |
 | **TBT** | Total Blocking Time: lab metric for how long scripts block the page. Proxy for INP in lab tests. |

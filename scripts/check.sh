@@ -44,6 +44,7 @@ done
 
 # Design tokens: types, units, references, dark coverage, contrast (DES-03, DES-41)
 python3 scripts/check_tokens.py || err "templates/tokens*.json invalid"
+python3 scripts/tokens_to_css.py --check || err "templates/tokens.css out of date"
 
 # rules.csv matches standards/
 python3 scripts/rules_index.py --check || err "rules.csv out of date"

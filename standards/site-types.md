@@ -8,6 +8,7 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
 - **Rendering:** static.
 - **Schema:** Organization, LocalBusiness subtype per location, BreadcrumbList, JobPosting on career pages.
 - **Raise:** SEO-31 and SEO-56 (sites with several locations), UX-08, UX-12, CON-19 (case studies, service and location pages), SEO-64 (sites with a location).
+- **Relax:** static sites without server code, accounts or uploads skip SEC-23 to SEC-38; forms still follow SEC-10, SEC-12, SEC-24 and TEC-17.
 - **Add:** career pages with JobPosting markup (SEO-51). Google recommends its Indexing API for JobPosting URLs and, for video, supports it only for livestreams (`BroadcastEvent`).
 
 ## Landing page (campaign)
@@ -29,6 +30,7 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
   - RSS/Atom feed, author archives, paginated archives (SEO-14).
   - Discover: large 16:9 images and `max-image-preview:large` (SEO-19). Treat Discover as supplemental and watch its Search Console report.
   - Paywalled content: SEO-52.
+  - CMS drafts and previews stay private (TEC-40).
 
 ## SaaS
 
@@ -41,6 +43,7 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
   - Transparent pricing page; indexable docs and help center; public changelog.
   - Status page on a separate domain (MSR-21).
   - Cancellation button for B2C subscriptions (PRV-12).
+  - Account security in full: SEC-30 to SEC-34; webhooks (SEC-35) for billing.
 
 ## E-commerce
 
@@ -56,6 +59,7 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
   - Before launch, protect the site with a password (not robots.txt), or launch with products out of stock. Never disable add-to-cart: Google uses it to verify price, tax and shipping. Sign up for Merchant Center and watch Page indexing.
   - No markup promoting firearms, recreational drugs, tobacco, vaping or gambling products. Adult-oriented products carry `hasAdultConsideration`.
   - Accessibility law applies (A11Y-02), as do the e-commerce duties (PRV-12).
+  - Server-side prices and totals (SEC-46); payment webhooks verified (SEC-35).
 
 ## Web application
 
@@ -66,6 +70,7 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
 - **Add:**
   - Product analytics only with consent (PRV-01).
   - Session timeout warnings (WCAG 2.2.1).
+  - Account and API security in full: SEC-23 to SEC-41.
   - Every core task is covered by E2E tests (QA-05).
   - Onboarding per UX-26; transactional email per TEC-38.
   - Dense data views: CMP-04 tables and CMP-21 states are MUST; desktop layouts may use the full width instead of LAY-03's wide container.
