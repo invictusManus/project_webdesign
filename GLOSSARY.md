@@ -60,6 +60,7 @@ Plain-language definitions of the terms used in this blueprint, in alphabetical 
 | **p75** | 75th percentile: the value that 75 % of real visits meet or beat. Core Web Vitals are judged at p75. |
 | **Pillar / cluster** | A broad overview page (pillar) linking to detailed pages (cluster) on sub-topics, and back. |
 | **Prerender / SSG / SSR / CSR** | Ways to produce HTML: at build time (prerender / static site generation), per request on the server (SSR), or in the browser (CSR). |
+| **PWA (progressive web app)** | A website that can be installed to the home screen or desktop and opens like an app, without an app store. |
 | **robots.txt** | File at the site root that tells crawlers which paths they may fetch. Controls crawling, not indexing. |
 | **RTL** | Right-to-left scripts such as Arabic or Hebrew. |
 | **RUM** | Real User Monitoring: performance measured on actual visitors' devices (field data), as opposed to lab tests. |
@@ -67,6 +68,7 @@ Plain-language definitions of the terms used in this blueprint, in alphabetical 
 | **Schema.org / structured data** | Shared vocabulary for describing content to machines (Organization, Product, Article …). |
 | **Search Console** | Google's free tool showing how your site performs in Search, with indexing reports and alerts. |
 | **SERP** | Search Engine Results Page. |
+| **Service worker** | A small script the browser runs in the background; it caches files so a site works offline and can receive push messages. |
 | **Sitemap (XML)** | File listing the URLs you want indexed, with last-modified dates. |
 | **Skeleton** | A grey placeholder in the shape of the coming content, shown while it loads. |
 | **SPF / DKIM / DMARC** | DNS records that prove email from your domain is genuine and stop spoofing. |
@@ -81,4 +83,5 @@ Plain-language definitions of the terms used in this blueprint, in alphabetical 
 | **UTM parameters** | Tags added to campaign links (`utm_source`, `utm_medium`, `utm_campaign`) so analytics can attribute visits. |
 | **Validate Fix** | A Search Console button that asks Google to recrawl the affected URLs after you fixed an indexing or enhancement issue. |
 | **WCAG** | Web Content Accessibility Guidelines (W3C). Level AA of version 2.2 is the target in this blueprint. |
+| **Web app manifest** | A JSON file that tells the browser an app's name, icons, colors and how it opens when installed. |
 | **YMYL** | "Your Money or Your Life": topics (health, finance, legal, safety) where bad information can cause real harm, judged more strictly. |

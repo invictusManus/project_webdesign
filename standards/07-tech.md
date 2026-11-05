@@ -4,7 +4,7 @@
 
 Detail: `reference/google-search/` notes.
 
-Scope: HTML/CSS/JS baseline, rendering, hosting, environments, domain, DNS, email, integrations (CMS, forms, APIs, third parties), CMS validation and editorial workflow, transactional and marketing email, maintenance and handover. Security headers and TLS: [`10-security-privacy.md`](10-security-privacy.md).
+Scope: HTML/CSS/JS baseline, rendering, hosting, environments, domain, DNS, email, integrations (CMS, forms, APIs, third parties), installable web apps (PWA), CMS validation and editorial workflow, transactional and marketing email, maintenance and handover. Security headers and TLS: [`10-security-privacy.md`](10-security-privacy.md).
 
 Last verified: 2026-11
 
@@ -75,6 +75,18 @@ Last verified: 2026-11
 | TEC-37 | SHOULD | Handover includes editor training (TEC-27): a short guide per content type, the style guide (CON-17), the AI-writing checklist (CON-16), and image preparation (formats, sizes, alt text). | Training record |
 | TEC-40 | MUST | *(CMS)* Unpublished, scheduled, private and deleted content is absent from sitemaps, feeds, site search and CMS REST or GraphQL listings. A preview link opens one item only and needs login or an expiring unguessable token. Exports and backups download only for named roles. | Search sitemap, RSS, API (`?status=draft`) and site search for a known draft slug unauthenticated; reuse item A's preview token on item B |
 
+## Installable web apps (PWA)
+
+Rules marked *(PWA)* apply when the site should install to the home screen or desktop.
+
+| ID | Level | Rule | Verify |
+|---|---|---|---|
+| TEC-44 | MUST | *(PWA)* A web app manifest, linked from every page over HTTPS, sets `name`, `short_name`, `id`, `start_url`, `scope`, `display: standalone` (`fullscreen` only for games and kiosks, since it hides the status bar), `theme_color` and `background_color` from the tokens, and PNG icons at 192 and 512 px plus a 512 px `maskable` icon with its artwork inside the safe zone (DES-10). | DevTools → Application → Manifest: no errors or installability warnings |
+| TEC-45 | MUST | *(PWA)* A service worker precaches the app shell and an offline fallback page, so the main screens open offline. HTML is network-first, hashed assets cache-first (PRF-17); private responses are never cached (SEC-40). Old caches are removed on activation, and a new version asks the user to reload instead of switching mid-session. | DevTools offline mode: main screens and the offline page load; Application → Service workers |
+| TEC-46 | SHOULD | *(PWA)* Install prompt: an "Install app" button appears only where `beforeinstallprompt` fires (Chromium on Android and desktop), after the user has engaged, never on first load (UX-17). On iPhone and iPad, Safari shows short "Share → Add to Home Screen" instructions instead (Chrome and Edge on iOS can't install). All install UI is hidden when `display-mode` is `standalone`. | Test on Android Chrome, iOS Safari and desktop Chrome |
+| TEC-47 | SHOULD | *(PWA)* In standalone mode the app replaces the missing browser bar: visible back navigation, share where useful, safe-area padding (LAY-09). Android builds the splash screen from `name`, `background_color` and the icon; iOS uses the apple-touch icon (DES-10). Push notifications are asked for only after a user action, in context (on iOS only for apps added to the home screen). | Device test in standalone mode on iOS and Android |
+| TEC-48 | SHOULD | *(PWA)* Installability is tested in Chrome DevTools (Application panel) and on real devices. Lighthouse no longer audits PWAs: its PWA category was removed in version 12. | DevTools Application panel; device test |
+
 ## Code quality, maintenance, handover
 
 | ID | Level | Rule | Verify |
@@ -88,6 +100,8 @@ Last verified: 2026-11
 
 ## Sources
 
+- [web.dev: Install criteria](https://web.dev/articles/install-criteria) · [Installation prompt](https://web.dev/learn/pwa/installation-prompt) · [Maskable icons](https://web.dev/articles/maskable-icon) · [MDN: Making PWAs installable](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) · [MDN: display](https://developer.mozilla.org/en-US/docs/Web/Manifest/Reference/display)
+- [Chrome: Updated install criteria](https://developer.chrome.com/blog/update-install-criteria) · [DevTools: Debug PWAs](https://developer.chrome.com/docs/devtools/progressive-web-apps) · [Lighthouse 12.0 release notes](https://github.com/GoogleChrome/lighthouse/releases/tag/v12.0.0) · [WebKit: Web Push for web apps on iOS](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/)
 - [PEP 8: Comments](https://peps.python.org/pep-0008/#comments) · [Google Python Style Guide: Comments](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)
 - [Google: Email sender guidelines](https://support.google.com/mail/answer/81126) · [Sender guidelines FAQ](https://support.google.com/a/answer/14229414) · [RFC 8058: One-click unsubscribe](https://www.rfc-editor.org/rfc/rfc8058)
 - [MDN: Webpage metadata](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) · [WHATWG HTML](https://html.spec.whatwg.org/)

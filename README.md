@@ -36,18 +36,19 @@ The work follows the web development life cycle. Each phase has its own files.
 
 | Phase | What happens | Main files |
 |---|---|---|
-| 1. Discovery | Goals, audience, offer, competitors, search demand | `standards/01-strategy.md`, `templates/project-brief.md` |
+| 1. Discovery | Goals, audience, offer, competitors, search demand, scope and estimate | `standards/01-strategy.md`, `standards/17-project.md`, `templates/project-brief.md`, `templates/project-plan.md` |
 | 2. Planning | Site type, pages and keywords, features, legal duties, accounts | `checklists/1-preflight.md`, `standards/site-types.md`, `templates/url-map.csv` |
 | 3. Design | Brand, design system, layout, components, UX, accessibility | standards 02, 03, 09, 14, 15, 16; `templates/DESIGN.md`, `templates/tokens.json` |
 | 4. Development | Content, code, SEO, performance, security, measurement | standards 04–08, 10–12; code templates |
 | 5. Testing | Automated checks, real devices, accessibility, security review | `standards/13-qa.md`, `templates/ci/` |
 | 6. Deployment | Launch gate (every MUST rule), go-live, first 14 days | `checklists/2-launch.md` |
-| 7. Maintenance | Monitoring, updates, Search Console, content upkeep | `checklists/3-monitoring.md`, `checklists/4-search-console.md` |
+| 7. Maintenance | Handover, monitoring, updates, Search Console, content upkeep | `templates/handover.md`, `templates/maintenance-agreement.md`, `checklists/3-monitoring.md`, `checklists/4-search-console.md` |
 
 ## What it covers
 
 | Area | In short | Where |
 |---|---|---|
+| Project and client | Scope, estimate, timeline, roles, change requests, handover, maintenance agreement | `17-project` |
 | Strategy | Goals, audiences, positioning, competitors, keyword research | `01-strategy` |
 | Brand and design system | Design intake, 60-30-10 color palette (primary, secondary, accent), golden-ratio type and spacing, full design tokens incl. hover, shadows, borders and dark mode, icons and animation | `02-brand-design`, `templates/DESIGN.md`, `templates/tokens.json` |
 | Layout and responsive | Mobile, tablet, desktop and wide screens, grid, page structure, header, navigation, hero, footer | `15-layout-responsive` |
@@ -57,7 +58,7 @@ The work follows the web development life cycle. Each phase has its own files.
 | Content | Content plans, trust signals, style guide, readability, AI-writing review | `04-content`, `reference/ai-writing/` |
 | SEO | Crawling, indexing, titles, alt text, structured data, links, local SEO, migrations | `05-seo`, `reference/google-search/` |
 | AI search | Being found and cited in AI answers (Google AI Overviews, ChatGPT and others) | `06-geo-aeo` |
-| Tech | HTML and CSS basics, hosting, domains, email, CMS and editors | `07-tech` |
+| Tech | HTML and CSS basics, hosting, domains, email, CMS and editors, installable web apps (PWA) | `07-tech` |
 | Performance | Core Web Vitals, images, fonts, JavaScript, energy use | `08-performance` |
 | Accessibility | WCAG 2.2 AA, keyboard, screen readers, motion, EU accessibility law | `09-accessibility` |
 | Security and privacy | HTTPS, headers, OWASP, accounts, APIs, consent, GDPR, legal pages | `10-security-privacy` |
@@ -118,11 +119,12 @@ Each standard shows when its rules were last checked against their sources (`Las
 README.md · GUIDE.md · GLOSSARY.md · AGENTS.md · TOOLS.md · rules.csv
 standards/   01-strategy · 02-brand-design · 03-ux · 04-content · 05-seo · 06-geo-aeo · 07-tech
              08-performance · 09-accessibility · 10-security-privacy · 11-measurement · 12-i18n · 13-qa
-             14-ux-psychology · 15-layout-responsive · 16-components · site-types
+             14-ux-psychology · 15-layout-responsive · 16-components · 17-project · site-types
 checklists/  1-preflight · 2-launch · 3-monitoring · 4-search-console
 templates/   project-brief · content-brief · url-map.csv · audit-report · AGENTS · DESIGN
              tokens.json · tokens.dark.json · tokens.css (generated) · motion.css · icon
              component-spec · page-blueprint · accessibility-statement
+             project-plan · handover · maintenance-agreement
              head.html · robots.txt · _headers · security.txt · consent-default.html
              schema/ (structured data examples) · ci/ (quality workflow, Lighthouse CI)
 reference/   google-search/ (all 184 Google Search documentation pages, condensed)

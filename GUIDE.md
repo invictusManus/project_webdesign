@@ -23,7 +23,8 @@ Most website failures are planning failures: the wrong audience, an unclear offe
 **Step 1 · Define goals and the one action that matters.**
 - Why: without a measurable goal you can't make design decisions or prove success.
 - Do: write 1–3 business goals. Turn each into a KPI with a baseline and a target, and define the primary action per page type (call, quote request, purchase, sign-up).
-- Done: STR-01, MSR-06.
+- Agree the scope, estimate, timeline and who decides in [`project-plan.md`](templates/project-plan.md); every later change goes through a change request.
+- Done: STR-01, MSR-06, PRJ-01 to PRJ-07.
 
 **Step 2 · Understand your audience.**
 - Why: visitors decide in seconds whether a page is for them. That only works if you speak to their real problem in their words.
@@ -273,4 +274,5 @@ A website is never finished. The routine in [`3-monitoring.md`](checklists/3-mon
 **Step 41 · Keep it safe and current.**
 - Why: outdated plugins and expired certificates or domains are the most common avoidable outages.
 - Do: patch on schedule, review access every quarter, renew `security.txt` and legal texts every year, and re-check this blueprint every quarter.
-- Done: SEC-15, TEC-25, MSR-21, MSR-22.
+- Hand over with [`handover.md`](templates/handover.md), agree ongoing care in [`maintenance-agreement.md`](templates/maintenance-agreement.md), and compare results after 90 days.
+- Done: SEC-15, TEC-25, MSR-21, MSR-22, PRJ-08 to PRJ-11.

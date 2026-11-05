@@ -16,6 +16,11 @@ Complete before design and build. Output: a signed [`project-brief.md`](../templ
 - [ ] STR-11 Market constraints *(multilingual)*
 - [ ] SEO-34 Full URL inventory *(relaunch)*
 
+## A2 · Project setup
+
+- [ ] PRJ-01 Scope signed · PRJ-02 estimate and running costs · PRJ-04 roles and decision-maker
+- [ ] PRJ-05 Change-request process agreed · PRJ-07 acceptance per phase agreed
+
 ## B · Content, UX & design foundations
 
 - [ ] CON-01 One intent per URL
