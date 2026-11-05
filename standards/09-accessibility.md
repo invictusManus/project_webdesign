@@ -39,7 +39,7 @@ Last verified: 2026-10
 |---|---|---|---|
 | A11Y-11 | MUST | Everything works by keyboard alone, in a logical order, with no keyboard traps. | Keyboard-only walkthrough |
 | A11Y-12 | MUST | Every focusable element shows a visible focus indicator. Sticky headers, chat widgets and cookie banners never hide the focused element entirely (2.4.11). | Keyboard walkthrough |
-| A11Y-13 | MUST | Targets are at least 24 × 24 CSS px or have enough spacing (2.5.8). Primary controls SHOULD be 44 × 44 px. | Target-size check on mobile viewport |
+| A11Y-13 | MUST | Targets are at least 24 × 24 CSS px or have enough spacing (2.5.8). Touch-target size for primary controls: LAY-08. | Target-size check on mobile viewport |
 | A11Y-14 | MUST | Every drag interaction has a single-pointer alternative (2.5.7). | Manual review |
 | A11Y-15 | MUST | Link and button text makes sense in context. No "click here" or "read more" without an accessible name that says what. | Screen reader links list |
 
