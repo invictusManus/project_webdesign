@@ -94,7 +94,7 @@ Every rule lives in exactly one place in `standards/` and looks like this:
 - the design tokens are valid and every color pair passes the contrast checks, in light and dark mode;
 - the generated files (`rules.csv`, `templates/tokens.css`) are up to date.
 
-GitHub runs the same check on every change. A weekly job reports changed Google documentation and broken external links.
+GitHub runs the same check on every change. A weekly job reports changed Google documentation, license changes in the asset sources and broken external links.
 
 ## Working with AI agents
 
@@ -131,7 +131,7 @@ templates/   project-brief · content-brief · url-map.csv · audit-report · AG
 reference/   google-search/ (all 184 Google Search documentation pages, condensed)
              ai-writing/ (signs of AI writing and a pre-publish checklist)
              assets/ (free icon, animation and illustration sources with licenses)
-scripts/     check.sh · rules_index.py · check_tokens.py · tokens_to_css.py
+scripts/     check.sh · rules_index.py · check_tokens.py · tokens_to_css.py · asset-check.py
 ```
 
 ## License

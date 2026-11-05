@@ -1,6 +1,6 @@
 name: maintenance
 
-# Weekly report: changed Google Search docs and broken external links.
+# Weekly report: changed Google Search docs, asset license changes and broken external links.
 # Never fails; opens or updates one issue when something needs attention.
 on:
   schedule:
@@ -19,6 +19,8 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Google docs changes
         run: python3 scripts/google-docs.py > docs.txt || true
+      - name: Asset licenses
+        run: python3 scripts/asset-check.py > assets.txt || true
       - name: External links
         id: links
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
@@ -37,6 +39,7 @@ jobs:
         run: |
           grep -E '^(NEW|REMOVED|CHANGED):' docs.txt > body.md || true
           if [ -s body.md ]; then printf '\nRefresh: run `scripts/google-docs.py --text DIR`, update the notes and dates in reference/google-search/.\n' >> body.md; fi
+          if [ -s assets.txt ]; then printf '\n## Asset sources (reference/assets/)\n\n' >> body.md; cat assets.txt >> body.md; printf '\nUpdate the license column or replace the package in reference/assets/README.md.\n' >> body.md; fi
           if [ "${{ steps.links.outputs.exit_code }}" != "0" ]; then printf '\n## Broken external links\n\n' >> body.md; cat lychee/out.md >> body.md; fi
           [ -s body.md ] || { echo "Nothing to report"; exit 0; }
           n=$(gh issue list --state open --search "Weekly maintenance in:title" --json number --jq '.[0].number // empty')

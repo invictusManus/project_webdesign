@@ -1,6 +1,6 @@
 # Asset sources: icons, animation, illustrations
 
-A vetted list of free sources for DES-42 to DES-44. Reference only: nothing is copied into this repository. Sites install the chosen package from npm and ship only what they use. Licenses and counts verified 2026-11 against npm, jsDelivr and each source's license page; re-check before relying on a count.
+A vetted list of free sources for DES-42 to DES-44. Reference only: nothing is copied into this repository. Sites install the chosen package from npm and ship only what they use. Licenses and counts verified 2026-11 against npm, jsDelivr and each source's license page; re-check before relying on a count. The weekly maintenance job (`scripts/asset-check.py`) reports license changes and deprecated packages.
 
 ## Icons (DES-42)
 
