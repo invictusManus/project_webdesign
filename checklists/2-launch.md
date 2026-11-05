@@ -64,6 +64,8 @@ Every MUST passes, or has a documented exception with an owner and a due date. R
 - [ ] TEC-10 Staging protected and noindexed
 - [ ] TEC-11 No secrets in repo or bundle · TEC-41 history scanned, leaked secrets rotated
 - [ ] TEC-40 *(CMS)* Drafts and previews not exposed
+- [ ] *(PWA)* TEC-44 manifest and icons · TEC-45 service worker and offline page
+- [ ] PRJ-08 Handover signed, accounts transferred, warranty agreed
 - [ ] TEC-12 Backup and tested restore
 - [ ] TEC-13 Domain owned by client, 2FA, auto-renew
 - [ ] TEC-15 SPF, DKIM, DMARC

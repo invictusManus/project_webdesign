@@ -42,6 +42,7 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
   - App and account areas send `noindex` (SEO-02).
   - Transparent pricing page; indexable docs and help center; public changelog.
   - Status page on a separate domain (MSR-21).
+  - Installable on phones without an app store: PWA rules TEC-44 to TEC-48.
   - Cancellation button for B2C subscriptions (PRV-12).
   - Account security in full: SEC-30 to SEC-34; webhooks (SEC-35) for billing.
 
@@ -73,4 +74,5 @@ Profiles adjust the standards per site type. **Raise** = SHOULD/COULD becomes MU
   - Account and API security in full: SEC-23 to SEC-41.
   - Every core task is covered by E2E tests (QA-05).
   - Onboarding per UX-26; transactional email per TEC-38.
+  - Installable as a PWA where users return daily (TEC-44 to TEC-48).
   - Dense data views: CMP-04 tables and CMP-21 states are MUST; desktop layouts may use the full width instead of LAY-03's wide container.
